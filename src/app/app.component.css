@@ -1,0 +1,144 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.floating_button_Appointment {
+    position: fixed;
+    right: -31px;
+    top: 27%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+.floating_button_Enquiry {
+    position: fixed;
+    right: -27px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+.floating_button_Appointment a, .floating_button_Enquiry a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    rotate: -90deg;
+}
+.book_appointment{
+    background-color: #8CC63F;
+}
+.book_appointment span, .book_appointment p {
+    font-size: 10px;
+    color: #FFFFFF !important;
+    font-family: 'Roboto', sans-serif;
+}
+.call_enquiry {
+    background-color: #008FD5;  
+}
+.call_enquiry span, .call_enquiry p {
+    font-size: 10px;
+    color: #FFFFFF !important;
+    font-family: 'Roboto', sans-serif;
+}
+.card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+.location_section h6:hover{
+ color: #008FD5;
+}
+.location_section img:hover{
+    /* color: blue; */
+    fill: green;
+
+}
+.width_height{
+    width:165px;
+    height: 165px;
+}
+h6{
+    color: #828282;
+}
+.active {
+    border-bottom: 2px solid #008FD5;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .speciality-container {
+    white-space: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling on smaller screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+  .specialities-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.specialities-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.specialities-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, green, blue);
+    margin: 5px auto;
+}
+.speciality-card {
+    width: 165px;
+    height: 165px;
+    background: white;
+    color: #090101;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.speciality-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.speciality-card p {
+    font-size: 14px;
+    margin: 0;
+    color: #090101;
+}
+.speciality-card:hover, .speciality-card.active {
+    border: 2px solid blue;
+    box-shadow: 2px 2px 15px rgba(0, 0, 255, 0.3);
+}
+.bg_lgt_blue{
+    background-color: #008FD526;
+}
+.line {
+    width: 60px;
+    height: 3px;
+}
+.line-left {
+    background-color: #8CC63F;
+}
+.line-right {
+    background: #008FD5;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}

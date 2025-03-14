@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +8,7 @@ export class AppComponent {
   title = 'Omni_project';
   activeIndex = 0
   showMore: boolean = false;
+  showmoreactive_one: boolean = false;
   startIndex = 0;
   specialities = [
     {
@@ -23,19 +23,20 @@ export class AppComponent {
   ]
 
   our_specialities = [
-    {id: 1, dep_name: 'Cardiology', img:'assets/our_specialities/Cardio_blue.svg'},{id: 2, dep_name: 'ENT', img:'assets/our_specialities/ENT_blue.svg'},{id: 3, dep_name: 'General Medicine', img:'assets/our_specialities/Internal_medic_blue.svg'},{id: 4, dep_name: 'General Surgery', img:'assets/our_specialities/General_Surgery_blue.svg'},{id: 5, dep_name: 'Gastroenterology', img:'assets/our_specialities/Gastro_blue.svg'},{id: 6, dep_name: 'Neurology', img:'assets/our_specialities/brain_blue.svg'},
+    { id: 1, dep_name: 'Cardiology', img: 'assets/our_specialities/Cardio_blue.svg' }, { id: 2, dep_name: 'ENT', img: 'assets/our_specialities/ENT_blue.svg' }, { id: 3, dep_name: 'General Medicine', img: 'assets/our_specialities/Internal_medic_blue.svg' }, { id: 4, dep_name: 'General Surgery', img: 'assets/our_specialities/General_Surgery_blue.svg' }, { id: 5, dep_name: 'Gastroenterology', img: 'assets/our_specialities/Gastro_blue.svg' }, { id: 6, dep_name: 'Neurology', img: 'assets/our_specialities/brain_blue.svg' },
     {
-      id: 7, dep_name: 'Nephrology', img:'assets/our_specialities/Nephrology_Urology_blue.svg'},{id: 8, dep_name: 'Gynaecology', img:'assets/our_specialities/Gynaecology_blue.svg'},{id: 9, dep_name: 'Paediatrics', img:'assets/our_specialities/Paediatrics_blue.svg'},{id: 10, dep_name: 'Pulmonology', img:'assets/our_specialities/Pulmonology_blue.svg'},{id: 11, dep_name: 'Psychiatry', img:'assets/our_specialities/Psychiatry_blue.svg'},{  id: 12, dep_name: 'Orthopaedics', img:'assets/our_specialities/Orthopedic_blue.svg'},
+      id: 7, dep_name: 'Nephrology', img: 'assets/our_specialities/Nephrology_Urology_blue.svg'
+    }, { id: 8, dep_name: 'Gynaecology', img: 'assets/our_specialities/Gynaecology_blue.svg' }, { id: 9, dep_name: 'Paediatrics', img: 'assets/our_specialities/Paediatrics_blue.svg' }, { id: 10, dep_name: 'Pulmonology', img: 'assets/our_specialities/Pulmonology_blue.svg' }, { id: 11, dep_name: 'Psychiatry', img: 'assets/our_specialities/Psychiatry_blue.svg' }, { id: 12, dep_name: 'Orthopaedics', img: 'assets/our_specialities/Orthopedic_blue.svg' },
     {
-      id: 13, dep_name: 'Vascular Surgery', img:'assets/our_specialities/Vascular-Surgery_blue.svg'
+      id: 13, dep_name: 'Vascular Surgery', img: 'assets/our_specialities/Vascular-Surgery_blue.svg'
     }
   ]
   counters = [
-    { id: 1, img:'hospitals.svg', label: 'Hospitals', target: 6, value: 0 },
-    { id: 2, img:'beds.svg', label: 'Beds', target: 750, value: 0 },
-    { id: 3, img:'doctors.svg', label: 'Doctors', target: 450, value: 0 },
-    { id: 4, img:'parmacy.svg', label: 'Pharmacy', target: 150, value: 0 }
-  ]; 
+    { id: 1, img: 'hospitals.svg', label: 'Hospitals', target: 6, value: 0 },
+    { id: 2, img: 'beds.svg', label: 'Beds', target: 750, value: 0 },
+    { id: 3, img: 'doctors.svg', label: 'Doctors', target: 450, value: 0 },
+    { id: 4, img: 'parmacy.svg', label: 'Pharmacy', target: 150, value: 0 }
+  ];
   news_cards = [
     { title: "News 1", text: "Testing the card 1" },
     { title: "New 2", text: "Testing the card 2" },
@@ -48,7 +49,6 @@ export class AppComponent {
     { title: "New 9", text: "Testing the card 9" }
   ];
 
-  
   testimonials = [
     { content: 'Testimonial 1' },
     { content: 'Testimonial 2' },
@@ -61,7 +61,32 @@ export class AppComponent {
     { img: 'https://via.placeholder.com/300', content: 'Blog 3' }
   ];
 
-  constructor() {}
+
+
+depertments = [
+  {
+    id:1, d_name:'What is Lorem Ipsum?', d_description:' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img:'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
+  },
+  {
+    id:2, d_name:'', d_description:'', img:''
+  },
+  {
+    id:3, d_name:'', d_description:'', img:''
+  },
+  {
+    id:4, d_name:'', d_description:'', img:''
+  },
+  {
+    id:5, d_name:'', d_description:'', img:''
+  },
+  {
+    id:6, d_name:'', d_description:'', img:''
+  }
+]
+
+  // slides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4', 'Slide 5', 'Slide 6', 'Slide 7', 'Slide 8', 'Slide 9'];
+  index = 0;
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -73,11 +98,11 @@ export class AppComponent {
   toggleReadMore(): void {
     this.showMore = !this.showMore;
   }
+  ReadMore() {
+    this.showmoreactive_one = !this.showmoreactive_one
+  }
   ourSpecialities(index: any) {
-    console.log(index, 'index');
-
     this.activeIndex = index;
-
   }
 
   animateCounter(element: HTMLElement, target: number) {
@@ -122,6 +147,17 @@ export class AppComponent {
       this.news_cards[(this.startIndex + 1) % this.news_cards.length],
       this.news_cards[(this.startIndex + 2) % this.news_cards.length]
     ];
+  }
+  updateCarousel(direction: 'next' | 'prev') {
+    if (direction === 'prev' && this.index > 0) {
+      this.index--;
+    } else if (direction === 'next' && this.index < this.depertments.length - 1) {
+      this.index++;
+    }
+  }
+
+  getTransform() {
+    return `translateX(-${this.index * 100}%)`;
   }
 
 }

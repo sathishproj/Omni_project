@@ -2,16 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 .text_black {
     color: #000000 !important;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 10px;
-    /* Set a fixed padding */
     border-radius: 5px;
-    /* Keep border-radius applied */
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Smooth transition */
 }
 
 .text_black:hover {
@@ -153,6 +149,22 @@ h6 {
     transition: 0.3s;
 }
 
+
+.speciality_card {
+    background: white;
+    color: #090101;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    /* Adds spacing between rows */
+}
+
+
+
 .speciality-card img {
     margin-bottom: 10px;
 }
@@ -173,9 +185,15 @@ h6 {
 
 .speciality-card:hover,
 .speciality-card.active {
-    /* border: 2px solid blue; */
-    /* box-shadow: 2px 2px 15px rgba(0, 0, 255, 0.3); */
     box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.speciality_img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.speciality_card:hover .speciality_img {
+    transform: rotateY(180deg);
 }
 
 .bg_lgt_blue {
@@ -204,12 +222,14 @@ h6 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .title_text {
     color: #000000;
     font-weight: bold;
+    font-size: 20px;
+    font-family: 'roboto';
 }
 
 .text_gray {
@@ -241,33 +261,14 @@ h6 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* @media screen and (min-width:576px) {
-    .carousel-inner{
-        display: flex;
-    }
-    .carousel-item{
-display: block;
-margin-right: 0;
-flex: 0 0 calc(100%3);
-    }
-}
-.carousel-inner{
-    padding: 1em;
-}
-.card{
-    margin: 0.5em;
-} */
 .image_hover {
     position: relative;
     text-align: center;
-    /* padding: 10px; */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers images and text */
+    align-items: center;
     justify-content: center;
 }
-
-
 
 .gray-icon {
     display: block;
@@ -276,11 +277,13 @@ flex: 0 0 calc(100%3);
 .blue-icon {
     display: none;
 }
-.img_div_hover:hover{
-    
-        color: #007bff;
-    
+
+.img_div_hover:hover {
+
+    color: #007bff;
+
 }
+
 /* On hover, swap the images */
 .image_hover:hover .gray-icon {
     display: none;
@@ -290,4 +293,60 @@ flex: 0 0 calc(100%3);
     display: block;
 }
 
+.footer_sec {
+    background-color: #548711;
+}
 
+.head_text {
+    color: #008FD5;
+    font-size: 20px;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-right: 2px solid #ddd;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.border_radius {
+    border-radius: 5px solid rgb(245, 241, 241);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}

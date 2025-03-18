@@ -1,0 +1,453 @@
+<!-- <div class="container-fluid bg-light py-1 d-none d-lg-block">
+  <div class="container d-flex justify-content-center justify-content-lg-end small text-muted flex-wrap">
+    <a href="#" class=" text-decoration-none me-2" style="color: black;">Blogs</a> |&nbsp;
+    <span class="me-2 ">Media</span> |&nbsp;
+    <span class="me-2 ">Patient Care</span> |&nbsp;
+    <span>24/7 APPOINTMENT HELPLINE : <span class="fw-bold text-primary"><a href="tel:888 0101 000"> 888 0101 000
+        </a></span></span>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+  <div class="container py-2">
+    <img src="assets/images/logo.png" alt="OMNI Hospitals">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link text_black" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">Find a Doctor</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">Our Specialities</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">Our Branches</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">Book an Appointment</a></li>
+        <li class="nav-item"><a class="nav-link text_black" href="#">Careers</a></li>
+        <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Blogs</a></li>
+        <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Media</a></li>
+        <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Patient Care</a></li>
+        <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Careers</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<app-header></app-header>
+
+<header class="container-fluid p-0">
+  <img
+    src="https://img.freepik.com/free-photo/doctor-with-face-mask-against-covid19-discussing-with-nurse-hospital-waiting-area-disabled-senior-woman-wheelchair-waiting-examination-assistant-working-reception-computer_482257-6055.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid"
+    class=" w-100" alt="Lungs Image" height="600px">
+  <!-- <div class="floating_button_Appointment">
+    <a href="#" class="book_appointment"><img src="assets/images/book_an_appointment.png" style="margin: 3px;" alt=""
+        width="22px" height="22px">
+      <span>Book an </span>
+      <p style="margin-left: 10px;">Appointment</p>
+    </a>
+
+
+  </div>
+  <div class="floating_button_Enquiry">
+    <a href="#" class="call_enquiry text-white"
+      style="font-size: 10px !important; font-family: 'Roboto', sans-serif;"><img style="rotate: 90deg; margin: 3px;"
+        src="assets/images/call_icon.png" alt="" width="22px" height="22px">Call for <p style="margin-left: 10px;">
+        Enquiry</p></a>
+  </div> -->
+</header>
+
+<section class="text-center pt-4" style="background-color: #F1F1F1;">
+  <ng-container>
+    <div class="row g-3 location_section d-flex justify-content-center gap-5 img_div_hover">
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height image_hover" data-bs-toggle="modal" data-bs-target="#locationModal">
+        <img class="gray-icon" src="assets/images/location_gray.svg" alt="">
+        <img class="blue-icon" src="assets/images/location_blue.svg" alt="">
+        <h6 class="mt-3" >Our Locations</h6>
+      </div>
+
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height" (click)="ourDoctorsDetails()">
+        <img src="assets/images/doctor_gray.svg" alt="" class="pt-4">
+        <h6 class="mt-3">
+          Our Doctors</h6>
+      </div>
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+        <img src="assets/images/calender_gray.svg" alt="" class="pt-4">
+        <h6 class="mt-3">Book an Appointment</h6>
+      </div>
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height">
+        <img src="assets/images/second_opeanion_gray.svg" alt="" class="pt-4">
+        <h6 class="mt-3">Free Second
+          Opinion </h6>
+      </div>
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height">
+        <img src="assets/images/health_checkup_gray.svg" alt="" class="pt-4">
+        <h6 class="mt-3">Health Checkup</h6>
+      </div>
+    </div>
+  </ng-container>
+  <div class="pt-5 d-flex justify-content-center gap-3 flex-wrap text-center">
+    <div class="d-flex justify-content-center gap-3 overflow-auto speciality-container">
+      <div *ngFor="let spe of specialities; index as i" (click)="ourSpecialities(i)" class="speciality-item px-2 py-2 "
+        [ngClass]="i === activeIndex?'active':'text_gray'">
+        <span>{{ spe.spe_name }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg_lgt_blue">
+
+  <!--************** Start Form Here OUR SPECIALITIES -->
+  <div class="container py-1" *ngIf="activeIndex==0">
+    <div class="container text-center specialities-container">
+      <div class="title-container">
+        <div class="line line-left"></div>
+        <span class="title_text">OUR SPECIALITIES</span>
+        <div class="line line-right"></div>
+      </div>
+      <!-- <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 pb-5">
+        <div class="speciality-card" *ngFor="let data of our_specialities; index as d">
+          <img class="mt-4" [src]="data.img" alt="" width="100px" height="80px">
+          <p>{{data.dep_name}}</p>
+        </div>
+      </div> -->
+      <div class="row g-2 mt-2">
+        <div class="col-6 col-sm-6 col-md-2 " *ngFor="let data of our_specialities; index as d">
+          <div class="speciality_card">
+            <img class="mt-4 speciality_img" [src]="data.img" alt="" width="60px" height="40px">
+            <p class="mt-2">{{data.dep_name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--************** Start End Here OUR SPECIALITIES -->
+
+  <!-- Key Surgories code start from here -->
+
+
+  <div class="" *ngIf="activeIndex==1">
+    <div class="container text-center specialities-container" *ngIf="false">
+      <div class="title-container">
+        <div class="line line-left"></div>
+        <span class="title_text" style="font-size: 30px; font-family: roboto;">KEY SURGERIES</span>
+        <div class="line line-right"></div>
+      </div>
+      <div class="row">
+        <div class="col-5 d-flex justify-content-end">
+          <img width="382px" height="382px"
+            src="data:image/jpeg;base64,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"
+            class="img-fluid">
+        </div>
+        <div class="col-7">
+          <h1 class="d-flex head_text justify-content-start" style="margin-top: 7%;">What is Lorem Ipsum?</h1>
+          <p style="text-align: justify;">
+            OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of
+            hospitals
+            that provides
+            super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor
+            group.
+            <span *ngIf="showmoreactive_one">
+              It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
+            </span>
+            <button (click)="ReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
+              {{ showmoreactive_one ? 'Read Less <<' : 'Read More >>' }} </button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container pt-1 pb-5">
+      <div class="carousel" [style.transform]="getTransform()">
+        <div class="carousel-slide" *ngFor="let dep of depertments">
+          <div class="container text-center specialities-container">
+            <div class="title-container">
+              <div class="line line-left"></div>
+              <span class="title_text">KEY SURGERIES</span>
+              <div class="line line-right"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 col-sm-12 d-flex justify-content-center ">
+                <img class="" width="250px" height="250px"
+                  [src]="dep['img']"
+                  class="img-fluid border_radius">
+              </div>
+              <div class="col-md-7 col-sm-12">
+                <h1 class="d-flex head_text justify-content-start" style="margin-top: 7%;">{{dep['d_name']}}</h1>
+                <p style="text-align: justify;">
+                 {{dep['d_description']}}
+                  <span *ngIf="showmoreactive_one">
+                    It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
+                  </span>
+                  <button (click)="ReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
+                    {{ showmoreactive_one ? 'Read Less <<' : 'Read More >>' }} </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end align-items-center">
+          <img src="assets/images/farward_gray.svg" alt="">
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <img class="ms-5" src="assets/images/{{index!=0?'back_black.svg':'back_gray.svg'}}" alt="" (click)="index!=0?updateCarousel('prev'):''">
+        <img class="me-5" src="assets/images/{{index === depertments.length - 1?'farward_gray.svg':'farward_black.svg'}}" alt="" (click)="index==depertments.length-1?'':updateCarousel('next')">
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Key Surgories code end here -->
+
+
+
+</section>
+
+
+<!-- Why Choose Us Section -->
+<section class="container d-flex align-items-center">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="text_lgt_primary fw-bold">WHY CHOOSE OMNI HOSPITAL'S?</h4>
+        <p style="text-align: justify;">
+          OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals
+          that provides
+          super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor
+          group.
+          <span *ngIf="showMore">
+            It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
+          </span>
+          <button (click)="toggleReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
+            {{ showMore ? 'Read Less <<' : 'Read More >>' }} </button>
+        </p>
+
+        <!-- Counter Section -->
+        <div class="row text-center mt-4">
+          <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
+            <div class="info-box d-flex align-items-center">
+              <div class="icon-circle">
+                <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px" height="142px">
+              </div>
+              <div class="text-left ms-3">
+                <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
+                <span class="counter-label">{{ counter.label }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side Image -->
+      <div class="col-md-6">
+        <img src="assets/images/why_choose.svg" alt="Doctors Team" class="doctor-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Section Starts from here -->
+<section class="mt-5">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center" style=" overflow-y: auto;
+  overflow-x: hidden;">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link">Card link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link">Card link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link">Card link</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section *ngIf="false">
+
+  <div class="container my-4">
+    <h2 class="section-title">TESTIMONIALS</h2>
+    <div class="carousel" id="testimonialsCarousel">
+      <div class="carousel-inner" *ngFor="let testimonial of testimonials">
+        <div class="carousel-item active">
+          <div class="cards p-3">
+            <p>{{testimonial.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blogs code start from here -->
+<section *ngIf="false">
+  <div class="container my-4">
+    <h2 class="section-title">BLOGS</h2>
+    <div class="carousel" id="blogsCarousel">
+      <div class="carousel-inner" *ngFor="let blog of blogs">
+        <div class="carousel-item active">
+          <div class="cards p-3">
+            <img [src]="blog.img" class="img-fluid" alt="Blog Image">
+            <p>{{blog.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Blogs code End here -->
+
+
+<!-- FAQ Section -->
+<section class="container my-5">
+  <h2 class="text-center">FREQUENTLY ASKED QUESTIONS</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          How Many OMNI Hospitals Are There In India?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          OMNI Hospitals has 6 healthcare facilities in India.
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for other FAQs -->
+  </div>
+</section>
+
+<!-- Footer -->
+<!-- <footer class="footer_sec text-white text-center p-4">
+  <div class="container">
+    <h4>OMNI Hospitals</h4>
+    <p>© 2025 Incor Hospitals Pvt Ltd</p>
+  </div>
+</footer> -->
+
+<app-footer></app-footer>
+
+
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+          <div class="row pt-4">
+            <div class="col-md-11 col-11 col-sm-10 col-xs-10 d-flex align-items-center justify-content-center">
+              <div class="line line-left ms-5"></div>
+              <div class="">
+                <span class="title_text text-center px-2">Our Locations</span>
+              </div>
+              <div class="line line-right"></div>
+            </div>              
+            <div class="col-md-1 col-1 d-flex col-sm-2 col-xs-2 align-items-center justify-content-start p-0 m-0">
+              <button class="" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body">
+              <div class="container">
+                  <div class="row g-3">
+                      <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
+                          <div class="text-center">
+                              <img src="assets/locations/{{details['img']}}" alt="Kothapet">
+                              <p class="border_prop py-2">{{details['location_name']}}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+<div class="modal fade custom-modal" id="appointmentModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-container">
+              <div class="line line-left"></div>
+              <span class="">BOOK AN APPOINTMENT</span>
+              <div class="line line-right"></div>
+          </div>
+          <button type="button" class="btn-close btn_close" data-bs-dismiss="modal"></button>
+      </div>
+      
+          
+          <div class="form-container rounded">
+              <form>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="fullName" placeholder=" " required>
+                      <label for="fullName" class="ps-0">Full Name</label>
+                  </div>
+                  
+                  <div class="form-floating mb-3">
+                      <input type="tel" class="form-control" id="phoneNumber" placeholder=" " required>
+                      <label for="phoneNumber" class="ps-0">Phone Number</label>
+                  </div>
+                  
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="email" placeholder=" " required>
+                      <label for="email" class="ps-0">Email ID</label>
+                  </div>
+                  
+                  <div class="mb-3 select-container">
+                      <select class="form-control ps-0" id="location" (click)="locationToggle(1)">
+                          <option value="" disabled selected>Location</option>
+                          <option value="Hyderabad">Hyderabad</option>
+                          <option value="Bangalore">Bangalore</option>
+                          <option value="Mumbai">Mumbai</option>
+                      </select>
+                      <img src="assets/images/{{direction_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon" id="location-icon">
+                  </div>
+                  
+                  <div class="mb-3 select-container">
+                      <select class="form-control ps-0" id="department" (click)="locationToggle(2)">
+                          <option value="" disabled selected>Department</option>
+                          <option value="Cardiology">Cardiology</option>
+                          <option value="Neurology">Neurology</option>
+                          <option value="Orthopedics">Orthopedics</option>
+                      </select>
+                      <img src="assets/images/{{depertment_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon" id="location-icon">
+                  </div>
+              </form>
+          </div>
+          <button type="submit" class="btn btn-outline-dark submit-btn">Submit</button>
+      </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- <router-outlet></router-outlet> -->
+<!-- <router-outlet></router-outlet> -->

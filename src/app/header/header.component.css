@@ -1,0 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_black {
+    color: #000000 !important;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text_black:hover {
+    color: white !important;
+    font-weight: Medium;
+    background-color: #008FD5;
+    text-decoration: none;
+}

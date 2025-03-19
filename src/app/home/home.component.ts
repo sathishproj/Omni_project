@@ -186,7 +186,6 @@ export class HomeComponent {
 
 
   ourDoctorsDetails() {
-    console.log('our doctor details calling..');
     this.router.navigate(['/our-doctors']).then(success => {
       if (success) {
         console.log('Navigation to OurDoctorsComponent successful');
@@ -205,6 +204,17 @@ export class HomeComponent {
    }
    depertmentToggle(){
 
+   }
+
+
+   openSecondOpinion(){
+    this.router.navigate(['/second-opinion']).then(success => {
+      if (success) {
+        console.log('Navigation to OurDoctorsComponent successful');
+      } else {
+        console.log('Navigation failed');
+      }
+    }).catch(error => console.error('Navigation error:', error));
    }
 
 }

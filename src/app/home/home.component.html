@@ -72,7 +72,7 @@
         <img src="assets/images/calender_gray.svg" alt="" class="pt-4">
         <h6 class="mt-3">Book an Appointment</h6>
       </div>
-      <div class="col-md-2 col-12 col-sm-12 border rounded width_height">
+      <div class="col-md-2 col-12 col-sm-12 border rounded width_height" (click)="openSecondOpinion()">
         <img src="assets/images/second_opeanion_gray.svg" alt="" class="pt-4">
         <h6 class="mt-3">Free Second
           Opinion </h6>
@@ -225,7 +225,7 @@
         <!-- Counter Section -->
         <div class="row text-center mt-4">
           <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
-            <div class="info-box d-flex align-items-center">
+            <div class="info-box d-flex align-items-center justify-content-center">
               <div class="icon-circle">
                 <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px" height="142px">
               </div>
@@ -394,7 +394,7 @@
         <div class="modal-header">
           <div class="modal-title-container">
               <div class="line line-left"></div>
-              <span class="">BOOK AN APPOINTMENT</span>
+              <span class="px-2 book_text">BOOK AN APPOINTMENT</span>
               <div class="line line-right"></div>
           </div>
           <button type="button" class="btn-close btn_close" data-bs-dismiss="modal"></button>

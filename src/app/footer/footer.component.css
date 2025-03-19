@@ -1,15 +1,12 @@
-.contact-section {
-    background: #e0f3ff;
-    padding: 40px 0;
+.footer_bg{
+    background:#8781811a;
+    background-color: #a69d9d1a;
 }
-.footer {
-    background: #76b82a;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
+.sec_footer_bg{
+    background-color: rgba(140, 198, 63, 1);
+    background: rgba(140, 198, 63, 1);
+    color: rgba(0, 0, 0, 1) !important;
 }
-.footer a {
-    color: black;
-    text-decoration: none;
-    margin: 0 10px;
+.text_prm{
+    color: rgba(15, 157, 204, 1);
 }

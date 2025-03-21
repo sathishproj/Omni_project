@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'our-doctors', component: OurDoctorsComponent },
   { path: 'second-opinion', component: SecondOpinionComponent },
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'our-vision-mission', component: OurVisionMissionComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

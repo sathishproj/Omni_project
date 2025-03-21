@@ -1,0 +1,244 @@
+<!-- 
+  Use a standard .container to match header alignment 
+  or .container-fluid if your header is full-width. 
+-->
+<div class="container py-4">
+  <div class="row">
+    <!-- ========== LEFT SIDE NAVIGATION ========== -->
+    <!-- Adjust columns: col-sm-12 for mobile, col-md-3 or col-lg-2 for smaller sidebar -->
+    <div class="col-sm-12 col-md-3 col-lg-2 mb-4">
+      <div class="side-nav p-0">
+        <ul class="nav flex-column">
+          <li class="nav-item" *ngFor="let section of sections">
+            <a
+              class="nav-link"
+              [ngClass]="{'active-link': activeSection === section.id}"
+              (click)="setActiveSection(section.id)"
+            >
+              {{ section.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========== RIGHT CONTENT AREA ========== -->
+    <div class="col-sm-12 col-md-9 col-lg-10">
+      <!-- =========================
+           VISION & MISSION (Default)
+           ========================= -->
+      <div *ngIf="activeSection === 'visionMission'">
+        <!-- OUR VISION -->
+        <div class="section-container mb-4">
+          <h2 class="section-title">OUR VISION</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/vision.jpg"
+                class="img-fluid"
+                alt="Vision Image"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem ipsum has been the industry's standard dummy text...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- OUR MISSION -->
+        <div class="section-container">
+          <h2 class="section-title">OUR MISSION</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/mission.jpg"
+                class="img-fluid"
+                alt="Mission Image"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           ABOUT OMNI HOSPITALS
+           ========================= -->
+      <div *ngIf="activeSection === 'aboutOmni'">
+        <div class="section-container">
+          <h2 class="section-title">ABOUT OMNI HOSPITALS</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/about-omni.jpg"
+                class="img-fluid"
+                alt="About OMNI"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           BOARD MEMBERS
+           ========================= -->
+      <div *ngIf="activeSection === 'boardMembers'">
+        <div class="section-container">
+          <h2 class="section-title">BOARD MEMBERS</h2>
+          <div class="row">
+            <div
+              class="col-12 col-sm-6 col-md-4 mb-4"
+              *ngFor="let member of boardMembers"
+            >
+              <div class="card h-100 text-center">
+                <img
+                  [src]="member.image"
+                  class="card-img-top"
+                  alt="Board Member"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">{{ member.name }}</h5>
+                  <p class="card-text">Medical Director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           OUR CHAIRMAN
+           ========================= -->
+      <div *ngIf="activeSection === 'ourChairman'">
+        <div class="section-container">
+          <h2 class="section-title">OUR CHAIRMAN</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/chairman.jpg"
+                class="img-fluid"
+                alt="Chairman"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           LEADERSHIP TEAM
+           ========================= -->
+      <div *ngIf="activeSection === 'leadershipTeam'">
+        <div class="section-container">
+          <h2 class="section-title">LEADERSHIP TEAM</h2>
+
+          <!-- Example of alternating image & text columns -->
+          <div
+            class="row align-items-center mb-4"
+            *ngFor="let leader of leadershipTeam; let i = index"
+          >
+            <!-- If i is odd, reverse the columns for an alternating layout -->
+            <div
+              class="col-12 col-md-3 text-center mb-3 mb-md-0"
+              [ngClass]="{'order-md-last': i % 2 !== 0}"
+            >
+              <img [src]="leader.image" class="img-fluid" alt="Leader" />
+            </div>
+            <div
+              class="col-12 col-md-9"
+              [ngClass]="{'order-md-first': i % 2 !== 0}"
+            >
+              <h5>
+                {{ leader.name }}
+                <small>({{ leader.title }})</small>
+              </h5>
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           ABOUT INCOR
+           ========================= -->
+      <div *ngIf="activeSection === 'aboutIncor'">
+        <div class="section-container">
+          <h2 class="section-title">ABOUT INCOR HOSPITALS</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/incor.jpg"
+                class="img-fluid"
+                alt="INCOR Hospitals"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           BEYOND BUSINESS
+           ========================= -->
+      <div *ngIf="activeSection === 'beyondBusiness'">
+        <div class="section-container">
+          <h2 class="section-title">BEYOND BUSINESS</h2>
+          <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+              <img
+                src="assets/beyond.jpg"
+                class="img-fluid"
+                alt="Beyond Business"
+              />
+            </div>
+            <!-- Text -->
+            <div class="col-12 col-md-9">
+              <p class="section-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

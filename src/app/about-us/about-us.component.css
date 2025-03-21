@@ -1,0 +1,80 @@
+/* Light blue background for the page (if needed) */
+body {
+  background-color: #f5fbff;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Example font */
+}
+
+/* Side Navigation */
+.side-nav {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Nav Links */
+.side-nav .nav-link {
+  color: #333;
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  /* Light bottom border for each link except last */
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+}
+.side-nav .nav-link:last-child {
+  border-bottom: none;
+}
+
+/* Active Link with a thicker bottom border and bold color */
+.side-nav .nav-link.active-link {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  background-color: #f9f9f9;
+}
+
+/* Section Container */
+.section-container {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Section Text */
+.section-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Board Member Cards */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}

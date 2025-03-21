@@ -1,71 +1,73 @@
 <app-header></app-header>
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-            <div class="head_text">
-                <h3 class="opinion_head">What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum</p>
-            </div>
-            <div class="text-center my-4 counter_bg py-3">
-                <div class="row">
-                    <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
-                      <div class="info-box d-flex align-items-center justify-content-center" [ngClass]="counter['id']==1?'par_counter':''">
-                        <div class="icon-circle">
-                          <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px" height="142px">
-                        </div>
-                        <div class="text-left ms-3">
-                          <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
-                          <span class="counter-label">{{ counter.label }}</span>
-                        </div>
-                      </div>
-                    </div>
+<section class="bg-white">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                <div class="head_text">
+                    <h3 class="opinion_head">What is Lorem Ipsum?</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum</p>
                 </div>
-              </div>
-        </div>
-        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
-            <div class="d-flex align-items-center justify-content-center">
-                <div class="line line-left"></div>
-                <h3 class="free_sec text-center px-2">Free Second Opinion</h3>
-                <div class="line line-right"></div>
+                <div class="text-center mt-4 counter_bg py-3">
+                    <div class="row">
+                        <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
+                          <div class="info-box d-flex align-items-center justify-content-center" [ngClass]="counter['id']==1?'par_counter':''">
+                            <div class="icon-circle">
+                              <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px" height="142px">
+                            </div>
+                            <div class="text-left ms-3">
+                              <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
+                              <span class="counter-label">{{ counter.label }}</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
             </div>
-            <div class="ms-3">
-                <form class="form-container">
-                    <div class="mb-3">
-                        <input type="text" class="form-control p-0" placeholder="Full Name">
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="line line-left"></div>
+                    <h3 class="free_sec text-center px-2">Free Second Opinion</h3>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="ms-3">
+                    <form class="form-container">
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-0" placeholder="Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-0" placeholder="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-0" placeholder="Email ID">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control p-0">
+                                <option selected disabled>Location</option>
+                                <option>Kukkatpally</option>
+                                <option>Kothapet</option>
+                                <option>Vizag</option>
+                                <option>Kurnool</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control p-0">
+                                <option selected disabled>Department</option>
+                                <option>Cardio</option>
+                                <option>Nephro</option>
+                                <img src="assets/images/up_icon.svg" alt="">
+                            </select>
+                        </div>
+                    </form>
+                    <div class="text-center mb-4 d-flex align-items-center justify-content-center">
+                        <button type="submit" class="btn btn-submit">Submit</button>
                     </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control p-0" placeholder="Phone Number">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control p-0" placeholder="Email ID">
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-control p-0">
-                            <option selected disabled>Location</option>
-                            <option>Kukkatpally</option>
-                            <option>Kothapet</option>
-                            <option>Vizag</option>
-                            <option>Kurnool</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-control p-0">
-                            <option selected disabled>Department</option>
-                            <option>Cardio</option>
-                            <option>Nephro</option>
-                            <img src="assets/images/up_icon.svg" alt="">
-                        </select>
-                    </div>
-                </form>
-                <div class="text-center d-flex align-items-center justify-content-center">
-                    <button type="submit" class="btn btn-submit">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<app-footer></app-footer>

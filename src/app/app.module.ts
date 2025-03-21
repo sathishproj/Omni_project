@@ -9,6 +9,8 @@ import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
+import { OurVisionMissionComponent } from './our-vision-mission/our-vision-mission.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SecondOpinionComponent } from './second-opinion/second-opinion.componen
     OurDoctorsComponent,
     HomeComponent,
     FooterComponent,
-    SecondOpinionComponent
+    SecondOpinionComponent,
+    OurVisionMissionComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

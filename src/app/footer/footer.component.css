@@ -10,3 +10,11 @@
 .text_prm{
     color: rgba(15, 157, 204, 1);
 }
+ul li{
+    color: rgba(0, 0, 0, 1);
+    font-family: 'roboto';
+    font-weight: 500;
+}
+ul li a{
+    text-decoration: none;
+}

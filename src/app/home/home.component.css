@@ -71,13 +71,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.card:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
 
-.carousel-item {
-    transition: transform 1s ease-in-out;
-}
 
 .location_section h6:hover {
     color: #008FD5;
@@ -578,3 +572,228 @@ h6 {
 .padding_top{
     padding-top: 0px !important;
 }
+.testimonial-card {
+    flex: 0 0 33.33%;
+    padding: 10px;
+  }
+  
+  .card {
+    height: 100%;
+    border-radius: 15px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background: blue;
+  }
+  
+/* 
+  .testimonial-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.testimonial-title span {
+    color: #ff9b00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.testimonial-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel .testimonial-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.client-info h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.client-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.testimonial-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonial-carousel .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #ddd !important;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: #ff9b00 !important;
+    transform: scale(1.2);
+} */
+/* Ensure all cards have the same height */
+.testimonial-item {
+    padding: 20px 15px;
+    max-width: 500px;
+    /* background: white; */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .testimonial-item:hover {
+    /* transform: scale(1.02); */
+  }
+  
+  /* Pagination Dots */
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #007bff !important; /* Fixed active color */
+  }
+  /* News & Media Section */
+.news-title {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .news-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Pagination Dots */
+  .news-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .news-dot.active {
+    background-color: #007bff !important; /* Active dot color */
+  }
+  /* Blogs Section */
+.blog-item {
+    /* width: 520px !important; */
+    height: 295px !important;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .blog-image {
+    /* width: 520px !important; */
+    height: 180px !important;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 10px 15px;
+    background: #fff;
+    height: calc(289px - 180px); /* Remaining height for content */
+  }
+  
+  .blog-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .blog-text {
+    font-size: 12px;
+    color: #828282;
+    margin-bottom: 5px;
+  }
+  
+  .blog-date {
+    font-size: 10px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .blog-read-more {
+    font-size: 12px;
+    /* font-weight: bold; */
+    /* color: #007bff; */
+    text-decoration: none;
+  }
+  
+  .blog-read-more:hover {
+    color: #0056b3;
+  }
+  
+  /* Pagination Dots */
+  .blog-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .blog-dot.active {
+    background-color: #007bff !important; /* Active dot color */
+  }
+  

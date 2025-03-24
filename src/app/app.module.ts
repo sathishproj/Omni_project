@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
 import { OurVisionMissionComponent } from './our-vision-mission/our-vision-mission.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -26,7 +28,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CarouselModule,
+    // BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="container my-5">
+    <!-- Header Section -->
+     <div class="package_box ms-2">
+         <div class="head_bg">
+           <div class="row align-items-center p-4 rounded-top rounded-bottom">
+             <div class="col-md-8 col-8 col-sm-8">
+               <h2 class="text-white head_text">Whole Body Check-Up</h2>
+               <p class="text-white area_des_txt">
+                 Schedule A Full Body Health Checkup At OMNI Hospitals, Kukatpally In Hyderabad<br> Today And Get Your Health And Well-Being Monitored.
+               </p>
+               <h4 class="text-white">
+                <span class="text-white pt-2 del_txt">₹7666/-</span> 
+                <span class="discount_price mt-2 ms-1">₹1999/-</span>
+                <span class="badge percentage_btn text-white ms-3">65% Off</span>
+            </h4>
+               <button class="btn book_an_appointment mt-2">Book an Appointment</button>
+             </div>
+             <div class="col-md-4 text-end col-4 col-sm-4">
+               <img src="assets/health_checkup/packages.svg" alt="Health Icon" class="img-fluid" width="180px" height="180px">
+             </div>
+           </div>
+         </div>
+       
+         <!-- Package Details Section -->
+         <div class=" p-4 pb-0">
+           <div class="d-flex justify-content-center align-items-center">
+            <div class="line line-left"></div>
+            <span class="mx-2 package_text">Package Detail’s</span>
+              <div class="line line-right"></div>
+           </div>
+       
+           <div class="row my-3 ">
+            <div class="col-md-2">
+            </div>
+             <div class="col-md-4 col-sm-12 d-flex justify-content-around">
+               <ul class="package-list">
+                 <li *ngFor="let item of packageDetails.slice(0, packageDetails.length / 2)">
+                   {{ item.name }}
+                 </li>
+               </ul>
+             </div>
+             <div class="col-md-4 w_dth col-sm-12 d-flex justify-content-around">
+               <ul class="package-list">
+                 <li *ngFor="let item of packageDetails.slice(packageDetails.length / 2)">
+                   {{ item.name }}
+                 </li>
+               </ul>
+             </div>
+             <div class="col-md-2">
+             </div>
+           </div>
+         </div>
+     </div>
+  </div>
+  <app-footer></app-footer>

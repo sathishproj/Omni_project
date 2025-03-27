@@ -1,0 +1,200 @@
+.head_bg {
+    background-color: #008FD5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.package_box {
+    border: 2px solid #008FD5;
+    border-radius: 10px;
+}
+
+:host {
+    background-color: white;
+    display: block;
+}
+
+.head_text {
+    font-weight: 900;
+    font-size: 35px;
+    font-family: 'roboto';
+}
+
+.area_des_txt {
+    font-size: 15px;
+    font-family: 'roboto';
+    font-weight: 300;
+}
+
+.del_txt {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 15px;
+    font-family: 'roboto';
+}
+
+.book_an_appointment {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'roboto';
+}
+
+.book_an_appointment:hover {
+    border: 2px solid #FFFFFF;
+    background-color: white;
+    color: #008FD5;
+}
+
+.del_txt::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    /* Line color */
+}
+
+.percentage_btn {
+    background-color: #8CC63F;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'roboto';
+}
+
+.discount_price {
+    font-weight: 700;
+    font-family: 'roboto';
+    font-size: 25px;
+}
+
+ul li {
+    color: #00699C;
+    font-weight: 400;
+    font-family: 'roboto';
+    /* font-size: 20px; */
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+}
+
+.line-left {
+    background-color: #8CC63F;
+}
+
+.line-right {
+    background: #008FD5;
+}
+
+.package_text {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'roboto';
+    text-transform: uppercase;
+}
+.w_dth{
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+
+    .head_text,
+    .package_text {
+        font-size: 20px;
+    }
+
+    .discount_price {
+        font-size: 16px;
+    }
+
+    .area_des_txt,
+    .percentage_btn,
+    .btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .head_text,
+    .package_text {
+        font-size: 16px;
+    }
+
+    .discount_price {
+        font-size: 13px;
+    }
+
+    .area_des_txt,
+    .del_txt,
+    .percentage_btn,
+    .btn {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .discount_price {
+        font-size: 20px;
+    }
+
+    .package_text {
+        font-size: 16px;
+    }
+
+    .area_des_txt,
+    .percentage_btn,
+    .del_txt {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .discount_price {
+        font-size: 16px;
+    }
+
+    .area_des_txt,
+    .percentage_btn,
+    .del_txt {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .head_text {
+        font-size: 15px;
+    }
+
+    .area_des_txt,
+    .percentage_btn,
+    .del_txt,
+    .btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 912px) {
+
+    .head_text {
+        font-size: 15px;
+    }
+
+    .area_des_txt,
+    .percentage_btn,
+    .del_txt,
+    .btn {
+        font-size: 12px;
+    }
+}

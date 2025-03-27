@@ -1,5 +1,5 @@
-import { Component, ViewChild, ElementRef  } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ViewChild, ElementRef, Renderer2  } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 declare var $: any; // Ensure jQuery is available
 
 
@@ -164,10 +164,18 @@ export class HomeComponent {
     }
   ]
   index = 0;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private renderer: Renderer2) { }
 
   ngOnInit(): void {
-
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/home') {
+          this.renderer.setStyle(document.body, 'background-color', 'rgb(234, 232, 232)');
+        } else {
+          this.renderer.setStyle(document.body, 'background-color', 'white'); // Reset for other routes
+        }
+      }
+    });
   }
   ngAfterViewInit(): void {
     this.observeCounters();
@@ -313,15 +321,21 @@ export class HomeComponent {
       this.depertment_icon = !this.depertment_icon
     }
   }
-  depertmentToggle() {
-
+  healthCheckup() {
+    this.router.navigate(['/health-checkup']).then(success => {
+      if (success) {
+        console.log('Navigation to Health Checkup successful');
+      } else {
+        console.log('Navigation failed');
+      }
+    }).catch(error => console.error('Navigation error:', error));
   }
 
 
   openSecondOpinion() {
     this.router.navigate(['/second-opinion']).then(success => {
       if (success) {
-        console.log('Navigation to OurDoctorsComponent successful');
+        console.log('Navigation to Second Opinion successful');
       } else {
         console.log('Navigation failed');
       }

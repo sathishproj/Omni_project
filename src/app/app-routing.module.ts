@@ -4,6 +4,8 @@ import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { HomeComponent } from './home/home.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
+import { PackageDetailsComponent } from './package-details/package-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'our-doctors', component: OurDoctorsComponent },
   { path: 'second-opinion', component: SecondOpinionComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'health-checkup', component: HealthCheckupComponent },
+  { path: 'package-details', component: PackageDetailsComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

@@ -1,0 +1,141 @@
+.container {
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #008FD5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card_bg{
+    border: none;
+    background: #008FD5;
+    color: white;
+    font-family: 'roboto';
+    font-weight: 900;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.new-price {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.discount {
+    background: #8CC63F;
+    color: white;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkup-image {
+    width: 50px;
+    height: 50px;
+}
+
+
+.btn {
+    font-size: 18px;
+}
+
+.view_button {
+    margin: 5px;
+    border: 1px solid #8CC63F;
+    border-radius: 10px;
+    color: #8CC63F;
+    font-size: 15px;
+}
+.view_button:hover{
+    margin: 5px;
+    background-color: #8CC63F;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .card-header,
+    .old-price,
+    .new-price,
+    .discount,
+    .view_button,
+    .btn {
+        font-size: 12px;
+    }
+}
+.dep_text{
+    font-family: 'roboto';
+    font-weight: 900;
+    font-size: 18px;
+}
+@media (max-width: 480px) {
+
+    .card-header,
+    .old-price,
+    .new-price,
+    .view_button,
+    .view_button:hover,
+    .discount,
+    .btn {
+        font-size: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .dep_text{
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .dep_text{
+        font-size: 12px;
+    }
+}
+@media (max-width: 1024px) {
+    .dep_text{
+        font-size: 14px;
+    }
+    .card-header,
+    .old-price,
+    .new-price,
+    .view_button,
+    .discount,
+    .view_button:hover,
+    .btn {
+        font-size: 10px;
+    }
+    .discount{
+        width: 50px;
+        text-align: center;
+    }
+}
+@media (max-width: 912px) {
+    .dep_text{
+        font-size: 10px;
+    }
+    .card-header,
+    .old-price,
+    .new-price,
+    .view_button,
+    .discount,
+    .view_button:hover,
+    .btn {
+        font-size: 6px;
+    }
+    .discount{
+        width: 40px;
+        text-align: center;
+    }
+}

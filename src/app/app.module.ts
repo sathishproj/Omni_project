@@ -9,9 +9,10 @@ import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
-import { OurVisionMissionComponent } from './our-vision-mission/our-vision-mission.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
+import { PackageDetailsComponent } from './package-details/package-details.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -22,8 +23,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeComponent,
     FooterComponent,
     SecondOpinionComponent,
-    OurVisionMissionComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    HealthCheckupComponent,
+    PackageDetailsComponent
   ],
   imports: [
     BrowserModule,

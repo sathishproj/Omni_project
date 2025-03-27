@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "name": "Whole Body Check-Up",
+    "original_price": "₹20605/-",
+    "discounted_price": "₹6000/-",
+    "tests": [
+      "Complete Blood Picture with ESR",
+      "Blood Grouping & RH Typing",
+      "Fasting Blood Sugar (FBS)",
+      "Post Lunch Blood Sugar (PLBS)",
+      "Serum Urea, Serum Creatinine",
+      "Serum Calcium, Serum Uric Acid",
+      "Lipid Profile, Liver Function Test (LFT)",
+      "Thyroid Stimulating Hormone (TSH)",
+      "Prostate Specific Antigen (PSA) for Male",
+      "HBSAG, HIV, HCV, Pap Smear (for Female)",
+      "X-ray Chest PE",
+      "Ultrasound Scan Whole Abdomen",
+      "CT Scan Brain (Plain)",
+      "Complete Urine Examination (CUE)",
+      "Stool Routine Analysis",
+      "ECG",
+      "2D ECHO",
+      "Treadmill Test (Stress test)",
+      "Pulmonary Function Test (PFT)",
+      "Clinical Examination",
+      "Consultation by Gen. Physician",
+      "Cardiology Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Executive Health Check-Up",
+    "original_price": "₹14385/-",
+    "discounted_price": "₹3999/-",
+    "tests": [
+      "Complete Blood Picture with ESR",
+      "Blood Grouping & RH Typing",
+      "Fasting Blood Sugar (FBS)",
+      "Post Lunch Blood Sugar (PLBS)",
+      "Serum Urea, Serum Creatinine",
+      "Serum Calcium",
+      "Serum Uric Acid",
+      "Lipid Profile",
+      "Liver Function Test (LFT)",
+      "Thyroid Stimulating Hormone (TSH)",
+      "Complete Urine Examination (CUE)",
+      "Stool Routine Analysis",
+      "HIV, HBSAG, X-Ray Chest PA",
+      "Ultrasound Scan Whole Abdomen",
+      "ECG, 2D ECHO, Treadmill Test (STRESS TEST)",
+      "Pulmonary Function Test (PFT)",
+      "Clinical Examination",
+      "Consultation by General Physician",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Giggles Well Women Check-Up",
+    "original_price": "₹7755/-",
+    "discounted_price": "₹2999/-",
+    "tests": [
+      "Complete Blood Picture",
+      "Random Blood Sugar",
+      "Serum Creatinine",
+      "Thyroid Stimulating Hormone (TSH)",
+      "Complete Urine Examination (CUE)",
+      "Pap Smear",
+      "Ultrasound Scan Pelvis",
+      "Clinical Examination",
+      "Mammography",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lung Pulmonary Check-Up",
+    "original_price": "₹4950/-",
+    "discounted_price": "₹1800/-",
+    "tests": [
+      "Complete Blood Picture",
+      "Serum Creatinine",
+      "Sputum Culture & Sensitivity",
+      "X-ray Chest PA",
+      "Pulmonary Function Test (PFT)",
+      "Sputum AFB, Serum Electrolytes",
+      "Clinical Examination",
+      "Pulmonologist Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Kidney Check-Up",
+    "original_price": "₹3190/-",
+    "discounted_price": "₹2500/-",
+    "tests": [
+      "Complete Blood Picture",
+      "Random Blood Sugar",
+      "Serum Urea",
+      "Serum Creatinine",
+      "Serum Electrolytes",
+      "Serum Uric Acid",
+      "Serum Calcium",
+      "Urine for Microalbumin",
+      "Urine Spot Protein & Creatinine Ratio",
+      "Ultrasound Scan Whole Abdomen",
+      "Clinical Examination",
+      "Nephrologist Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Diabetic Health Check-Up",
+    "original_price": "₹2945/-",
+    "discounted_price": "₹999/-",
+    "tests": [
+      "Fasting Blood Sugar (FBS)",
+      "Post Lunch Blood Sugar (PLBS)",
+      "Serum Creatinine",
+      "Haemoglobin (HB%)",
+      "Glycosylated Haemoglobin (HBA1C)",
+      "Complete Urine Examination (CUE)",
+      "Clinical Examination",
+      "Diabetologist Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Gastro Check-Up",
+    "original_price": "₹3315/-",
+    "discounted_price": "₹2500/-",
+    "tests": [
+      "Complete Blood Picture",
+      "Liver Function Test (LFT)",
+      "Random Blood Sugar",
+      "Ultrasound Scan Whole Abdomen",
+      "Endoscopy",
+      "Medical Gastro Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Liver Check-Up",
+    "original_price": "₹7500/-",
+    "discounted_price": "₹2500/-",
+    "tests": [
+      "HCV, HBSAG",
+      "Anti HBC (TOTAL)",
+      "Liver Function Test (LFT)",
+      "Prothrombin Time (PT)",
+      "Ultrasound Scan Whole Abdomen",
+      "Clinical Examination",
+      "Medical Gastro Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Urology Check-Up",
+    "original_price": "₹4955/-",
+    "discounted_price": "₹1800/-",
+    "tests": [
+      "Random Blood Sugar",
+      "Complete Urine Examination (CUE)",
+      "CBP",
+      "Prostate Specific Antigen (PSA)",
+      "Haemoglobin (HB%)",
+      "Clinical Examination",
+      "Prostatist Consultation",
+      "Dietician Consultation"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Giggles Paediatric Health Check-Up",
+    "original_price": "₹2600/-",
+    "discounted_price": "₹1200/-",
+    "tests": [
+      "Growth Assessment & Paediatric Consultation",
+      "Psychological Assessment & Counselling",
+      "CBP",
+      "TSH",
+      "Blood Group",
+      "Dental Checkup",
+      "CUE",
+      "Dietician Consultation"
+    ]
+  }
+]

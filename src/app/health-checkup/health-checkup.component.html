@@ -1,27 +1,76 @@
 <app-header></app-header>
 <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 col-12" *ngFor="let checkup of checkups">
-        <div class="card">
-            <div class="row card_bg">
-              <div class="col-8">
-                <h5 class="ms-4 mt-2 dep_text">{{ checkup.title }}</h5>
-                <div class='d-flex align-items-center justify-content-start ms-4'>
-                    <span class="old-price" style="font-weight: 300 !important;">₹{{ checkup.oldPrice }}/-</span>
-                    <span class="new-price text-white ms-2">₹{{ checkup.newPrice }}/-</span>
-                </div>
-                <p class="discount ms-4">{{ getDiscount(checkup.oldPrice, checkup.newPrice) }}</p>                
-              </div>
-              <div class="col-4 d-flex align-items-center justify-content-center">
-                <img [src]="checkup.image" class="checkup-image" alt="checkup">
-              </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-12" *ngFor="let checkup of checkups; index as i">
+      <div class="card">
+        <div class="row card_bg">
+          <div class="col-8">
+            <h5 class="ms-4 mt-2 dep_text">{{ checkup['title'] | titlecase }}</h5>
+            <div class='d-flex align-items-center justify-content-start ms-4'>
+              <span class="old-price" style="font-weight: 300 !important;">₹{{ checkup['oldPrice'] }}/-</span>
+              <span class="new-price text-white ms-2">₹{{ checkup['newPrice'] }}/-</span>
             </div>
-            <div class="card-body">
-              <button class="btn view_button ms-3" (click)="viewPackageDetails()">View Details</button>
-              <button class="btn view_button">Book an Appointment</button>
+            <p class="discount ms-4">{{ getDiscount(checkup['oldPrice'], checkup['newPrice']) }}</p>
           </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <img [src]="checkup.image" class="checkup-image" alt="checkup">
+          </div>
+        </div>
+        <div class="card-body">
+          <button class="btn view_button ms-3 w_dth px-0" (click)="viewPackageDetails(checkup['id'])">View
+            Details</button>
+          <button class="btn view_button w_dth px-0" (click)="bookAppointment(checkup['id'], checkup['title'])">Book an
+            Appointment</button>
         </div>
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
+  <!-- Bootstrap Modal -->
+  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center">Book an Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()">
+            <div class="mb-3">
+              <label class="form-label">Package Type</label>
+              <input type="text" class="form-control" formControlName="packageType" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="name">
+              <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched"
+                class="text-danger">
+                Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" formControlName="email">
+              <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
+                class="text-danger">
+                Enter a valid email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mobile Number</label>
+              <input type="text" class="form-control" formControlName="mobile">
+              <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched"
+                class="text-danger">
+                Enter a valid 10-digit mobile number.
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-success w-50" [disabled]="appointmentForm.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

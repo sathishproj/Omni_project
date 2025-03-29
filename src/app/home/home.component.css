@@ -274,6 +274,11 @@ h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: gray; /* Default text color */
+    cursor: pointer; /* Add cursor pointer for better UX */
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
 }
 
 .gray-icon {
@@ -284,12 +289,6 @@ h6 {
     display: none;
 }
 
-.img_div_hover:hover {
-
-    color: #007bff;
-
-}
-
 /* On hover, swap the images */
 .image_hover:hover .gray-icon {
     display: none;
@@ -297,6 +296,16 @@ h6 {
 
 .image_hover:hover .blue-icon {
     display: block;
+}
+
+/* Change text color to blue on hover */
+.image_hover:hover h6 {
+    color: #008FD5;
+}
+
+/* Add shadow effect on hover */
+.image_hover:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .footer_sec {
@@ -596,77 +605,6 @@ h6 {
     background: blue;
   }
   
-/* 
-  .testimonial-section {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.testimonial-title span {
-    color: #ff9b00;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.testimonial-title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.testimonial-carousel .testimonial-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-}
-
-
-.client-info {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.client-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.client-info h4 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.client-info p {
-    font-size: 14px;
-    color: #666;
-}
-
-.testimonial-carousel .owl-dots {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.testimonial-carousel .owl-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    background: #ddd !important;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.testimonial-carousel .owl-dot.active {
-    background: #ff9b00 !important;
-    transform: scale(1.2);
-} */
 /* Ensure all cards have the same height */
 .testimonial-item {
     padding: 20px 15px;
@@ -677,9 +615,28 @@ h6 {
     transition: transform 0.3s ease-in-out;
   }
   
-  .testimonial-item:hover {
-    /* transform: scale(1.02); */
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
   }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(1);
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
   
   /* Pagination Dots */
   .dot {
@@ -796,4 +753,46 @@ h6 {
   .blog-dot.active {
     background-color: #007bff !important; /* Active dot color */
   }
+
   
+.tech-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-carousel .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        /* .tech-carousel .carousel-item {
+            flex: 0 0 33.33%;
+            display: flex;
+            justify-content: center;
+        } */
+        .tech-card {
+            width: 18rem;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background: white;
+        }
+        .tech-card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .tech-card-body {
+            padding: 15px;
+            text-align: center;
+        }
+        @media (max-width: 992px) {
+            .tech-carousel .carousel-item {
+                flex: 0 0 50%;
+            }
+        }
+        @media (max-width: 768px) {
+            .tech-carousel .carousel-item {
+                flex: 0 0 100%;
+            }
+        }

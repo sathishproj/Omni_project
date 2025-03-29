@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2  } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener  } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 declare var $: any; // Ensure jQuery is available
 
@@ -13,7 +13,7 @@ export class HomeComponent {
   @ViewChild('owlCarousel', { static: false }) owlCarousel!: ElementRef;
   @ViewChild('newsMediaCarousel', { static: false }) newsMediaCarousel!: ElementRef;
   @ViewChild('blogCarousel', { static: false }) blogCarousel!: ElementRef;
-
+  activeCard = 0;
   title = 'Omni_project';
   activeIndex = 0;
   direction_icon: boolean = false;
@@ -24,8 +24,11 @@ export class HomeComponent {
   currentIndex = 0;
   currentNewsIndex = 0;
   currentBlogIndex = 0;
-  // owl = $(this.owlCarousel.nativeElement);
-
+  currentTechnologyIndex: number = 0;
+  totalItems: number = 0;
+  prevBtn!: HTMLElement | null;
+  nextBtn!: HTMLElement | null;
+  carousel!: HTMLElement | null;
   specialities = [
     {
       id: 1, spe_name: 'Our Specialities'
@@ -163,6 +166,41 @@ export class HomeComponent {
       id: 6, location_name: 'Kurnool', img: 'kurnool_location.png'
     }
   ]
+
+  images = [
+    { src: 'assets/owl1.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl2.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl3.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
+  ];
+
+  slides = [
+    {
+      img: 'assets/mri1.jpg',
+      title: 'MRI',
+      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
+    },
+    {
+      img: 'assets/mri2.jpg',
+      title: 'MRI',
+      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
+    },
+    {
+      img: 'assets/mri3.jpg',
+      title: 'MRI',
+      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
+    },
+    {
+      img: 'assets/mri4.jpg',
+      title: 'MRI',
+      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
+    },
+  ];
+
   index = 0;
   constructor(private router: Router, private renderer: Renderer2) { }
 
@@ -244,7 +282,40 @@ export class HomeComponent {
       let realIndex = event.item.index - event.relatedTarget._clones.length / 2;
       this.currentBlogIndex = (realIndex + this.totalBlogSlides) % this.totalBlogSlides;
     });
+    
+    $('#owl-demo').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: false,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      },
+      onInitialized: this.updateNavButtons,
+      onTranslated: this.updateNavButtons
+    });
 
+    this.totalItems = document.querySelectorAll(".carousel-item").length;
+    this.prevBtn = document.getElementById("prevBtn");
+    this.nextBtn = document.getElementById("nextBtn");
+    this.carousel = document.querySelector("#carouselExample");
+
+    if (this.carousel) {
+      this.carousel.addEventListener("slid.bs.carousel", (e: any) => {
+        this.currentTechnologyIndex = [...e.target.querySelectorAll(".carousel-item")].indexOf(e.relatedTarget);
+        this.updateButtons();
+      });
+    }
+    this.updateButtons();
+  }
+  updateButtons(): void {
+    if (this.prevBtn) {
+      this.prevBtn.classList.toggle("disabled", this.currentIndex === 0);
+    }
+    if (this.nextBtn) {
+      this.nextBtn.classList.toggle("disabled", this.currentIndex === this.totalItems - 1);
+    }
   }
 
 
@@ -359,5 +430,19 @@ export class HomeComponent {
   goToBlogSlide(index: number) {
     this.currentBlogIndex = index;
     $(this.blogCarousel.nativeElement).trigger('to.owl.carousel', [index, 300]);
+  }
+
+  prev() {
+    $('#owl-demo').trigger('prev.owl.carousel');
+  }
+
+  next() {
+    $('#owl-demo').trigger('next.owl.carousel');
+  }
+
+  updateNavButtons() {
+    const carousel = $('#owl-demo');
+    $('#prevBtn').toggle(!carousel.find('.owl-item:first').hasClass('active'));
+    $('#nextBtn').toggle(!carousel.find('.owl-item:last').hasClass('active'));
   }
 }

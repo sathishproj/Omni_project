@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+// import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
 import { PackageDetailsComponent } from './package-details/package-details.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CarouselModule,
+    // CarouselModule,
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule

@@ -1,7 +1,6 @@
 <app-header></app-header>
 <header class="container-fluid p-0">
-  <img
-    src="https://img.freepik.com/free-photo/doctor-with-face-mask-against-covid19-discussing-with-nurse-hospital-waiting-area-disabled-senior-woman-wheelchair-waiting-examination-assistant-working-reception-computer_482257-6055.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid"
+  <img src="https://img.freepik.com/free-photo/doctor-with-face-mask-against-covid19-discussing-with-nurse-hospital-waiting-area-disabled-senior-woman-wheelchair-waiting-examination-assistant-working-reception-computer_482257-6055.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid"
     class=" w-100" alt="Lungs Image" height="600px">
 </header>
 
@@ -59,12 +58,6 @@
         <span class="title_text">OUR SPECIALITIES</span>
         <div class="line line-right"></div>
       </div>
-      <!-- <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 pb-5">
-        <div class="speciality-card" *ngFor="let data of our_specialities; index as d">
-          <img class="mt-4" [src]="data.img" alt="" width="100px" height="80px">
-          <p>{{data.dep_name}}</p>
-        </div>
-      </div> -->
       <div class="row g-2 mt-2">
         <div class="col-6 col-sm-6 col-md-2 " *ngFor="let data of our_specialities; index as d">
           <div class="speciality_card">
@@ -143,10 +136,9 @@
         </div>
       </div>
       <div class="carousel-buttons">
-        <img class="ms-5" src="assets/images/{{index!=0?'back_black.svg':'back_gray.svg'}}" alt=""
+        <img src="assets/images/{{index!=0?'back_black.svg':'back_gray.svg'}}" alt=""
           (click)="index!=0?updateCarousel('prev'):''">
-        <img class="me-5"
-          src="assets/images/{{index === depertments.length - 1?'farward_gray.svg':'farward_black.svg'}}" alt=""
+        <img src="assets/images/{{index === depertments.length - 1?'farward_gray.svg':'farward_black.svg'}}" alt=""
           (click)="index==depertments.length-1?'':updateCarousel('next')">
       </div>
     </div>
@@ -162,67 +154,91 @@
     <div class="">
       <h2 class="text-center">TECHNOLOGIES</h2>
       <div id="techCarousel" class="carousel slide tech-carousel" data-bs-ride="carousel">
-        <div class="carousel-inner" id="carouselInner">
-          <div class="carousel-item active">
-            <div class="tech-card">
-              <img src="image1.jpg" class="card-img-top" alt="MRI">
-              <div class="tech-card-body">
-                <h5 class="card-title">MRI</h5>
-                <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and
-                  radio waves.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carouselInner">
+            <!-- First carousel item with 3 cards -->
+            <div class="carousel-item active">
+              <div class="d-flex">
+                <div class="tech-card">
+                  <img src="https://tse4.mm.bing.net/th?id=OIP.5DtXksD3xr9H86j9R51bOAHaF2&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+                <div class="tech-card">
+                  <img src="https://tse1.mm.bing.net/th?id=OIP.ALvkWSDy5Dkr9nG4fx2NmQHaFj&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+                <div class="tech-card">
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.wxseSHtsSomJTdwS0V-LRAHaE7&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="tech-card">
-              <img src="image2.jpg" class="card-img-top" alt="MRI">
-              <div class="tech-card-body">
-                <h5 class="card-title">MRI</h5>
-                <p class="card-text">MRI is a non-invasive medical imaging technique used in radiology.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+        
+            <!-- Second carousel item with 3 cards -->
+            <div class="carousel-item">
+              <div class="d-flex">
+                <div class="tech_card">
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.cckOuz6wV56MPHPHWCXmwQHaEJ&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+        
+                <div class="tech_card">
+                  <img src="https://tse1.mm.bing.net/th?id=OIP.JjROwweTxDE-pFW_NZI2cgHaF2&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+        
+                <div class="tech_card">
+                  <img src="https://tse1.mm.bing.net/th?id=OIP.71BYALdGNSRjMXvQvRzBgAHaEp&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
+                  <div class="tech-card-body">
+                    <h5 class="card-title">MRI</h5>
+                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
               </div>
             </div>
+        
+            <!-- More carousel items as needed -->
           </div>
-          <div class="carousel-item">
-            <div class="tech-card">
-              <img src="image3.jpg" class="card-img-top" alt="MRI">
-              <div class="tech-card-body">
-                <h5 class="card-title">MRI</h5>
-                <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="tech-card">
-              <img src="image4.jpg" class="card-img-top" alt="MRI">
-              <div class="tech-card-body">
-                <h5 class="card-title">MRI</h5>
-                <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="tech-card">
-              <img src="image5.jpg" class="card-img-top" alt="MRI">
-              <div class="tech-card-body">
-                <h5 class="card-title">MRI</h5>
-                <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-              </div>
-            </div>
-          </div>
+        
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+        
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </button> -->
       </div>
     </div>
 
@@ -490,7 +506,17 @@
   </div>
 </section>
 
-
+<!---------- Side Fixed Buttons ------------>
+<div class="fixed_buttons">
+  <div class="book_app_button bg_green">
+    <!-- <img src="assets/images/calender_gray.svg" > -->
+    <button class="rotate btn-lg custom-btns bg_green"> BOOK <br> AN APPOINTMENT</button>
+  </div>
+  <div class="bg_blue">
+    <!-- <img src="assets/our_specialities/brain_blue.svg" > -->
+    <button for="" class="bg_blue">CALL FOR <br> ENQUARY</button>
+  </div>
+</div>
 
 
 

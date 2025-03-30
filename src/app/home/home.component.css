@@ -796,3 +796,62 @@ h6 {
                 flex: 0 0 100%;
             }
         }
+        .fixed_buttons{
+            display: flex;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            right: -108px; 
+            transform: rotate(-90deg);
+            gap: 5px;
+            align-items: end;
+            transition: right 0.3s ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .fixed_buttons{
+                right: -104px; 
+            }  
+        }
+        .book_app_button{
+            order: 1;
+        }
+        .bg_green{
+            background: rgba(140, 198, 63, 1);
+            background-color: rgba(140, 198, 63, 1);
+            color: #f1f1f1 !important;
+            letter-spacing: 1px;
+            padding: 5px;
+        }
+        .bg_blue{
+            background-color: rgba(15, 157, 204, 1);
+            color: #f1f1f1 !important;
+            letter-spacing: 1px;
+            padding: 5px;
+
+        }
+        .fixed_buttons div button{
+            border: none;
+        }
+        .fixed_buttons::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .carousel-item .d-flex {
+            justify-content: space-between; /* Adds space between cards */
+          }
+          
+          .tech_card {
+            flex: 1; /* Ensure cards take equal width */
+            margin: 0 10px; /* Adds space between the cards */
+            max-width: 30%; /* Adjust the card width as needed */
+          }
+         
+          
+          .card-img-top {
+            width: 100%; /* Ensures the image fills the card */
+            height: auto;
+          }
+          
+      

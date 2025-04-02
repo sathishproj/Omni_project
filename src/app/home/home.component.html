@@ -508,12 +508,12 @@
 
 <!---------- Side Fixed Buttons ------------>
 <div class="fixed_buttons">
-  <div class="book_app_button bg_green">
-    <!-- <img src="assets/images/calender_gray.svg" > -->
+  <div class="book_app_button bg_green d-flex align-items-center">
+    <img src="assets/images/book_an_appointment.png" style="rotate: 90deg;" width="24px" height="24px">
     <button class="rotate btn-lg custom-btns bg_green"> BOOK <br> AN APPOINTMENT</button>
   </div>
-  <div class="bg_blue">
-    <!-- <img src="assets/our_specialities/brain_blue.svg" > -->
+  <div class="bg_blue d-flex align-items-center">
+    <img src="assets/images/call_icon.png" style="rotate: 90deg;" width="24px" height="24px">
     <button for="" class="bg_blue">CALL FOR <br> ENQUARY</button>
   </div>
 </div>
@@ -542,7 +542,7 @@
             <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
               <div class="text-center">
                 <img src="assets/locations/{{details['img']}}" alt="Kothapet">
-                <p class="border_prop py-2">{{details['location_name']}}</p>
+                <p class="border_prop py-2" style="background-color: #008FD5 !important;">{{details['location_name']}}</p>
               </div>
             </div>
           </div>

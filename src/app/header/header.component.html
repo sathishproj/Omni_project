@@ -18,8 +18,9 @@
           <li class="nav-item"><a class="nav-link text_black" href="../about-us/">About Us</a></li>
           <li class="nav-item"><a class="nav-link text_black" href="../our-doctors/">Find a Doctor</a></li>
           <li class="nav-item"><a class="nav-link text_black" href="../our-specialities/">Our Specialities</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="#">Our Branches</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="#">Book an Appointment</a></li>
+          <li class="nav-item"><a class="nav-link text_black"  data-bs-toggle="modal"
+            data-bs-target="#branchesModal">Our Branches</a></li>
+          <li class="nav-item"><a class="nav-link text_black">Book an Appointment</a></li>
           <li class="nav-item"><a class="nav-link text_black" href="#">Careers</a></li>
           <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Blogs</a></li>
           <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Media</a></li>
@@ -29,3 +30,38 @@
       </div>
     </div>
   </nav>
+
+
+  <ng-container >
+    <div class="modal fade" id="branchesModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="row pt-4">
+          <div class="col-md-11 col-11 col-sm-10 col-xs-10 d-flex align-items-center justify-content-center">
+            <div class="line line-left ms-5"></div>
+            <div class="">
+              <span class="title_text text-center px-2">Our Branches</span>
+            </div>
+            <div class="line line-right"></div>
+          </div>
+          <div class="col-md-1 col-1 d-flex col-sm-2 col-xs-2 align-items-center justify-content-start p-0 m-0">
+            <button class="" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
+                <div class="text-center">
+                  <img src="assets/locations/{{details['img']}}" alt="Kothapet">
+                  <p class="border_prop py-2">{{details['location_name']}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>

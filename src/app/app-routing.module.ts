@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
 import { PackageDetailsComponent } from './package-details/package-details.component';
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
+import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'health-checkup', component: HealthCheckupComponent },
   { path: 'package-details', component: PackageDetailsComponent },
   { path: 'our-specialities', component: OurSpecialitiesComponent },
+  { path: 'our-specialities-details', component: OurSpecialitiesDetailsComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

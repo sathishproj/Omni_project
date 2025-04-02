@@ -16,6 +16,7 @@ import { PackageDetailsComponent } from './package-details/package-details.compo
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
+import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -29,7 +30,8 @@ import { OurSpecialitiesComponent } from './our-specialities/our-specialities.co
     AboutUsComponent,
     HealthCheckupComponent,
     PackageDetailsComponent,
-    OurSpecialitiesComponent
+    OurSpecialitiesComponent,
+    OurSpecialitiesDetailsComponent
   ],
   imports: [
     BrowserModule,

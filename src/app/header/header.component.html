@@ -20,7 +20,8 @@
           <li class="nav-item"><a class="nav-link text_black" href="../our-specialities/">Our Specialities</a></li>
           <li class="nav-item"><a class="nav-link text_black"  data-bs-toggle="modal"
             data-bs-target="#branchesModal">Our Branches</a></li>
-          <li class="nav-item"><a class="nav-link text_black">Book an Appointment</a></li>
+          <li class="nav-item"><a class="nav-link text_black" data-bs-toggle="modal"
+            data-bs-target="#bookanappointment">Book an Appointment</a></li>
           <li class="nav-item"><a class="nav-link text_black" href="#">Careers</a></li>
           <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Blogs</a></li>
           <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Media</a></li>
@@ -31,9 +32,9 @@
     </div>
   </nav>
 
-
+<!-- Our Branches modal -->
   <ng-container >
-    <div class="modal fade" id="branchesModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true"
+    <div class="modal fade" id="branchesModal" tabindex="-1" aria-labelledby="branchesModalLabel" aria-hidden="true"
     data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
@@ -65,3 +66,65 @@
     </div>
   </div>
   </ng-container>
+  <!-- Our Branches modal -->
+
+<ng-container>
+ 
+<div class="modal fade custom-modal" id="bookanappointment" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-container">
+          <div class="line line-left"></div>
+          <span class="px-2 book_text">BOOK AN APPOINTMENT</span>
+          <div class="line line-right"></div>
+        </div>
+        <button type="button" class="btn-close btn_close" data-bs-dismiss="modal"></button>
+      </div>
+
+
+      <div class="form-container rounded">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="fullName" placeholder=" " required>
+            <label for="fullName" class="ps-0">Full Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="phoneNumber" placeholder=" " required>
+            <label for="phoneNumber" class="ps-0">Phone Number</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder=" " required>
+            <label for="email" class="ps-0">Email ID</label>
+          </div>
+
+          <div class="mb-3 select-container">
+            <select class="form-control ps-0" id="location" (click)="locationToggle(1)">
+              <option value="" disabled selected>Location</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+            <img src="assets/images/{{direction_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
+              id="location-icon">
+          </div>
+
+          <div class="mb-3 select-container">
+            <select class="form-control ps-0" id="department" (click)="locationToggle(2)">
+              <option value="" disabled selected>Department</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+            </select>
+            <img src="assets/images/{{depertment_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
+              id="location-icon">
+          </div>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-outline-dark submit-btn">Submit</button>
+    </div>
+  </div>
+</div>
+</ng-container>

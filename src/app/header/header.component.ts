@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  direction_icon: boolean = false;
+  depertment_icon: boolean = false;
   locations_details = [
     {
       id: 1, location_name: 'Kothapet', img: 'omni_kothapet.png'
@@ -26,4 +28,7 @@ export class HeaderComponent {
       id: 6, location_name: 'Kurnool', img: 'kurnool_location.png'
     }
   ]
+  locationToggle(num:number){
+
+  }
 }

@@ -68,17 +68,125 @@ body {
     border-radius: 15px;
 }
 
+
+
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
 .modal {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1 !important;
-  }
-  .border_prop{
+}
+
+
+.custom-modal .modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.custom-modal .modal-header {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Ensures space between elements */
+    width: 100%;
+    position: relative;
+}
+
+.custom-modal .modal-title {
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.custom-modal .form-container {
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.custom-modal .form-floating .form-control {
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.custom-modal select {
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+}
+
+.custom-modal select:focus {
+    outline: none;
+    border-bottom: 1px solid #6c757d;
+    background: none;
+    box-shadow: none;
+}
+
+.custom-modal .select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.custom-modal .select-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+.custom-modal .submit-btn {
+    display: block;
+    margin: 15px auto 0;
+    width: auto;
+    padding: 5px 40px;
+    width: auto;
+    /* padding: 5px 20px; */
+}
+
+@media (max-width: 576px) {
+    .custom-modal .modal-dialog {
+        max-width: 90%;
+    }
+
+    .custom-modal select {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.custom-modal .submit-btn:hover {
+    color: white;
+    display: block;
+    margin: 15px auto 0;
+    width: auto;
+    padding: 5px 40px;
+    background-color: #008FD5;
+    border: 1px solid #008FD5;
+}
+.border_prop {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     background-color: #008FD5 !important;
     background: #008FD5 !important;
-    color:#FFFFFF;
+    color: #FFFFFF;
     font-family: 'Roboto';
     /* font-size: 12px; */
 }

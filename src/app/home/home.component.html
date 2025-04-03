@@ -150,97 +150,33 @@
 
   <!-- Technologies code start from here -->
   <ng-container *ngIf="activeIndex==2">
-
-    <div class="">
-      <h2 class="text-center">TECHNOLOGIES</h2>
-      <div id="techCarousel" class="carousel slide tech-carousel" data-bs-ride="carousel">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" id="carouselInner">
-            <!-- First carousel item with 3 cards -->
-            <div class="carousel-item active">
-              <div class="d-flex">
-                <div class="tech-card">
-                  <img src="https://tse4.mm.bing.net/th?id=OIP.5DtXksD3xr9H86j9R51bOAHaF2&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-                <div class="tech-card">
-                  <img src="https://tse1.mm.bing.net/th?id=OIP.ALvkWSDy5Dkr9nG4fx2NmQHaFj&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-                <div class="tech-card">
-                  <img src="https://tse2.mm.bing.net/th?id=OIP.wxseSHtsSomJTdwS0V-LRAHaE7&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">Magnetic resonance imaging (MRI) is a technology that uses a magnetic field and radio waves.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Second carousel item with 3 cards -->
-            <div class="carousel-item">
-              <div class="d-flex">
-                <div class="tech_card">
-                  <img src="https://tse2.mm.bing.net/th?id=OIP.cckOuz6wV56MPHPHWCXmwQHaEJ&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-        
-                <div class="tech_card">
-                  <img src="https://tse1.mm.bing.net/th?id=OIP.JjROwweTxDE-pFW_NZI2cgHaF2&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-        
-                <div class="tech_card">
-                  <img src="https://tse1.mm.bing.net/th?id=OIP.71BYALdGNSRjMXvQvRzBgAHaEp&pid=Api&P=0&h=180" class="card-img-top" alt="MRI">
-                  <div class="tech-card-body">
-                    <h5 class="card-title">MRI</h5>
-                    <p class="card-text">MRI provides detailed images of the body’s internal structures.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <!-- More carousel items as needed -->
-          </div>
-        
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
-      </div>
+    <div class="swiper-wrapper-container">
+      <swiper-container
+        #swiperContainer
+        [slidesPerView]="slidesPerView"
+        space-between="20"
+        navigation="true"
+        [breakpoints]="{
+          '0': { 'slidesPerView': 1 },
+          '768': { 'slidesPerView': 2 },
+          '1024': { 'slidesPerView': 3 }
+        }"
+      >
+        <swiper-slide *ngFor="let tech of technologies">
+          <img [src]="tech.img" [alt]="tech.label">
+          <h3>{{ tech.label }}</h3>
+          <p>Lorem ipsum is simply dummy text of the printing industry.</p>
+          <a href="#" class="read-more">Read More >></a>
+        </swiper-slide>
+      </swiper-container>
     </div>
+    
+
+    
+    
+    
+    
+     
 
 
   </ng-container>

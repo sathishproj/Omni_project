@@ -41,3 +41,31 @@
   .bg_color{
     background-color: #008FD50D;
   }
+
+  
+  /* Image Handling */
+  .default-icon {
+    display: block; 
+  }
+  
+  .hover-icon {
+    display: none;
+  }
+  
+  /* Apply Hover Effect */
+  .specialty-card:hover {
+    border-color: #008FD5;
+  }
+  
+  .specialty-card:hover .specialty-name {
+    color: #008FD5; 
+  }
+  
+  .specialty-card:hover .default-icon {
+    display: none; 
+  }
+  
+  .specialty-card:hover .hover-icon {
+    display: block; 
+  }
+  

@@ -1,0 +1,26 @@
+
+<app-header></app-header>
+<section class="bg-white">
+    <div class="container py-5">
+        <div class="border p-5 rounded-4">
+            <h3 class="section-title text-center mb-4">
+              <span class="decor"></span>
+              TECHNOLOGIES
+              <span class="decor right"></span>
+            </h3>
+            <div class="row px-1">
+              <div class="col-md-4 col-sm-6 mb-4" *ngFor="let tech of technologies">
+                <div class="card h-100 shadow-sm rounded-4">
+                  <img [src]="tech.image" class="card-img-top" alt="{{ tech.title }}">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">{{ tech.title }}</h5>
+                    <p class="card-text text-muted">{{ tech.description }}</p>
+                    <a [href]="" class="fw-bold text-dark">Read More »</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+</section>
+  <app-footer></app-footer>

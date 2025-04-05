@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
 import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -31,7 +32,8 @@ import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-
     HealthCheckupComponent,
     PackageDetailsComponent,
     OurSpecialitiesComponent,
-    OurSpecialitiesDetailsComponent
+    OurSpecialitiesDetailsComponent,
+    TechnologiesComponent
   ],
   imports: [
     BrowserModule,

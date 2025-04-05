@@ -150,7 +150,7 @@
 
   <!-- Technologies code start from here -->
   <ng-container *ngIf="activeIndex==2">
-    <div class="swiper-wrapper-container">
+    <div class="swiper-wrapper-container py-5">
       <swiper-container
         #swiperContainer
         [slidesPerView]="slidesPerView"
@@ -162,11 +162,11 @@
           '1024': { 'slidesPerView': 3 }
         }"
       >
-        <swiper-slide *ngFor="let tech of technologies">
-          <img [src]="tech.img" [alt]="tech.label">
-          <h3>{{ tech.label }}</h3>
-          <p>Lorem ipsum is simply dummy text of the printing industry.</p>
-          <a href="#" class="read-more">Read More >></a>
+        <swiper-slide *ngFor="let tech of technologies" class="">
+          <img [src]="tech.img" [alt]="tech.label" width="100%" class="img_rad">
+          <h3 class="ps-1 head_text">{{ tech.label }}</h3>
+          <p class="ps-1">Lorem ipsum is simply dummy text of the printing industry.</p>
+          <a href="#" class="text-black ps-1 read_btn p-0">Read More >></a>
         </swiper-slide>
       </swiper-container>
     </div>

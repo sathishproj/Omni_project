@@ -2,7 +2,8 @@
 body {
   background-color: #f5fbff;
   margin: 0;
-  font-family: 'Roboto', sans-serif; /* Example font */
+  font-family: 'Roboto', sans-serif;
+  /* Example font */
 }
 
 /* Side Navigation */
@@ -22,14 +23,29 @@ body {
   border-bottom: 1px solid #ddd;
   border-radius: 0;
 }
+
 .side-nav .nav-link:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #D9D9D9;
 }
 
+.border_bottom_none {
+  border-bottom: none;
+  color: #333;
+  padding: 12px 20px;
+  line-height: 48px;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0;
+  text-decoration: none;
+}
+.border_bottom_none.active-link{
+  color: #008FD5;
+  background-color: #f9f9f9;
+}
 /* Active Link with a thicker bottom border and bold color */
 .side-nav .nav-link.active-link {
-  color: #007bff;
-  border-bottom: 3px solid #007bff;
+  color: #008FD5;
+  border-bottom: 3px solid #008FD5;
   background-color: #f9f9f9;
 }
 
@@ -45,7 +61,7 @@ body {
 /* Section Title */
 .section-title {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #008FD5;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -69,12 +85,17 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
 }
+
 .card-title {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
+
 .card-text {
   font-size: 0.9rem;
   color: #555;
+}
+.mission_txt{
+  text-align: left;
 }

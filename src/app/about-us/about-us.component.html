@@ -9,7 +9,7 @@
         <ul class="nav flex-column">
           <li class="nav-item" *ngFor="let section of sections">
             <a
-              class="nav-link"
+              class=" {{section['id'] == 'beyondBusiness'?'border_bottom_none':'nav-link'}}"
               [ngClass]="{'active-link': activeSection === section.id}"
               (click)="setActiveSection(section.id)"
             >
@@ -33,7 +33,7 @@
             <!-- Image -->
             <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
               <img
-                src="assets/vision.jpg"
+                src="https://plus.unsplash.com/premium_photo-1676750395664-3ac0783ae2c2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="img-fluid"
                 alt="Vision Image"
               />
@@ -50,23 +50,26 @@
 
         <!-- OUR MISSION -->
         <div class="section-container">
-          <h2 class="section-title">OUR MISSION</h2>
-          <div class="row align-items-center">
-            <!-- Image -->
-            <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
-              <img
-                src="assets/mission.jpg"
-                class="img-fluid"
-                alt="Mission Image"
-              />
-            </div>
+          <div class="row ">
             <!-- Text -->
-            <div class="col-12 col-md-9">
+            <div class="col-12 col-md-9 mission_txt">
+              <h2 class="section-title">OUR MISSION</h2>
               <p class="section-text">
-                Lorem ipsum is simply dummy text of the printing and typesetting
-                industry...
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
               </p>
             </div>
+                      <!-- Image -->
+                      <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+                        <img
+                          src="https://plus.unsplash.com/premium_photo-1682124860947-4c0ff8e0742f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fG1pc3Npb258ZW58MHx8MHx8fDA%3D"
+                          class="img-fluid"
+                          alt="Mission Image"
+                        />
+                      </div>
           </div>
         </div>
       </div>

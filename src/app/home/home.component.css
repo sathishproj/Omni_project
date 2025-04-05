@@ -848,7 +848,7 @@ h6 {
     right: -108px;
     transform: rotate(-90deg);
     gap: 5px;
-    align-items: end;
+    align-items: flex-end;
     transition: right 0.3s ease-in-out;
 }
 

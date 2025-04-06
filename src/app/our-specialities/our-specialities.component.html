@@ -3,7 +3,7 @@
     <div class="">
         <div class=" p-5">
             <div class="row justify-content-center bg_color p-5">
-              <div *ngFor="let specialty of specialties" class="col-12 col-sm-6 col-md-3 col-lg-3 mt-4">
+              <div *ngFor="let specialty of specialties" class="col-12 col-sm-6 col-md-2 col-lg-2 mt-4">
                 <div class="card specialty-card d-flex flex-column align-items-center justify-content-center py-5" (click)="goToDetails(specialty['id'])">
                   <img [src]="specialty.icon" 
                        [alt]="specialty.name" 
@@ -11,7 +11,7 @@
                   <img [src]="specialty.blue_icon" 
                        [alt]="specialty.name" 
                        class="icon-img hover-icon">
-                  <p class="specialty-name text-center">{{ specialty.name }}</p>
+                  <p class="specialty-name text-center px-2">{{ specialty.name }}</p>
                 </div>
               </div>              
             </div>

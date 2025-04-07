@@ -45,14 +45,15 @@ export class HomeComponent {
   ]
 
   our_specialities = [
-    { id: 1, dep_name: 'Cardiology', img: 'assets/our_specialities/Cardio_blue.svg' }, { id: 2, dep_name: 'ENT', img: 'assets/our_specialities/ENT_blue.svg' }, { id: 3, dep_name: 'General Medicine', img: 'assets/our_specialities/Internal_medic_blue.svg' }, { id: 4, dep_name: 'General Surgery', img: 'assets/our_specialities/General_Surgery_blue.svg' }, { id: 5, dep_name: 'Gastroenterology', img: 'assets/our_specialities/Gastro_blue.svg' }, { id: 6, dep_name: 'Neurology', img: 'assets/our_specialities/brain_blue.svg' },
+    { id: 1, dep_name: 'Cardiology', img_blue: 'assets/our_specialities/Cardio_blue.svg', img:"assets/our_specialities/Cardio_gray.svg" }, { id: 2, dep_name: 'ENT', img_blue: 'assets/our_specialities/ENT_blue.svg', img:"assets/our_specialities/ENT.svg" }, { id: 3, dep_name: 'General Medicine', img_blue: 'assets/our_specialities/Internal_medic_blue.svg', img:"assets/our_specialities/general_medicine.svg" }, { id: 4, dep_name: 'General Surgery', img_blue: 'assets/our_specialities/General_Surgery_blue.svg', img:"assets/our_specialities/General_Surgery.svg" }, { id: 5, dep_name: 'Gastroenterology', img_blue: 'assets/our_specialities/Gastro_blue.svg', img:"assets/our_specialities/Gastro.svg" }, { id: 6, dep_name: 'Neurology', img_blue: 'assets/our_specialities/brain_blue.svg', img:"assets/our_specialities/brain.svg" },
     {
-      id: 7, dep_name: 'Nephrology', img: 'assets/our_specialities/Nephrology_Urology_blue.svg'
-    }, { id: 8, dep_name: 'Gynaecology', img: 'assets/our_specialities/Gynaecology_blue.svg' }, { id: 9, dep_name: 'Paediatrics', img: 'assets/our_specialities/Paediatrics_blue.svg' }, { id: 10, dep_name: 'Pulmonology', img: 'assets/our_specialities/Pulmonology_blue.svg' }, { id: 11, dep_name: 'Psychiatry', img: 'assets/our_specialities/Psychiatry_blue.svg' }, { id: 12, dep_name: 'Orthopaedics', img: 'assets/our_specialities/Orthopedic_blue.svg' },
+      id: 7, dep_name: 'Nephrology', img_blue: 'assets/our_specialities/Nephrology_Urology_blue.svg', img:"assets/our_specialities/Nephrology_Urology.svg"
+    }, { id: 8, dep_name: 'Gynaecology', img_blue: 'assets/our_specialities/Gynaecology_blue.svg', img:"assets/our_specialities/Gynaecology.svg" }, { id: 9, dep_name: 'Paediatrics', img_blue: 'assets/our_specialities/Paediatrics_blue.svg', img:"assets/our_specialities/Paediatrics.svg" }, { id: 10, dep_name: 'Pulmonology', img_blue: 'assets/our_specialities/Pulmonology_blue.svg', img:"assets/our_specialities/Pulmonology.svg" }, { id: 11, dep_name: 'Psychiatry', img_blue: 'assets/our_specialities/Psychiatry_blue.svg', img:"assets/our_specialities/Psychiatry.svg" }, { id: 12, dep_name: 'Orthopaedics', img_blue: 'assets/our_specialities/Orthopedic_blue.svg', img:"assets/our_specialities/Orthopedic.svg" },
     {
-      id: 13, dep_name: 'Vascular Surgery', img: 'assets/our_specialities/Vascular-Surgery_blue.svg'
+      id: 13, dep_name: 'Vascular Surgery', img_blue: 'assets/our_specialities/Vascular-Surgery_blue.svg', img:"assets/our_specialities/Vascular_Surgery.svg"
     }
   ]
+  selectedIndex:number = 0;
   counters = [
     { id: 1, img: 'hospitals.svg', label: 'Hospitals', target: 6, value: 0 },
     { id: 2, img: 'beds.svg', label: 'Beds', target: 750, value: 0 },
@@ -76,6 +77,7 @@ export class HomeComponent {
     { id: 8, img: 'https://s3-alpha-sig.figma.com/img/64ab/bc1d/6b4ff909436fd5c3321e99d779bb363a?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FR1iylyiw~34Poq3IsU7BfzrQLIxXC~Wky1IsfmykALnwKQwkVPwT8Ow4Nu6YTxvbltfGGSWUTb1RC8c6w0Bx7E6xsCYX7EEGyfwsFa-3SdGLxihY~9ZzGBxpV6IZei94Su4~DcLvfsqHWmwT5pihWc8FYvIqdbDWfPSmkHogLIdSP7mIEdUJZ6SmIPwM9O~TAWg5kipuTuuZfp6TEr520vjZe6pet0-wfeSCZ~AtdL8tK--VabAQKzlwvN9F9U95YOJmJQI7NMt55Or0jRr9BC2UStILQkzyK4zs-nFCwm6Xa~mLJbq-KnQKngFHNy8Gzt3uSTiiOE75FVf8cZvfg__', label: 'Pharmacy' },
   ];
   totalNewsSlides = this.newsMedia.length;
+  hoveredCard = '';
 
   testimonials = [
     {
@@ -140,22 +142,22 @@ export class HomeComponent {
 
   depertments = [
     {
-      id: 1, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
+      id: 1, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 2, d_name: '', d_description: '', img: ''
+      id: 2, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 3, d_name: '', d_description: '', img: ''
+      id: 3, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 4, d_name: '', d_description: '', img: ''
+      id: 4, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 5, d_name: '', d_description: '', img: ''
+      id: 5, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 6, d_name: '', d_description: '', img: ''
+      id: 6, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     }
   ]
 
@@ -214,7 +216,6 @@ export class HomeComponent {
       desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
     },
   ];
-
   index = 0;
   constructor(private router: Router, private renderer: Renderer2) {
 
@@ -474,4 +475,41 @@ export class HomeComponent {
     }
 }
 
+
+goToDetails(id:number) {
+  this.router.navigate(['/our-specialities-details'], {
+    queryParams: {
+      selected_Id: id,
+    }
+  });
+}
+
+onClickTechno(){
+  this.router.navigate(['/technologies']).then(success => {
+    if (success) {
+      console.log('Navigation to technologies successful');
+    } else {
+      console.log('Navigation failed');
+    }
+  }).catch(error => console.error('Navigation error:', error));
+}
+
+onNewsCLick(){
+  this.router.navigate(['/news-media']).then(success => {
+    if (success) {
+      console.log('Navigation to technologies successful');
+    } else {
+      console.log('Navigation failed');
+    }
+  }).catch(error => console.error('Navigation error:', error));
+}
+goToBlogs(){
+  this.router.navigate(['/blogs']).then(success => {
+    if (success) {
+      console.log('Navigation to technologies successful');
+    } else {
+      console.log('Navigation failed');
+    }
+  }).catch(error => console.error('Navigation error:', error));
+}
 }

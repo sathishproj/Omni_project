@@ -9,6 +9,8 @@ import { PackageDetailsComponent } from './package-details/package-details.compo
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
 import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
+import { NewsMediaComponent } from './news-media/news-media.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'our-specialities', component: OurSpecialitiesComponent },
   { path: 'our-specialities-details', component: OurSpecialitiesDetailsComponent },
   { path: 'technologies', component: TechnologiesComponent },
+  { path: 'news-media', component: NewsMediaComponent },
+  { path: 'blogs', component: BlogsComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

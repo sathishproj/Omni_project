@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class OurSpecialitiesComponent {
   specialties = [
-    {id:1, name: 'Cardiology', icon: 'assets/our_specialities/Cardio.svg', blue_icon:'assets/our_specialities/Cardio_blue.svg' },
+    {id:1, name: 'Cardiology', icon: 'assets/our_specialities/Cardio_gray.svg', blue_icon:'assets/our_specialities/Cardio_blue.svg' },
     {id:2, name: 'ENT', icon: 'assets/our_specialities/ENT.svg', blue_icon:'assets/our_specialities/ENT_blue.svg' },
     {id:3, name: 'General Medicine', icon: 'assets/our_specialities/general_medicine.svg',blue_icon:'assets/our_specialities/Internal_medic_blue.svg' },
     {id:4, name: 'General Surgery', icon: 'assets/our_specialities/General_Surgery.svg',blue_icon:'assets/our_specialities/General_Surgery_blue.svg' },

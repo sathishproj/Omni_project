@@ -34,6 +34,10 @@ constructor(    private activated_routes: ActivatedRoute,
 ){
   this.activatedRoutesData();
 }
+
+ngOnInit(){
+  window.scrollTo(0, 0)
+}
   onLocationChange(event: any) {
     const selectedId = event.target.value;
     this.selectedLocation = this.locations.find(loc => loc.id === selectedId) || this.locations[0];

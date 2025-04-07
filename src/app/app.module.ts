@@ -18,6 +18,8 @@ import { CommonModule } from '@angular/common';
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
 import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
+import { NewsMediaComponent } from './news-media/news-media.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -33,7 +35,9 @@ import { TechnologiesComponent } from './technologies/technologies.component';
     PackageDetailsComponent,
     OurSpecialitiesComponent,
     OurSpecialitiesDetailsComponent,
-    TechnologiesComponent
+    TechnologiesComponent,
+    NewsMediaComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,

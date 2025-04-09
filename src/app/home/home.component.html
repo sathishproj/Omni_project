@@ -195,6 +195,8 @@
     
     </div>
   </ng-container>
+
+
   <!-- Technologies code end here -->
 </section>
 
@@ -284,17 +286,19 @@
       <div class="line line-right"></div>
     </div>
     <!-- Owl Carousel -->
-     <div class="row">
+    <div class="row">
       <div class="col-5">
         <div class="owl-carousel" #owlCarousel>
           <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ms-2">
             <div class="row g-0">
               <!-- Image Section (Left) -->
               <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img [src]="testimonial.image" class="rounded" width="207px" height="156px" alt="Testimonial Image"
-                  style="object-fit: cover;">
+                <app-video-player 
+                [videoUrl]="testimonial.videoUrl" 
+                [thumbnailUrlId]="testimonial.thumbnailUrl"
+                [(videoPlayed)]="testimonial.videoPlayed">
+              </app-video-player>
               </div>
-    
               <!-- Text Section (Right) -->
               <div class="col-md-8 d-flex flex-column align-items-start justify-content-center ps-2 p-3">
                 <h5 class="p-0 m-0" style="font-size: 15px; font-family: 500; font-family: 'roboto';">{{ testimonial.name }}
@@ -323,7 +327,7 @@
           </div>
         </div>
       </div>
-     </div>
+    </div>
  
     <!-- Pagination Dots -->
     <!-- <div class="d-flex justify-content-center mt-3">

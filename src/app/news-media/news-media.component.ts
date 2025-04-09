@@ -80,6 +80,12 @@ export class NewsMediaComponent {
     }
 
   ]
+  playerWidth = window.innerWidth < 768 ? 320 : 640;
+  playerHeight = window.innerWidth < 768 ? 180 : 360;
+  
+  ngOnInit(){
+    window.scrollTo(0, 0)
+  }
   showMedia(index: number) {
     this.media_type = index;
   }

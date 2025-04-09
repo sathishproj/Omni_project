@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
-  activeSection = 'visionMission'; // Default
+  activeSection = 'aboutOmni'; // Default
 
   sections = [
-    { id: 'visionMission', name: 'Vision & Mission' },
+    // { id: 'visionMission', name: 'Vision & Mission' },
     { id: 'aboutOmni', name: 'About OMNI Hospitals' },
-    { id: 'boardMembers', name: 'Board Members' },
     { id: 'ourChairman', name: 'Our Chairman' },
+    { id: 'boardMembers', name: 'Board Members' },
     { id: 'leadershipTeam', name: 'Leadership Team' },
-    { id: 'aboutIncor', name: 'About INCOR' },
-    { id: 'beyondBusiness', name: 'Beyond Business' }
   ];
 
   boardMembers = [

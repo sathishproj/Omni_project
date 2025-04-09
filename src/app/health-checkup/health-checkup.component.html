@@ -16,6 +16,7 @@
             <img [src]="checkup.image" class="checkup-image" alt="checkup">
           </div>
         </div>
+        <span class="px-3 pt-2">{{checkup['description']}}</span>
         <div class="card-body">
           <button class="btn view_button ms-3 w_dth px-0" (click)="viewPackageDetails(checkup['id'])">View
             Details</button>

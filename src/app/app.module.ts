@@ -20,6 +20,7 @@ import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { NewsMediaComponent } from './news-media/news-media.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -46,7 +47,8 @@ import { BlogsComponent } from './blogs/blogs.component';
     // CarouselModule,
     HttpClientModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

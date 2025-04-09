@@ -17,6 +17,7 @@ export class HealthCheckupComponent {
       title: 'Whole Body Check-Up',
       oldPrice: 20605,
       newPrice: 6000,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -24,6 +25,7 @@ export class HealthCheckupComponent {
       title: 'EXECUTIVE HEALTH CHECK-UP ',
       oldPrice: 14555,
       newPrice: 3999,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -31,6 +33,7 @@ export class HealthCheckupComponent {
       title: 'GIGGLES WELL WOMEN CHECK-UP ',
       oldPrice: 7755,
       newPrice: 2999,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -38,6 +41,7 @@ export class HealthCheckupComponent {
       title: 'LUNG PULMONARY CHECK-UP ',
       oldPrice: 4890,
       newPrice: 1800,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -45,6 +49,7 @@ export class HealthCheckupComponent {
       title: 'KIDNEY CHECK-UP',
       oldPrice: 6310,
       newPrice: 2500,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -52,6 +57,7 @@ export class HealthCheckupComponent {
       title: 'DIABETIC HEALTH CHECK-UP ',
       oldPrice: 2845,
       newPrice: 999,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -59,6 +65,7 @@ export class HealthCheckupComponent {
       title: 'GASTRO CHECK UP',
       oldPrice: 6315,
       newPrice: 2500,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -66,6 +73,7 @@ export class HealthCheckupComponent {
       title: 'LIVER  CHECK UP',
       oldPrice: 7660,
       newPrice: 2500,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -73,6 +81,7 @@ export class HealthCheckupComponent {
       title: 'UROLOGY  CHECK UP',
       oldPrice: 4095,
       newPrice: 1800,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     },
     {
@@ -80,6 +89,7 @@ export class HealthCheckupComponent {
       title: 'GIGGLES PAEDIATRIC  HEALTH CHECK-UP ',
       oldPrice: 3000,
       newPrice: 1200,
+      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
       image: 'assets/health_checkup/whole_body_checkup.svg'
     }
   ];

@@ -129,21 +129,70 @@
   <!-- Key Surgories code end here -->
 
   <!-- Technologies code start from here -->
-  <ng-container *ngIf="activeIndex==2">
-    <div class="swiper-wrapper-container py-5">
-      <swiper-container #swiperContainer [slidesPerView]="slidesPerView" space-between="20" navigation="true"
-        [breakpoints]="{
-          '0': { 'slidesPerView': 1 },
-          '768': { 'slidesPerView': 2 },
-          '1024': { 'slidesPerView': 3 }
-        }">
-        <swiper-slide *ngFor="let tech of technologies" class="" (click)="onClickTechno()">
-          <img [src]="tech.img" [alt]="tech.label" width="100%" class="img_rad">
+  <!-- <ng-container *ngIf="activeIndex == 2">
+    <div class="swiper-wrapper-container py-5 position-relative">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <button class="btn btn-outline-dark" (click)="swiperPrev()">Previous</button>
+        <button class="btn btn-outline-dark" (click)="swiperNext()">Next</button>
+      </div>
+      <swiper-container
+        #swiperContainer
+        [attr.slides-per-view]="slidesPerView"
+        space-between="20"
+        navigation="false"
+        [attr.breakpoints]="breakpointsJson"
+      >
+        <swiper-slide *ngFor="let tech of technologies" (click)="onClickTechno()">
+          <img [src]="tech.img" [alt]="tech.label" width="100%" class="img_rad" />
           <h3 class="ps-1 head_text">{{ tech.label }}</h3>
           <p class="ps-1">Lorem ipsum is simply dummy text of the printing industry.</p>
           <a href="#" class="text-black ps-1 read_btn p-0">Read More >></a>
         </swiper-slide>
       </swiper-container>
+    </div>
+  </ng-container> -->
+
+
+  <ng-container *ngIf="activeIndex === 2">
+    <div class="title-container mb-4 py-3">
+      <div class="line line-left"></div>
+      <span class="title_text">Technologies</span>
+      <div class="line line-right"></div>
+    </div>
+    <div class="swiper-wrapper-container position-relative pb-4">
+      <img
+        src="assets/images/back_black.svg"
+        class="custom-arrow left-arrow ms-5"
+        [class.disabled]="!canSlidePrev"
+        (click)="swiperPrev()"
+      />
+  
+      <img
+        src="assets/images/farward_black.svg"
+        class="custom-arrow right-arrow me-5"
+        [class.disabled]="!canSlideNext"
+        (click)="swiperNext()"
+      />
+  
+      <swiper-container
+      #swiperContainer
+      class="custom-swiper"
+      [attr.slides-per-view]="slidesPerView"
+      space-between="20"
+      navigation="false"
+      allow-touch-move="true"
+      [attr.breakpoints]="breakpointsJson"
+    >
+      <swiper-slide *ngFor="let tech of technologies" class="tech-slide">
+        <img [src]="tech.img" [alt]="tech.label" class="img-fluid img_rad" />
+        <h3 class="ps-2 pt-2 tech-title">{{ tech.label }}</h3>
+        <p class="ps-2 tech-desc">
+          Lorem ipsum is simply dummy text of the printing industry.
+        </p>
+        <a href="#" class="text-black ps-2 pb-3 read_btn">Read More >></a>
+      </swiper-slide>
+    </swiper-container>
+    
     </div>
   </ng-container>
   <!-- Technologies code end here -->
@@ -235,33 +284,52 @@
       <div class="line line-right"></div>
     </div>
     <!-- Owl Carousel -->
-    <div class="owl-carousel" #owlCarousel>
-      <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ">
-        <div class="row g-0">
-          <!-- Image Section (Left) -->
-          <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <img [src]="testimonial.image" class="rounded" width="207px" height="156px" alt="Testimonial Image"
-              style="object-fit: cover;">
-          </div>
-
-          <!-- Text Section (Right) -->
-          <div class="col-md-8 d-flex flex-column align-items-start justify-content-center ps-2 p-3">
-            <h5 class="p-0 m-0" style="font-size: 15px; font-family: 500; font-family: 'roboto';">{{ testimonial.name }}
-            </h5>
-            <p class=" m-0 p-0 py-2 " style="font-size: 10px; color: #828282; font-family: 'roboto';">{{
-              testimonial.text }}</p>
-            <p class="" style="font-size: 10px; color: #000000; font-family: 'roboto'; font-weight: 500;">{{
-              testimonial.date }}</p>
+     <div class="row">
+      <div class="col-5">
+        <div class="owl-carousel" #owlCarousel>
+          <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ms-2">
+            <div class="row g-0">
+              <!-- Image Section (Left) -->
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img [src]="testimonial.image" class="rounded" width="207px" height="156px" alt="Testimonial Image"
+                  style="object-fit: cover;">
+              </div>
+    
+              <!-- Text Section (Right) -->
+              <div class="col-md-8 d-flex flex-column align-items-start justify-content-center ps-2 p-3">
+                <h5 class="p-0 m-0" style="font-size: 15px; font-family: 500; font-family: 'roboto';">{{ testimonial.name }}
+                </h5>
+                <p class=" m-0 p-0 py-2 " style="font-size: 10px; color: #828282; font-family: 'roboto';">{{
+                  testimonial.text }}</p>
+                <p class="" style="font-size: 10px; color: #000000; font-family: 'roboto'; font-weight: 500;">{{
+                  testimonial.date }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+      <div class="col-7">
+        <div class="owl-carousel" #patientowlCarousel>
+          <div *ngFor="let testimonial of userTestimonials" class="testimonial_card card p-3 pb-0">
+            <div class="d-flex align-items-center mb-2">
+              <img [src]="testimonial.image" class="me-2 cicle_image" alt="User Image" style="object-fit: cover;">
+              <div>
+                <h6 class="mb-0" style="font-weight: 600;">{{ testimonial.name }}</h6>
+                <small class="text-muted">{{ testimonial.location }}</small>
+              </div>
+              <span class="ms-auto fs-3 text-muted">“</span>
+            </div>
+            <p class="mb-0 pb-0" style="font-size: 13px; color: #333;">{{ testimonial.text }}</p>
+          </div>
+        </div>
+      </div>
+     </div>
+ 
     <!-- Pagination Dots -->
-    <div class="d-flex justify-content-center mt-3">
+    <!-- <div class="d-flex justify-content-center mt-3">
       <span *ngFor="let testimonial of testimonials; let idx = index" (click)="goToSlide(idx)" class="dot"
         [class.active]="idx === currentIndex"></span>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -510,7 +578,7 @@
 </div>
 
 
-<div class="row bg_footer_blue position-relative py-4">
+<div class="row bg_footer_blue text-white position-relative py-4">
   <div class="col-md-4 d-flex justify-content-center">
     <img class="z_index img-fluid" src="assets/images/call_center.svg" alt="">
   </div>

@@ -9,7 +9,7 @@ body {
 /* Side Navigation */
 .side-nav {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 1px solid #ddd;
 }
 
@@ -52,7 +52,7 @@ body {
 /* Section Container */
 .section-container {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 1px solid #ddd;
   padding: 20px;
   margin-bottom: 20px;
@@ -68,7 +68,7 @@ body {
 
 /* Section Text */
 .section-text {
-  font-size: 1rem;
+  font-size: 15px;
   color: #333;
   line-height: 1.6;
 }

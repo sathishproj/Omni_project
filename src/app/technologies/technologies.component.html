@@ -10,7 +10,7 @@
             </h3>
             <div class="row px-1">
               <div class="col-md-4 col-sm-6 mb-4" *ngFor="let tech of technologies">
-                <div class="card h-100 shadow-sm rounded-4">
+                <div class="card h-100 shadow-sm rounded-4" (click)="onClickTechnologies(tech['id'])">
                   <img [src]="tech.image" class="card-img-top" alt="{{ tech.title }}">
                   <div class="card-body">
                     <h5 class="card-title text-primary">{{ tech.title }}</h5>

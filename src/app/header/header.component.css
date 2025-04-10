@@ -1,7 +1,65 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
+.navbar-nav .nav-link {
+    white-space: nowrap !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    color: #000 !important;
+    border-radius: 6px;
+  }
+  
+  /* Hover effect for all screens */
+  .navbar-nav .nav-link:hover {
+    background-color:rgba(0, 143, 213, 1);
+    color: white !important;
+  }
+  
+  /* Active style only for desktop */
+  /* @media (min-width: 992px) {
+    .navbar-nav .nav-link.active {
+      background-color: #007bff;
+      color: #fff !important;
+    }
+  }
+   */
+  /* Mobile styles */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background: linear-gradient(to bottom, #0066cc, #004080);
+      padding: 1rem 0;
+      animation: fadeInDown 0.3s ease-in-out;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 0;
+      padding: 0.2rem 1.2rem;
+    }
+  
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 1rem;
+    }
+  
+    /* .navbar-nav .nav-link.active {
+      background: none;
+      color: #fff !important;
+    }
+  
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    } */
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 .text_black {
     color: #000000 !important;
     font-size: 18px;

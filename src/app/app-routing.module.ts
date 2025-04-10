@@ -11,6 +11,7 @@ import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { NewsMediaComponent } from './news-media/news-media.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { TechnologiesDetailsComponent } from './technologies-details/technologies-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'news-media', component: NewsMediaComponent },
   { path: 'blogs', component: BlogsComponent },
+  { path: 'technologies-details', component: TechnologiesDetailsComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

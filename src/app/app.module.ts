@@ -23,6 +23,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { SafePipe } from './safe.pipe';
+import { TechnologiesDetailsComponent } from './technologies-details/technologies-details.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -42,7 +43,8 @@ import { SafePipe } from './safe.pipe';
     NewsMediaComponent,
     BlogsComponent,
     VideoPlayerComponent,
-    SafePipe
+    SafePipe,
+    TechnologiesDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,35 +1,62 @@
+
+
+<!-- Top Header -->
 <div class="container-fluid bg-light py-1 d-none d-lg-block">
-    <div class="container d-flex justify-content-center justify-content-lg-end small text-muted flex-wrap">
-      <a href="#" class="text-decoration-none me-2" style="color: black;">Blogs</a> |&nbsp;
-      <span class="me-2">Media</span> |&nbsp;
-      <span>24/7 APPOINTMENT HELPLINE : <span class="fw-bold text-primary"><a href="tel:888 0101 000"> 888 0101 000</a></span></span>
+  <div class="container d-flex justify-content-center justify-content-lg-end small text-muted flex-wrap">
+    <a href="#" class="text-decoration-none me-2" style="color: black;">Blogs</a> |&nbsp;
+    <span class="me-2">Media</span> |&nbsp;
+    <span>24/7 APPOINTMENT HELPLINE : <span class="fw-bold text-primary"><a href="tel:8880101000">888 0101 000</a></span></span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.png" alt="OMNI Hospitals" width="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/our-doctors" routerLinkActive="active">Find a Doctor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/our-specialities" routerLinkActive="active">Our Specialities</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link modal-link" data-bs-toggle="modal" data-bs-target="#branchesModal">Our Branches</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link modal-link" data-bs-toggle="modal" data-bs-target="#bookanappointment">Book an Appointment</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/careers" routerLinkActive="active">Careers</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" routerLink="/blogs" routerLinkActive="active">Blogs</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" routerLink="/media" routerLinkActive="active">Media</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" routerLink="/patient-care" routerLinkActive="active">Patient Care</a>
+        </li>
+      </ul>
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 px-lg-5 py-3 py-lg-0 sticky-top">
-    <div class="container py-2">
-      <img src="assets/images/logo.png" alt="OMNI Hospitals">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link text_black" href="">Home</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="../about-us/">About Us</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="../our-doctors/">Find a Doctor</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="../our-specialities/">Our Specialities</a></li>
-          <li class="nav-item"><a class="nav-link text_black"  data-bs-toggle="modal"
-            data-bs-target="#branchesModal">Our Branches</a></li>
-          <li class="nav-item"><a class="nav-link text_black" data-bs-toggle="modal"
-            data-bs-target="#bookanappointment">Book an Appointment</a></li>
-          <li class="nav-item"><a class="nav-link text_black" href="#">Careers</a></li>
-          <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Blogs</a></li>
-          <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Media</a></li>
-          <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Patient Care</a></li>
-          <li class="nav-item d-lg-none"><a class="nav-link text_black" href="#">Careers</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+</nav>
+
+
 
 <!-- Our Branches modal -->
   <ng-container >

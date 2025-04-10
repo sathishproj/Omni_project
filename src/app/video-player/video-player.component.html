@@ -1,7 +1,7 @@
 <div class="video-container" (click)="playVideo()" [style.width.px]="190" [style.height.px]="140">
     <!-- Thumbnail -->
     <ng-container *ngIf="!videoPlayed">
-      <img class="thumbnail" [style.width.px]="190" [style.height.px]="140"
+      <img class="thumbnail h-100" [style.width.px]="190" [style.height.px]=""
         [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'" />
       <div class="play-button"></div>
     </ng-container>

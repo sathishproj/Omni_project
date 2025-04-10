@@ -3,3 +3,8 @@
     box-sizing: border-box;
     overflow-x: hidden;
 } */
+
+.main-wrapper {
+    overflow-x: hidden !important;
+  }
+  

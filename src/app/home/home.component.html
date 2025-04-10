@@ -2,7 +2,7 @@
 <header class="container-fluid p-0">
   <img
     src="https://img.freepik.com/free-photo/doctor-with-face-mask-against-covid19-discussing-with-nurse-hospital-waiting-area-disabled-senior-woman-wheelchair-waiting-examination-assistant-working-reception-computer_482257-6055.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid"
-    class=" w-100" alt="Lungs Image" height="400px">
+    class="w-100" alt="Lungs Image" height="400px">
 </header>
 
 <section class="text-center pt-4" style="background-color: #F1F1F1;">
@@ -183,7 +183,7 @@
       allow-touch-move="true"
       [attr.breakpoints]="breakpointsJson"
     >
-      <swiper-slide *ngFor="let tech of technologies" class="tech-slide">
+      <swiper-slide *ngFor="let tech of technologies" class="tech-slide" (click)="onClickTechno()">
         <img [src]="tech.img" [alt]="tech.label" class="img-fluid img_rad" />
         <h3 class="ps-2 pt-2 tech-title">{{ tech.label }}</h3>
         <p class="ps-2 tech-desc">
@@ -203,44 +203,65 @@
 
 <!-- Why Choose Us Section -->
 <section class="bg-white d-flex align-items-center">
-  <div class="container mt-5 pb-5">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-        <h4 class="text_lgt_primary fw-bold">WHY CHOOSE OMNI HOSPITAL'S?</h4>
-        <p style="text-align: justify;">
+      <!-- Doctor Image -->
+      <div class="col-md-5 mb-md-0 ">
+        <img src="assets/images/why_choose_us_femail.svg" alt="Doctors Team" class="img-fluid doctor-img-custom" />
+      </div>
+
+      <!-- Text and Counters -->
+      <div class="col-md-7">
+        <h4 class="choose_txt fw-bold mt-5">WHY CHOOSE OMNI HOSPITALS?</h4>
+        <p class="text-justify">
           OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals
-          that provides
-          super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor
+          that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor
           group.
           <span *ngIf="showMore">
             It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
           </span>
-          <button (click)="toggleReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
-            {{ showMore ? 'Read Less <<' : 'Read More >>' }} </button>
+          <button (click)="toggleReadMore()" class="btn btn-link choose_txt fw-bold p-0">
+            {{ showMore ? 'Read Less <<' : 'Read More >>' }}
+          </button>
         </p>
 
-        <!-- Counter Section -->
+        <!-- COUNTER GRID -->
         <div class="row text-center mt-4">
-          <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
-            <div class="info-box d-flex align-items-center justify-content-center">
-              <div class="icon-circle">
-                <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px" height="142px">
+          <div
+            class="col-6 col-md-6 mb-4 d-flex align-items-center justify-content-center"
+            *ngFor="let counter of counters"
+          >
+            <div
+              class="d-flex align-items-center justify-content-start w-100"
+              style="min-height: 100px;"
+            >
+              <div class="icon-circle flex-shrink-0">
+                <img
+                  src="assets/images/{{ counter.img }}"
+                  alt="{{ counter.label }}"
+                  width="80"
+                  height="80"
+                />
               </div>
-              <div class="text-left ms-3">
-                <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
-                <span class="counter-label">{{ counter.label }}</span>
+              <div
+                class="text-start ms-3 d-flex flex-column justify-content-center"
+                style="min-height: 80px;"
+              >
+                <h5 class="counter mb-0" [attr.data-target]="counter.target" style="font-size: 20px;">
+                  {{ counter.value }}+
+                </h5>
+                <span class="counter-label" style="font-size: 14px;">{{ counter.label }}</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Right Side Image -->
-      <div class="col-md-6">
-        <img src="assets/images/why_choose.svg" alt="Doctors Team" class="doctor-img">
+        
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 <!-- News And Media Start -->
@@ -287,7 +308,7 @@
     </div>
     <!-- Owl Carousel -->
     <div class="row">
-      <div class="col-5">
+      <div class="col-md-5 col-sm-12 col-xs-12">
         <div class="owl-carousel" #owlCarousel>
           <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ms-2">
             <div class="row g-0">
@@ -313,7 +334,7 @@
         </div>
         
       </div>
-      <div class="col-7">
+      <div class="col-md-7 col-sm-12 col-xs-12">
         <div class="owl-carousel" #patientowlCarousel>
           <div *ngFor="let testimonial of userTestimonials" class="testimonial_card card p-3 pb-0">
             <div class="d-flex align-items-center mb-2">

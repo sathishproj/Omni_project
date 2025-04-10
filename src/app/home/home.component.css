@@ -714,6 +714,7 @@ h6 {
 .testimonial-item {
     padding: 20px 15px;
     max-width: 580px;
+    height: 100%;
     /* background: white; */
     border-radius: 15px;
     overflow: hidden;
@@ -726,10 +727,10 @@ h6 {
     transition: transform 0.3s;
 }
 
-.card:hover {
-    /* transform: scale(1.05); */
-}
-
+.testimonial-item .row {
+    height: 100%;
+  }
+  
 .carousel-control-prev,
 .carousel-control-next {
     filter: invert(1);
@@ -1188,4 +1189,43 @@ swiper-container {
     border-radius: 98%;
     height: 51px;
     width: 51px !important;
+  }
+
+  .doctor-img-custom {
+    max-height: 400px;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  /* .counter-img {
+    width: 142px;
+    height: 142px;
+    object-fit: contain;
+  } */
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .doctor-img-custom {
+      max-height: 280px;
+    }
+  
+    /* .counter-img {
+      width: 60px;
+      height: 60px;
+    } */
+  
+    h5 {
+      font-size: 16px;
+    }
+  
+    small {
+      font-size: 12px;
+    }
+  
+    .gap-3 {
+      gap: 1rem !important;
+    }
+  }
+  .choose_txt{
+    color: rgba(0, 143, 213, 1);
   }

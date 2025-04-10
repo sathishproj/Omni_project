@@ -130,8 +130,8 @@ export class HomeComponent {
       text: "Hyderabad, 7/01/2025 – Omni Hospitals, A Leading Multi-Specialty Healthcare Provider, Proudly Inaugurated The Station Naming Rights...",
       date: "January 20, 2025",
       videoPlayed: false,
-      thumbnailUrl:'ts0mU1_fQVA',
-      videoUrl:"https://www.youtube.com/embed/ts0mU1_fQVA?autoplay=1&mute=1&modestbranding=1&rel=0&showinfo=0"
+      thumbnailUrl:'F6PTu29AhUE',
+      videoUrl:"https://youtu.be/F6PTu29AhUE?si=3zt7ke9vCpQbV-BB"
     },
     {
       name: "Anand Doe",
@@ -139,8 +139,8 @@ export class HomeComponent {
       text: "This platform helped me a lot in my career growth. The services provided are top-notch...",
       date: "March 10, 2025",
       videoPlayed: false,
-      thumbnailUrl:'nqye02H_H6I',
-      videoUrl:"https://www.youtube.com/embed/nqye02H_H6I?autoplay=1&mute=1&modestbranding=1&rel=0&showinfo=0https://www.youtube.com/embed/nqye02H_H6I?si=YiiTVE4edvpSKzT0"
+      thumbnailUrl:'5mGb2WtElQc',
+      videoUrl:"https://youtu.be/5mGb2WtElQc?si=MTgUM8LR5sX31bfn"
     },
     {
       name: "Murali Doe",
@@ -213,6 +213,7 @@ export class HomeComponent {
     }
   ]
 
+  owlInstance: any; // Store reference globally
 
   locations_details = [
     {
@@ -625,13 +626,14 @@ export class HomeComponent {
     this.cdr.detectChanges(); // ensure Angular updates the UI
   }
 
-  owl() {
-    const owl = $(this.owlCarousel.nativeElement); // ✅ Fix: Use `const`
-    $(this.owlCarousel.nativeElement).owlCarousel({
+
+  owl(): void {
+    const owl = $(this.owlCarousel.nativeElement);
+    this.owlInstance = owl.owlCarousel({
       loop: true,
       margin: 20,
       nav: false,
-      dots: false, // Disable Owl default dots
+      dots: false,
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
@@ -641,14 +643,8 @@ export class HomeComponent {
         992: { items: 1 }
       }
     });
-
-    // ✅ Update dot when auto-slide changes
-    owl.on('changed.owl.carousel', (event: any) => {
-      let realIndex = event.item.index - event.relatedTarget._clones.length / 2;
-      this.currentIndex = (realIndex + this.totalSlides) % this.totalSlides; // Fix incorrect index
-    });
-    // this.updateButtons();
   }
+  
 
 testowl(){
   const owl = $(this.patientowlCarousel.nativeElement); // ✅ Fix: Use `const`
@@ -715,4 +711,14 @@ testowl(){
     });
 
   }
+
+  onVideoPlay(index: number): void {
+    this.owlInstance.trigger('stop.owl.autoplay');
+  }
+
+  onVideoPauseOrEnd(index: number): void {
+    this.owlInstance.trigger('play.owl.autoplay', [3000]);
+  }
+  
+  
 }

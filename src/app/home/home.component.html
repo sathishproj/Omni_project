@@ -291,26 +291,27 @@
         <div class="owl-carousel" #owlCarousel>
           <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ms-2">
             <div class="row g-0">
-              <!-- Image Section (Left) -->
+              <!-- Video on left -->
               <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <app-video-player 
-                [videoUrl]="testimonial.videoUrl" 
-                [thumbnailUrlId]="testimonial.thumbnailUrl"
-                [(videoPlayed)]="testimonial.videoPlayed">
-              </app-video-player>
+                <app-video-player
+                  [videoUrl]="testimonial.videoUrl"
+                  [thumbnailUrlId]="testimonial.thumbnailUrl"
+                  [(videoPlayed)]="testimonial.videoPlayed"
+                  (videoStarted)="onVideoPlay(idx)"
+                  (videoStopped)="onVideoPauseOrEnd(idx)">
+                </app-video-player>
               </div>
-              <!-- Text Section (Right) -->
-              <div class="col-md-8 d-flex flex-column align-items-start justify-content-center ps-2 p-3">
-                <h5 class="p-0 m-0" style="font-size: 15px; font-family: 500; font-family: 'roboto';">{{ testimonial.name }}
-                </h5>
-                <p class=" m-0 p-0 py-2 " style="font-size: 10px; color: #828282; font-family: 'roboto';">{{
-                  testimonial.text }}</p>
-                <p class="" style="font-size: 10px; color: #000000; font-family: 'roboto'; font-weight: 500;">{{
-                  testimonial.date }}</p>
+        
+              <!-- Text on right -->
+              <div class="col-md-8  d-flex flex-column align-items-start justify-content-center ps-2 p-3">
+                <h5 class="p-0 m-0 ms-2" style="font-size: 15px;">{{ testimonial.name }}</h5>
+                <p class="m-0 py-2 ms-2" style="font-size: 10px; color: #828282;">{{ testimonial.text }}</p>
+                <p class="m-0 ms-2" style="font-size: 10px; color: #000;">{{ testimonial.date }}</p>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
       <div class="col-7">
         <div class="owl-carousel" #patientowlCarousel>

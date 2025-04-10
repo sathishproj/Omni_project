@@ -1,14 +1,12 @@
 <div class="video-container" (click)="playVideo()" [style.width.px]="190" [style.height.px]="140">
-    <!-- Show thumbnail and play button if the video has not played -->
+    <!-- Thumbnail -->
     <ng-container *ngIf="!videoPlayed">
-        <img class="thumbnail" [style.width.px]="190" [style.height.px]="140"
-            [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'" alt="Video Thumbnail" />
-        <div class="play-button"></div>
+      <img class="thumbnail" [style.width.px]="190" [style.height.px]="140"
+        [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'" />
+      <div class="play-button"></div>
     </ng-container>
-
-    <!-- Show the iframe once the video is to be played -->
-    <iframe *ngIf="videoPlayed" [style.width.px]="190" [style.height.px]="140" [src]="videoUrl | safe" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-</div>
+  
+    <!-- YouTube player (inserted dynamically) -->
+    <div *ngIf="videoPlayed" [id]="'yt-player-' + thumbnailUrlId"></div>
+  </div>
+  

@@ -1,0 +1,35 @@
+.bg_color{
+background-color: rgba(0, 143, 213, 0.05);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h6 {
+  font-size: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.doctor-card {
+    border: 1px solid #cfd9e0;
+    border-radius: 15px;
+  }
+  
+  .doctor-list-container {
+    max-height: 600px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-right: 10px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  

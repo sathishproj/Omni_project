@@ -24,6 +24,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { SafePipe } from './safe.pipe';
 import { TechnologiesDetailsComponent } from './technologies-details/technologies-details.component';
+import { OurBranchesComponent } from './our-branches/our-branches.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -44,7 +45,8 @@ import { TechnologiesDetailsComponent } from './technologies-details/technologie
     BlogsComponent,
     VideoPlayerComponent,
     SafePipe,
-    TechnologiesDetailsComponent
+    TechnologiesDetailsComponent,
+    OurBranchesComponent
   ],
   imports: [
     BrowserModule,

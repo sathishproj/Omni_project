@@ -89,3 +89,27 @@ button {
 .border-line:last-child {
   background-color: #008FD5;
 }
+
+
+.card-animate {
+  animation: fadeInSlide 0.8s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    transform: translate(-10px, -10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

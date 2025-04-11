@@ -41,13 +41,13 @@
                                 readonly>
                         </div>
 
-                        <div class="mb-3 position-relative">
+                        <!-- <div class="mb-3 position-relative">
                             <select class="form-select floating-input" (change)="onLocationChange($event)" required>
                                 <option value="" disabled selected>Select Location</option>
                                 <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}
                                 </option>
                             </select>
-                        </div>
+                        </div> -->
 
                         <!-- Centered Submit Button -->
                     </form>
@@ -59,5 +59,59 @@
             </div>
         </ng-container>
     </div>
+
+    <div class="container-fluid p-3">
+        <div class="row">
+          <!-- Doctor Cards (Scrollable Section) -->
+          <div class="col-md-8 col-12 no-scrollbar" style="max-height: calc(100vh - 40px); overflow-y: scroll;">
+            <!-- <div *ngIf="searchName && selectedLocation">
+              <h5 class="mb-3">Showing results for "{{ searchName }}" in "{{ selectedLocation }}"</h5>
+            </div>
+            <div *ngIf="searchName && !selectedLocation">
+              <h5 class="mb-3">Showing results for Doctor "{{ searchName }}"</h5>
+            </div>
+            <div *ngIf="!searchName && selectedLocation">
+              <h5 class="mb-3">Showing Doctors in "{{ selectedLocation }}"</h5>
+            </div> -->
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" *ngFor="let doctor of filteredDoctors">
+                <div class="card card-animate text-center shadow border-primary rounded">
+                  <img [src]="doctor.image" class="card-img-top" alt="{{ doctor.name }}" style="height: 200px; object-fit: cover;" />
+                  <div class="card-body px-2 py-3">
+                    <h6 class="card-title text-white bg-primary py-2 px-1 rounded">{{ doctor.name }}</h6>
+                    <p class="text-white bg-info py-1 px-1 rounded mt-2">{{ doctor.designation }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Search and Info Panel (Fixed Panel) -->
+          <div class="col-md-4 col-12" style="position: sticky; top: 10px; z-index: 100;">
+            <div class="card p-4 shadow-lg border border-dark rounded-4">
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Search by Doctor"
+                [(ngModel)]="searchName"
+              />
+              <select class="form-select mb-3" [(ngModel)]="selectedLocation">
+                <option value="">Select Location</option>
+                <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
+              </select>
+              <button class="btn btn-primary w-100" (click)="filterDoctors()">Search</button>
+            </div>
+      
+            <div class="card mt-4 p-4 border border-dark rounded-4 shadow-sm">
+              <h5 class="text-primary fw-bold">Cardiology Package</h5>
+              <p class="text-muted small">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
 </section>
 <app-footer></app-footer>

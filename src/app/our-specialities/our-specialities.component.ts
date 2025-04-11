@@ -26,10 +26,11 @@ export class OurSpecialitiesComponent {
 
   }
 
-  goToDetails(id:number) {
+  goToDetails(id:number, dep:any) {
     this.router.navigate(['/our-specialities-details'], {
       queryParams: {
         selected_Id: id,
+        depertment:dep
       }
     });
   }

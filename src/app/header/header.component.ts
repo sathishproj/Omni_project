@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -30,5 +31,25 @@ export class HeaderComponent {
   ]
   locationToggle(num:number){
 
+  }
+
+  constructor(private router: Router){
+
+  }
+
+  routeToLocation(location:string){
+    const modalElement = document.getElementById('branchesModal');
+  const modalInstance = bootstrap.Modal.getInstance(modalElement);
+  if (modalInstance) {
+    modalInstance.hide();
+  }
+
+  setTimeout(() => {
+    this.router.navigate(['/our-branches'], {
+      queryParams: {
+        selected_location: location,
+      }
+    });
+  }, 300); // optional delay for smoother transition
   }
 }

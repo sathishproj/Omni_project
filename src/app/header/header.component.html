@@ -80,7 +80,7 @@
           <div class="container">
             <div class="row g-3">
               <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
-                <div class="text-center">
+                <div class="text-center" (click)="routeToLocation(details['location_name'])">
                   <img src="assets/locations/{{details['img']}}" alt="Kothapet">
                   <p class="border_prop py-2">{{details['location_name']}}</p>
                 </div>

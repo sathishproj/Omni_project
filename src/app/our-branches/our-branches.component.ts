@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-our-branches',
@@ -69,6 +70,17 @@ export class OurBranchesComponent {
       department: 'Dermatology'
     },
   ];
+  getting_location:string='';
+  constructor(private activated_routes: ActivatedRoute){
+    this.activatedRoutesData();
+  }
+
+  activatedRoutesData() {
+    this.activated_routes.queryParams.subscribe(params => {
+      console.log(params,'params..');
+      this.getting_location = params['selected_location'] || '';
+    });
+  }
 
   setSelected(dept: string) {
     this.selectedDepartment = dept;

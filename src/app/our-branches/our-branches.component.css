@@ -32,4 +32,8 @@ background-color: rgba(0, 143, 213, 0.05);
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  
+  .txt{
+    color: rgba(102, 102, 102, 1);
+    font-family: 'Roboto';
+    font-weight: 400;
+  }

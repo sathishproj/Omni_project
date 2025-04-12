@@ -10,7 +10,7 @@
                   <img src="https://i.ibb.co/BZVsb8M/omni.png" alt="Omni Kukatpally" class="img-fluid rounded">
                 </div>
                 <div class="col-md-8">
-                  <h5 class="text-primary fw-bold">Omni Kukatpally</h5>
+                  <h5 class="text-primary fw-bold">{{getting_location}}</h5>
                   <p class="small text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales purus et sapien facilisis, sed pharetra risus faucibus.
                   </p>
@@ -74,19 +74,19 @@
                       <!-- Right Side Icons and Button -->
                       <div class="col-md-3 text-md-end mt-3 mt-md-0">
                         <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-calendar3 me-2 text-secondary"></i>
-                          <span>{{ doc.experience }}</span>
+                          <img class="ms-2 me-3" src="assets/our_doctors/experience.svg" alt="">
+                          <span class="txt">{{ doc.experience }}</span>
                         </div>
                         <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-clock me-2 text-secondary"></i>
-                          <span>{{ doc.timings }}</span>
+                          <img class="ms-2 me-3" src="assets/our_doctors/clock.svg" alt="">
+                          <span class="txt">{{ doc.timings }}</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
-                          <i class="bi bi-geo-alt me-2 text-secondary"></i>
-                          <span>{{ doc.location }}</span>
+                          <img class="ms-2 me-3" src="assets/our_doctors/location.svg" alt="">
+                          <span class="txt">{{ doc.location }}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-start mb-3">
-                            <button class="btn btn-success rounded-pill px-3 py-1 btn-sm">
+                            <button class="btn rounded-pill px-3 py-2 btn-sm" style="font-size:13px; color: rgba(255, 255, 255, 1); font-weight: 700; font-family: 'Roboto'; background-color: rgba(140, 198, 63, 1);">
                               Book an Appointment
                             </button>
                         </div>

@@ -109,4 +109,9 @@
 .line-right {
     background: #008FD5;
 }
+@media (max-width: 768px) {
+    .free_sec {
+      font-size: 20px;
+    }
+  }
 

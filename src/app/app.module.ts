@@ -27,6 +27,7 @@ import { TechnologiesDetailsComponent } from './technologies-details/technologie
 import { OurBranchesComponent } from './our-branches/our-branches.component';
 import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -50,7 +51,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     TechnologiesDetailsComponent,
     OurBranchesComponent,
     CareersComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,

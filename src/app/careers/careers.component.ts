@@ -13,9 +13,9 @@ export class CareersComponent {
   selectedFile: File | null = null;
 
   careers = [
-    { title: 'Compassionate Culture', image: 'culture.jpg', description: 'We nurture empathy and kindness.' },
-    { title: 'Career Growth', image: 'growth.jpg', description: 'Opportunities to grow and lead.' },
-    { title: 'Great Teamwork', image: 'teamwork.jpg', description: 'Collaboration across departments.' },
+    { title: 'Compassionate Culture', image: 'careers_motivational.svg', description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },
+    { title: 'Career Growth', image: 'careers_motivational.svg', description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },
+    { title: 'Great Teamwork', image: 'careers_motivational.svg', description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },
   ];
 
   jobList = [

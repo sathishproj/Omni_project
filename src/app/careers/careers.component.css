@@ -4,3 +4,28 @@
     margin: 0 10px;
     font-weight: bold;
   }
+  .border_gray{
+    border:1px solid #666666;
+  }
+  .card{
+    border:1px solid #666666 !important;
+  }
+  .form_border{
+    border:1px solid #000000 !important;
+    background-color: #FFFFFF !important;
+  }
+  .br_dark{
+    border:1px solid #000000 !important;
+    color:#666666;
+  }
+  .form-control {
+    all: unset; /* Reset all Bootstrap styles */
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #000; /* You can change it */
+    border: 1px solid #ccc; /* Custom border */
+    border-radius: 0.25rem; /* Optional: customize or remove */
+    box-sizing: border-box;
+}

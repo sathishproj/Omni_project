@@ -41,7 +41,7 @@
 .form-container {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -89,8 +89,8 @@
     color: grey;
     background-color: white;
     margin-top: 10px;
-    padding: 3px 20px;
-    border-radius: 5px;
+    padding: 5px 40px;
+    border-radius: 10px;
 }
 .btn-submit:hover {
     background-color: #8CC63F;
@@ -109,3 +109,4 @@
 .line-right {
     background: #008FD5;
 }
+

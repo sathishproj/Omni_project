@@ -1,0 +1,29 @@
+<div class="container my-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 mb-4">
+        <h4 class="fw-bold">{{ mainBlog?.title }}</h4>
+        <img [src]="mainBlog?.image" alt="blog" class="img-fluid rounded shadow-sm mb-2" />
+        <div class="border-top border-3 border-success border-start-0 border-end-0 border-bottom-0 mb-3"></div>
+        <p class="text-muted">{{ mainBlog?.description }}</p>
+        <p *ngFor="let i of [1,2,3]" class="text-muted">
+          {{ mainBlog?.description }} {{ mainBlog?.description }}
+        </p>
+      </div>
+  
+      <div class="col-lg-4 col-md-12">
+        <div class="bg-primary text-white rounded-top px-3 py-2 text-center mb-2">
+          <h5 class="m-0">Recent Posts</h5>
+        </div>
+        <div *ngFor="let blog of recentPosts" class="card mb-3 recent-card cursor-pointer" (click)="swapBlog(blog)">
+          <img [src]="blog.image" class="card-img-top rounded-top" style="height: 130px; object-fit: cover;" />
+          <div class="border-top border-3 border-info border-start-0 border-end-0 border-bottom-0"></div>
+          <div class="card-body py-2 px-3">
+            <h6 class="card-title mb-1">{{ blog.title }}</h6>
+            <small class="text-muted d-block">{{ blog.date }}</small>
+            <a href="#" class="small fw-bold text-dark text-decoration-none">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

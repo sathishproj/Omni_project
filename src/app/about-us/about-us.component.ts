@@ -17,19 +17,19 @@ export class AboutUsComponent {
   ];
 
   boardMembers = [
-    { name: 'Dr M Goutham Reddy', image: 'assets/member1.jpg' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/member2.jpg' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/member3.jpg' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/member4.jpg' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/member5.jpg' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/member6.jpg' }
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' }
   ];
 
   leadershipTeam = [
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/leader1.jpg' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/leader2.jpg' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/leader3.jpg' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/leader4.jpg' }
+    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
+    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
+    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
+    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' }
   ];
 
   setActiveSection(sectionId: string) {

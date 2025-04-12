@@ -8,7 +8,7 @@
         <div class="side-nav p-0">
           <ul class="nav flex-column">
             <li class="nav-item  {{section['id'] == 'leadershipTeam'?'py-4':''}}" *ngFor="let section of sections">
-              <a class=" {{section['id'] == 'leadershipTeam'?'border_bottom_none':'nav-link'}} py-4"
+              <a class=" {{section['id'] == 'leadershipTeam'?'border_bottom_none':'nav-link py-4'}} "
                 [ngClass]="{'active-link': activeSection === section.id}" (click)="setActiveSection(section.id)">
                 {{ section.name }}
               </a>
@@ -33,7 +33,7 @@
           <div class="section-container">
             <!-- Image -->
             <div class="">
-              <img src="assets/images/about_us_banner.jpg" class="img-fluid" alt="About OMNI">
+              <img src="assets/images/about-us.png" class="img-fluid" alt="About OMNI">
             </div>
             <h2 class="section-title pt-3">ABOUT OMNI HOSPITALS</h2>
             <div class="row align-items-center">
@@ -54,7 +54,7 @@
           <!-- OUR VISION -->
           <div class="section-container mb-4">
             
-            <div class="row ">
+            <div class="row d-flex  justify-content-center">
               <!-- Image -->
               <div class="col-12 col-md-3 mb-3 mb-md-0">
                 <img
@@ -75,8 +75,8 @@
           </div>
 
           <!-- OUR MISSION -->
-          <div class="section-container">
-            <div class="row ">
+          <div class="section-container d-flex flex-column align-items-center text-center w-100">
+            <div class="row d-flex justify-content-center">
               <!-- Text -->
               <div class="col-12 col-md-9 mission_txt">
                 <h2 class="section-title">OUR MISSION</h2>
@@ -110,46 +110,72 @@
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- =========================
-           BOARD MEMBERS
-           ========================= -->
-        <div *ngIf="activeSection === 'boardMembers'">
-          <div class="section-container">
-            <h2 class="section-title">BOARD MEMBERS</h2>
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-4 mb-4" *ngFor="let member of boardMembers">
-                <div class="card h-100 text-center">
-                  <img [src]="member.image" class="card-img-top" alt="Board Member" />
-                  <div class="card-body">
-                    <h5 class="card-title">{{ member.name }}</h5>
-                    <p class="card-text">Medical Director</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- =========================
            OUR CHAIRMAN
            ========================= -->
-        <div *ngIf="activeSection === 'ourChairman'">
-          <div class="section-container">
-            <h2 class="section-title">OUR CHAIRMAN</h2>
-            <div class="row align-items-center">
-              <!-- Image -->
-              <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
-                <img src="assets/chairman.jpg" class="img-fluid" alt="Chairman" />
+           <div *ngIf="activeSection === 'ourChairman'">
+            <div class="section-container">
+              
+              <div class="row align-items-start">
+                <!-- Image -->
+                <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+                  <img src="assets/images/our_chairman.png" class="img-fluid" alt="Chairman" />
+                  <div class="d-flex flex-column pt-3">
+                    <label class="chairman_name">Suryanarayana Reddy Pulagam</label>
+                    <small class="chairman_role">Chairman & Managing Director Incor Group</small>
+                  </div>
+                </div>
+                <!-- Text -->
+                <div class="col-12 col-md-9">
+                  <h2 class="section-title">OUR CHAIRMAN</h2>
+                  <p class="section-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                    Lorem Ipsum.
+                  </p>
+                  <p class="section-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                    Lorem Ipsum.
+                  </p>
+                  <p class="section-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum
+                  </p>
+                </div>
               </div>
-              <!-- Text -->
-              <div class="col-12 col-md-9">
-                <p class="section-text">
-                  Lorem ipsum is simply dummy text of the printing and typesetting
-                  industry...
-                </p>
+            </div>
+          </div>
+
+        <!-- =========================
+           BOARD MEMBERS
+           ========================= -->
+        <div *ngIf="activeSection === 'boardMembers'">
+          <div class="section-container d-flex flex-column align-items-center text-center w-100">
+            <div class="d-flex align-items-center justify-content-center my-4 w-100">
+              <div class="flex-grow-1 green_line mb-3"></div>
+              <h2 class="section-title mx-3" style="color:#000000 !important">BOARD MEMBERS</h2>
+              <div class="flex-grow-1 blue_line mb-3"></div>
+            </div>
+            <!-- <h2 class="section-title">BOARD MEMBERS</h2> -->
+            <div class="row d-flex justify-content-center gap-5 padding_none ">
+              <div class="col-12 col-sm-6 col-md-4 mb-4 board_container" *ngFor="let member of boardMembers">
+                <img [src]="member.image" class="card-img-top" alt="Board Member" />
+                <div class="card-body">
+                  <h5 class="card-title">{{ member.name }}</h5>
+                  <p class="card-text">Medical Director</p>
+                </div>
               </div>
             </div>
           </div>
@@ -159,23 +185,26 @@
            LEADERSHIP TEAM
            ========================= -->
         <div *ngIf="activeSection === 'leadershipTeam'">
-          <div class="section-container">
-            <h2 class="section-title">LEADERSHIP TEAM</h2>
+          <div class="section-container d-flex flex-column align-items-center text-center w-100">
+            <div class="d-flex align-items-center justify-content-center my-4 w-100">
+              <div class="flex-grow-1 mb-3 green_line"></div>
+              <h2 class="section-title mx-3" style="color:#000000 !important">LEADERSHIP TEAM</h2>
+              <div class="flex-grow-1 mb-3 blue_line"></div>
+            </div>
 
             <!-- Example of alternating image & text columns -->
-            <div class="row align-items-center mb-4" *ngFor="let leader of leadershipTeam; let i = index">
+            <div class="row px-3" style="margin-bottom: 50px;" *ngFor="let leader of leadershipTeam; let i = index">
               <!-- If i is odd, reverse the columns for an alternating layout -->
-              <div class="col-12 col-md-3 text-center mb-3 mb-md-0" [ngClass]="{'order-md-last': i % 2 !== 0}">
-                <img [src]="leader.image" class="img-fluid" alt="Leader" />
+              <div class="col-12 col-md-3 mb-3 mb-md-0 p-0"  [ngClass]="{'order-md-last text-end': i % 2 !== 0,'text-start': i % 2 === 0}">
+                <img [src]="leader.image" style="width:225px;height:240px;object-fit: cover;" class="img-fluid" alt="Leader" />
               </div>
-              <div class="col-12 col-md-9" [ngClass]="{'order-md-first': i % 2 !== 0}">
-                <h5>
-                  {{ leader.name }}
-                  <small>({{ leader.title }})</small>
-                </h5>
-                <p class="section-text">
-                  Lorem ipsum is simply dummy text of the printing and typesetting
-                  industry...
+              <div class="col-12 col-md-9 text-start p-0" [ngClass]="{'order-md-first': i % 2 !== 0}">
+                <div class="d-flex flex-column bb-75">
+                  <h5 class="m-0" style="color: #8CC63F;">{{ leader.name }}</h5>
+                  <small class="pb-2" style="color:#008FD5">({{ leader.title }})</small>
+                </div>
+                <p class="section-text pt-3 pl-0 pr-0">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
               </div>
             </div>

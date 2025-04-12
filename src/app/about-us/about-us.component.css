@@ -11,6 +11,10 @@ body {
   background-color: #fff;
   border-radius: 30px;
   border: 1px solid #ddd;
+  
+  display: inline-block;     /* Shrink to fit content */
+  white-space: nowrap;       /* Prevent line wrapping */
+  padding: 1rem;
 }
 
 /* Nav Links */
@@ -21,11 +25,13 @@ body {
   font-size: 1rem;
   /* Light bottom border for each link except last */
   border-bottom: 1px solid #ddd;
+  width: -webkit-fill-available;
   border-radius: 0;
 }
 
 .side-nav .nav-link:last-child {
   border-bottom: 1px solid #D9D9D9;
+  width: -webkit-fill-available;
 }
 
 .border_bottom_none {
@@ -37,15 +43,18 @@ body {
   font-size: 1rem;
   border-radius: 0;
   text-decoration: none;
+  width: -webkit-fill-available;
 }
 .border_bottom_none.active-link{
   color: #008FD5;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  width: -webkit-fill-available;
 }
 /* Active Link with a thicker bottom border and bold color */
 .side-nav .nav-link.active-link {
   color: #008FD5;
   border-bottom: 3px solid #008FD5;
+  width: -webkit-fill-available;
   /* background-color: #f9f9f9; */
 }
 
@@ -75,7 +84,7 @@ body {
 
 /* Images */
 .img-fluid {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -99,3 +108,86 @@ body {
 .mission_txt{
   text-align: left;
 }
+.side-nav .nav-link {
+  white-space: nowrap;       /* Prevent text from wrapping */
+  width: fit-content;        /* Make width adjust to text length */
+  display: inline-block;     /* Ensure the width is respected */
+}
+.chairman_name{
+  font-weight: 900;
+  font-size:16px;
+  color:#8CC63F;
+}
+.chairman_role{
+  font-weight: 400;
+  font-size:12px;
+}
+.card-img-top {
+  width: 274px;
+  height: 274px;
+}
+.board_container{
+  width: 274px;
+}
+.card-body{
+  background-color:#008FD5;
+}
+
+.board_container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* padding: 1rem; */
+}
+
+.board_container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.board_container img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
+
+.board_container .card-body {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-block: 1rem;
+}
+
+.board_container .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #FFFFFF;
+}
+
+.board_container .card-text {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+.padding_none > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.bb-75 {
+  width: 75%;
+  border-bottom: 2px solid lightgray;
+}
+.green_line{
+  height: 3px; 
+  max-width: 200px; 
+  background-color: #8CC63F;
+}
+.blue_line{
+  height: 3px;
+   max-width: 200px;
+   background-color: #008FD5
+}
+

@@ -34,7 +34,7 @@ button {
   position: absolute;
   /* left: 5px; */
   padding-left: 0px !important;
-  top: 15%;
+  top: 30%;
   transform: translateY(-15%);
   font-size: 14px;
   color: #aaa;
@@ -112,4 +112,80 @@ button {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.description_font{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .description_font{
+    font-size: 12px;
+  }
+}
+.padding_none > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.card-img-top {
+  width: 274px;
+  height: 274px;
+}
+.card-body{
+  background-color:#008FD5;
+}
+.board_container{
+  width: 274px;
+}
+.card-body{
+  background-color:#008FD5;
+}
+
+.board_container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* padding: 1rem; */
+}
+
+.board_container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.board_container img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
+
+.board_container .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #FFFFFF;
+}
+
+.board_container .card-text {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+.card {
+  border: none !important;
+}
+.board_container .card , .card-img-top{
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.board_container .card-body {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-block: 1rem;
+}
+.border_gray{
+  border:2px solid #82828233;
 }

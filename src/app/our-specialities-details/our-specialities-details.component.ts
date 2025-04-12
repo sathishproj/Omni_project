@@ -33,62 +33,62 @@ export class OurSpecialitiesDetailsComponent {
   departmentName: string = '';
   doctors = [
     // Cardiology
-    { name: 'Dr Pramod Kumar Rao', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/dr1.jpg', location: 'kukkatpally' },
-    { name: 'Dr Anjali Mehra', designation: 'Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/dr2.jpg', location: 'Nampally' },
-    { name: 'Dr Ravi Sharma', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/dr3.jpg', location: 'vizag' },
-    { name: 'Dr Sunita Reddy', designation: 'Cardiologist', department: 'Cardiology', image: 'assets/images/dr4.jpg', location: 'kurnool' },
-    { name: 'Dr Rajeev Menon', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/dr5.jpg', location: 'Giggles-vizag' },
-    { name: 'Dr Ayesha Khan', designation: 'Cardiologist', department: 'Cardiology', image: 'assets/images/dr6.jpg', location: 'kothapet' },
+    { name: 'Dr Pramod Kumar Rao', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
+    { name: 'Dr Anjali Mehra', designation: 'Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' },
+    { name: 'Dr Ravi Sharma', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Sunita Reddy', designation: 'Cardiologist', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'kurnool' },
+    { name: 'Dr Rajeev Menon', designation: 'Sr. Consultant - Cardiology', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'Giggles-vizag' },
+    { name: 'Dr Ayesha Khan', designation: 'Cardiologist', department: 'Cardiology', image: 'assets/images/cardiology_doctor.png', location: 'kothapet' },
   
     // ENT
-    { name: 'Dr Sandeep Roy', designation: 'ENT Surgeon', department: 'ENT', image: 'assets/images/dr7.jpg', location: 'kukkatpally' },
-    { name: 'Dr Pooja Iyer', designation: 'Consultant - ENT', department: 'ENT', image: 'assets/images/dr8.jpg', location: 'vizag' },
-    { name: 'Dr Nishant Rao', designation: 'Sr. ENT Specialist', department: 'ENT', image: 'assets/images/dr9.jpg', location: 'Nampally' },
+    { name: 'Dr Sandeep Roy', designation: 'ENT Surgeon', department: 'ENT', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
+    { name: 'Dr Pooja Iyer', designation: 'Consultant - ENT', department: 'ENT', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Nishant Rao', designation: 'Sr. ENT Specialist', department: 'ENT', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' },
   
     // General Medicine
-    { name: 'Dr Veena Desai', designation: 'General Physician', department: 'General Medicine', image: 'assets/images/dr10.jpg', location: 'kothapet' },
-    { name: 'Dr Mahesh Rathi', designation: 'Sr. Consultant - General Medicine', department: 'General Medicine', image: 'assets/images/dr11.jpg', location: 'vizag' },
-    { name: 'Dr Lakshmi Rao', designation: 'Consultant - General Medicine', department: 'General Medicine', image: 'assets/images/dr12.jpg', location: 'kurnool' },
+    { name: 'Dr Veena Desai', designation: 'General Physician', department: 'General Medicine', image: 'assets/images/cardiology_doctor.png', location: 'kothapet' },
+    { name: 'Dr Mahesh Rathi', designation: 'Sr. Consultant - General Medicine', department: 'General Medicine', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Lakshmi Rao', designation: 'Consultant - General Medicine', department: 'General Medicine', image: 'assets/images/cardiology_doctor.png', location: 'kurnool' },
   
     // General Surgery
-    { name: 'Dr Amit Bhargava', designation: 'General Surgeon', department: 'General Surgery', image: 'assets/images/dr13.jpg', location: 'Giggles-vizag' },
-    { name: 'Dr Neelima Sharma', designation: 'Sr. Consultant - General Surgery', department: 'General Surgery', image: 'assets/images/dr14.jpg', location: 'Nampally' },
+    { name: 'Dr Amit Bhargava', designation: 'General Surgeon', department: 'General Surgery', image: 'assets/images/cardiology_doctor.png', location: 'Giggles-vizag' },
+    { name: 'Dr Neelima Sharma', designation: 'Sr. Consultant - General Surgery', department: 'General Surgery', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' },
   
     // Gastroenterology
-    { name: 'Dr Farhan Qureshi', designation: 'Gastroenterologist', department: 'Gastroenterology', image: 'assets/images/dr15.jpg', location: 'kukkatpally' },
-    { name: 'Dr Sheetal Agarwal', designation: 'Sr. Consultant - Gastroenterology', department: 'Gastroenterology', image: 'assets/images/dr16.jpg', location: 'vizag' },
+    { name: 'Dr Farhan Qureshi', designation: 'Gastroenterologist', department: 'Gastroenterology', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
+    { name: 'Dr Sheetal Agarwal', designation: 'Sr. Consultant - Gastroenterology', department: 'Gastroenterology', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
   
     // Neurology
-    { name: 'Dr Kavitha Menon', designation: 'Neurologist', department: 'Neurology', image: 'assets/images/dr17.jpg', location: 'kothapet' },
-    { name: 'Dr Ramesh Chandra', designation: 'Sr. Consultant - Neurology', department: 'Neurology', image: 'assets/images/dr18.jpg', location: 'kurnool' },
+    { name: 'Dr Kavitha Menon', designation: 'Neurologist', department: 'Neurology', image: 'assets/images/cardiology_doctor.png', location: 'kothapet' },
+    { name: 'Dr Ramesh Chandra', designation: 'Sr. Consultant - Neurology', department: 'Neurology', image: 'assets/images/cardiology_doctor.png', location: 'kurnool' },
   
     // Nephrology & Urology
-    { name: 'Dr Sanjay Naik', designation: 'Urologist', department: 'Nephrology & Urology', image: 'assets/images/dr19.jpg', location: 'kukkatpally' },
-    { name: 'Dr Aruna Patil', designation: 'Nephrologist', department: 'Nephrology & Urology', image: 'assets/images/dr20.jpg', location: 'Nampally' },
+    { name: 'Dr Sanjay Naik', designation: 'Urologist', department: 'Nephrology & Urology', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
+    { name: 'Dr Aruna Patil', designation: 'Nephrologist', department: 'Nephrology & Urology', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' },
   
     // Obstetrics & Gynaecology
-    { name: 'Dr Swathi Rao', designation: 'Gynaecologist', department: 'Obstetrics & Gynaecology', image: 'assets/images/dr21.jpg', location: 'vizag' },
-    { name: 'Dr Meera Shah', designation: 'Consultant - Obstetrics', department: 'Obstetrics & Gynaecology', image: 'assets/images/dr22.jpg', location: 'Giggles-vizag' },
+    { name: 'Dr Swathi Rao', designation: 'Gynaecologist', department: 'Obstetrics & Gynaecology', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Meera Shah', designation: 'Consultant - Obstetrics', department: 'Obstetrics & Gynaecology', image: 'assets/images/cardiology_doctor.png', location: 'Giggles-vizag' },
   
     // Paediatrics
-    { name: 'Dr Rekha Iyer', designation: 'Child Specialist', department: 'Paediatrics', image: 'assets/images/dr23.jpg', location: 'kothapet' },
-    { name: 'Dr Joseph Mathew', designation: 'Sr. Consultant - Paediatrics', department: 'Paediatrics', image: 'assets/images/dr24.jpg', location: 'kukkatpally' },
+    { name: 'Dr Rekha Iyer', designation: 'Child Specialist', department: 'Paediatrics', image: 'assets/images/cardiology_doctor.png', location: 'kothapet' },
+    { name: 'Dr Joseph Mathew', designation: 'Sr. Consultant - Paediatrics', department: 'Paediatrics', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
   
     // Pulmonology
-    { name: 'Dr Niharika Das', designation: 'Pulmonologist', department: 'Pulmonology', image: 'assets/images/dr25.jpg', location: 'kurnool' },
-    { name: 'Dr Vijay Singh', designation: 'Consultant - Pulmonology', department: 'Pulmonology', image: 'assets/images/dr26.jpg', location: 'Nampally' },
+    { name: 'Dr Niharika Das', designation: 'Pulmonologist', department: 'Pulmonology', image: 'assets/images/cardiology_doctor.png', location: 'kurnool' },
+    { name: 'Dr Vijay Singh', designation: 'Consultant - Pulmonology', department: 'Pulmonology', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' },
   
     // Psychiatry
-    { name: 'Dr Shruti Kaur', designation: 'Psychiatrist', department: 'Psychiatry', image: 'assets/images/dr27.jpg', location: 'vizag' },
-    { name: 'Dr Rohit Das', designation: 'Sr. Consultant - Psychiatry', department: 'Psychiatry', image: 'assets/images/dr28.jpg', location: 'kothapet' },
+    { name: 'Dr Shruti Kaur', designation: 'Psychiatrist', department: 'Psychiatry', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Rohit Das', designation: 'Sr. Consultant - Psychiatry', department: 'Psychiatry', image: 'assets/images/cardiology_doctor.png', location: 'kothapet' },
   
     // Orthopaedics & Sports Medicine
-    { name: 'Dr Ashok Verma', designation: 'Orthopaedic Surgeon', department: 'Osthopaedics & Sports Medicine', image: 'assets/images/dr29.jpg', location: 'kukkatpally' },
-    { name: 'Dr Sneha Menon', designation: 'Consultant - Sports Medicine', department: 'Osthopaedics & Sports Medicine', image: 'assets/images/dr30.jpg', location: 'Giggles-vizag' },
+    { name: 'Dr Ashok Verma', designation: 'Orthopaedic Surgeon', department: 'Osthopaedics & Sports Medicine', image: 'assets/images/cardiology_doctor.png', location: 'kukkatpally' },
+    { name: 'Dr Sneha Menon', designation: 'Consultant - Sports Medicine', department: 'Osthopaedics & Sports Medicine', image: 'assets/images/cardiology_doctor.png', location: 'Giggles-vizag' },
   
     // Vascular Surgery
-    { name: 'Dr Mohit Chawla', designation: 'Vascular Surgeon', department: 'Vascular Surgery', image: 'assets/images/dr31.jpg', location: 'vizag' },
-    { name: 'Dr Nisha Rao', designation: 'Consultant - Vascular Surgery', department: 'Vascular Surgery', image: 'assets/images/dr32.jpg', location: 'Nampally' }
+    { name: 'Dr Mohit Chawla', designation: 'Vascular Surgeon', department: 'Vascular Surgery', image: 'assets/images/cardiology_doctor.png', location: 'vizag' },
+    { name: 'Dr Nisha Rao', designation: 'Consultant - Vascular Surgery', department: 'Vascular Surgery', image: 'assets/images/cardiology_doctor.png', location: 'Nampally' }
   ];
   
 

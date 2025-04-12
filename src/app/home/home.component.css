@@ -1192,7 +1192,7 @@ swiper-container {
   }
 
   .doctor-img-custom {
-    max-height: 420px;
+    max-height: 400px;
     width: 100%;
     object-fit: contain;
   }

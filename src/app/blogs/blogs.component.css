@@ -1,37 +1,42 @@
-.section-title {
-    font-weight: bold;
-    position: relative;
-  }
-  
-  .section-title .decor {
-    display: inline-block;
-    width: 40px;
-    height: 3px;
-    background: #8CC63F;
-    margin: 0 10px;
-    vertical-align: middle;
-  }
-  .section-title .decor.right {
-    display: inline-block;
-    width: 40px;
-    height: 3px;
-    background: #008FD5;
-    margin: 0 10px;
-    vertical-align: middle;
-  }
-  
-  .section-title .decor.right {
-    transform: rotate(180deg);
-  }
-  
-  .card {
-    transition: transform 0.3s ease;
-  }
-  
-  .card-img-top {
-    object-fit: cover;
-    height: 200px;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-  
+.bg_blue{
+  background-color: rgba(0, 143, 213, 0.05) !important;
+  background: rgba(0, 143, 213, 0.05) !important;
+}
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+h2 {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+.card-title{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'roboto';
+  color: rgba(0, 0, 0, 1) !important;
+}
+.card-text{
+  color: rgba(130, 130, 130, 1) !important;
+  font-family: 'roboto';
+  font-size: 12px;
+  font-weight: 500;
+}
+.date_txt{
+  color: rgba(0, 0, 0, 1) !important;
+  font-family: 'roboto';
+  font-size: 12px;
+  font-weight: 500;
+}
+.read_txt{
+  color: rgba(0, 0, 0, 1) !important;
+  font-family: 'roboto';
+  font-size: 12px;
+  font-weight: 500;
+}

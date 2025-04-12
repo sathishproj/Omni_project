@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-blogs',
-  templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.css']
+  selector: 'app-blog-details',
+  templateUrl: './blog-details.component.html',
+  styleUrls: ['./blog-details.component.css']
 })
-export class BlogsComponent {
-  blogs = [
+export class BlogDetailsComponent {
+
+
+  blogList = [
     {
       image: 'https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=',
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights',
@@ -72,17 +74,37 @@ export class BlogsComponent {
       link: '#'
     }
   ];
-
-  constructor(    private router: Router){
-
+  mainBlog: any;
+  recentPosts: any[] = [];
+  getting_blog:string = "";
+  constructor(
+    private activated_routes: ActivatedRoute,
+    private router: Router
+  ) { }
+  ngOnInit(): void {
+    this.activatedRoutesData()
   }
 
-  goToBlogDetails(blog_name:any) {
-    this.router.navigate(['/blogs-details'], {
-      queryParams: {
-        blog_name:blog_name
-      }
+  activatedRoutesData() {
+    this.activated_routes.queryParams.subscribe(params => {
+      this.getting_blog = params['blog_name'] || '';
+      this.setBlogData();
     });
+  }
+
+  setBlogData(): void {
+    const blog = this.blogList.find(b => b.title === this.getting_blog);
+    if (blog) {
+      this.mainBlog = blog;
+      this.recentPosts = this.blogList.filter(b => b.title !== this.getting_blog);
+    }
+  }
+
+  swapBlog(selectedBlog: any): void {
+    const temp = this.mainBlog;
+    this.mainBlog = selectedBlog;
+    this.recentPosts = this.recentPosts.filter(b => b.title !== selectedBlog.title);
+    this.recentPosts.unshift(temp);
   }
 
 }

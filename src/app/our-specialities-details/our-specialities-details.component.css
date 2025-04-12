@@ -131,15 +131,13 @@ button {
   width: 274px;
   height: 274px;
 }
-.card-body{
+.doctor_card_body{
   background-color:#008FD5;
 }
 .board_container{
   width: 274px;
 }
-.card-body{
-  background-color:#008FD5;
-}
+
 
 .board_container {
   text-align: center;
@@ -174,7 +172,7 @@ button {
   font-size: 0.95rem;
   color: #FFFFFF;
 }
-.card {
+.doctor_card {
   border: none !important;
 }
 .board_container .card , .card-img-top{
@@ -189,3 +187,23 @@ button {
 .border_gray{
   border:2px solid #82828233;
 }
+
+  .custom_select_btn {
+    appearance: none;           /* Hide default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #828282;  /* Bootstrap primary border */
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 1.3rem;    /* Bootstrap button radius */
+    color: #828282;
+    font-weight: 500;
+    cursor: pointer;
+  }
+    @media (max-width: 768px) {
+      .device .row {
+      flex-direction: column-reverse;
+
+    }
+  } 
+  

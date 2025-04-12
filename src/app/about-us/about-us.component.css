@@ -182,12 +182,12 @@ body {
 }
 .green_line{
   height: 3px; 
-  max-width: 200px; 
+  max-width: 70px; 
   background-color: #8CC63F;
 }
 .blue_line{
   height: 3px;
-   max-width: 200px;
+   max-width: 70px;
    background-color: #008FD5
 }
 

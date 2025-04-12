@@ -25,6 +25,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
 import { SafePipe } from './safe.pipe';
 import { TechnologiesDetailsComponent } from './technologies-details/technologies-details.component';
 import { OurBranchesComponent } from './our-branches/our-branches.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -46,7 +47,8 @@ import { OurBranchesComponent } from './our-branches/our-branches.component';
     VideoPlayerComponent,
     SafePipe,
     TechnologiesDetailsComponent,
-    OurBranchesComponent
+    OurBranchesComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,

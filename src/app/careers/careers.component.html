@@ -1,0 +1,84 @@
+<section class="banner">
+  <img src="assets/locations/careers_banner_image.svg" alt="Omni Banner" class="w-100 h-100">
+</section>
+
+<section class="discover py-5 text-center">
+  <h2 class="position-relative d-inline-block px-3"><span class="dots-left"></span>Discover Why Omni Hospital Is the Ideal Workplace<span class="dots-right"></span></h2>
+</section>
+
+<section class="careers-at-omni py-5 text-center">
+  <h2 class="position-relative d-inline-block px-3"><span class="dots-left"></span>Careers at Omni<span class="dots-right"></span></h2>
+  <div class="row pt-4">
+    <div class="col-md-4" *ngFor="let career of careers">
+      <img src="assets/{{career.image}}" class="img-fluid mb-3" alt="{{career.title}}">
+      <h5>{{ career.title }}</h5>
+      <p>{{ career.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tab Buttons -->
+<div class="d-flex justify-content-center gap-2 mb-3">
+  <button class="btn" [ngClass]="{'btn-primary': currentTab === 'openings', 'btn-outline-primary': currentTab !== 'openings'}" (click)="switchTab('openings')">Current Openings</button>
+  <button class="btn" [ngClass]="{'btn-primary': currentTab === 'joiners', 'btn-outline-primary': currentTab !== 'joiners'}" (click)="switchTab('joiners')">Doctors Joiners</button>
+  <button class="btn" [ngClass]="{'btn-primary': currentTab === 'apply', 'btn-outline-primary': currentTab !== 'apply'}" (click)="switchTab('apply')">Apply Online</button>
+</div>
+
+<!-- Openings -->
+<div *ngIf="currentTab === 'openings'">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let job of jobList" [ngClass]="{'opacity-25': !isJobActive(job)}">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="card-body">
+          <h5>{{job.title}}</h5>
+          <p>{{job.location}} | {{job.department}}</p>
+          <p class="text-muted">Posted: {{job.postedDate}}</p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-primary btn-sm" (click)="shareJob(job)">Share</button>
+            <button class="btn btn-primary btn-sm" [disabled]="!isJobActive(job)">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Joiners -->
+<div *ngIf="currentTab === 'joiners'">
+  <h5>Doctors Joiners</h5>
+  <p>Contact HR team:</p>
+  <ul>
+    <li>Phone: <a href="tel:+919876543210">+91 9876543210</a></li>
+    <li>Email: <a href="mailto:doctors@omnihospitals.in">doctors@omnihospitals.in</a></li>
+  </ul>
+</div>
+
+<!-- Apply Form -->
+<div *ngIf="currentTab === 'apply'">
+  <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" class="w-75 mx-auto p-3 border rounded-4 shadow-sm">
+    <div class="mb-3">
+      <label>First Name*</label>
+      <input type="text" class="form-control" formControlName="firstName">
+      <div *ngIf="applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched" class="text-danger">Required</div>
+    </div>
+    <div class="mb-3">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+    <div class="mb-3">
+      <label>Phone*</label>
+      <input type="tel" class="form-control" formControlName="phone">
+      <div *ngIf="applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched" class="text-danger">Required</div>
+    </div>
+    <div class="mb-3">
+      <label>Email*</label>
+      <input type="email" class="form-control" formControlName="email">
+      <div *ngIf="applyForm.get('email')?.invalid && applyForm.get('email')?.touched" class="text-danger">Valid Email Required</div>
+    </div>
+    <div class="mb-3">
+      <label>Resume*</label>
+      <input type="file" class="form-control" (change)="onFileChange($event)">
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="applyForm.invalid">Submit</button>
+  </form>
+</div>

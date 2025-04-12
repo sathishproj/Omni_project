@@ -1,0 +1,6 @@
+.dots-left::before, .dots-right::after {
+    content: '••';
+    color: #00aaff;
+    margin: 0 10px;
+    font-weight: bold;
+  }

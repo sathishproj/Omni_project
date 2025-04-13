@@ -9,6 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 export class NewsMediaDetailsComponent {
   getting_media_object: any = null;
 
+  recentImages = [
+    'assets/images/media_recent_post.svg',
+    'assets/images/media_recent_post.svg',
+    'assets/images/media_recent_post.svg'
+  ];
+
   constructor(private activated_routes: ActivatedRoute) {
     this.activatedRoutesData();
   }

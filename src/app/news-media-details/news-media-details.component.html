@@ -1,7 +1,46 @@
-<div *ngIf="getting_media_object">
+<!-- <div *ngIf="getting_media_object">
     <img [src]="getting_media_object.image" alt="media image" />
     <h2>{{ getting_media_object.title }}</h2>
     <p>{{ getting_media_object.date }}</p>
     <p>{{ getting_media_object.description }}</p>
-  </div>
+  </div> -->
+<app-header></app-header>
+<section class="bg_light_blue">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-lg-8 col-md-12 mb-4" *ngIf="getting_media_object">
+        <h4 class="fw-medium meadia_title">{{ getting_media_object?.title }}</h4>
+        <div class="pb-4 mobile_view">
+          <img src="assets/images/media.svg" alt="blog" style="height:326px;width:411px" class="img-fluid mb-2 mb-4" />
+        </div>
+        <p class="text-muted mobile_view_text">{{ getting_media_object?.description }}</p>
+        <p *ngFor="let i of [1,2,3]" class="text-muted">
+          {{ getting_media_object?.description }} {{ getting_media_object?.description }}
+        </p>
+      </div>
   
+      <div class="col-lg-4 col-md-12">
+        <h5 class="bg_blue text-white rounded-top-4 py-2 text-center m-0 fw-medium" style="font-size:25px">Recent Posts
+        </h5>
+        <div class="br_gray bg_whie rounded-bottom-4">
+          <div class="card border_remove rounded-bottom-4 recent-card cursor-pointer py-3 px-3 gap-3">
+            <ng-container *ngFor="let media of recentImages">
+              <img src="{{media}}" class="card-img-top" alt="blog image">
+            </ng-container>
+            <!-- <div class="position-relative"> -->
+            <!-- <img src="assets/images/media_recent_post.svg" class="card-img-top" alt="blog image"> -->
+            <!-- <div class="position-absolute w-100" style="height: 5px; bottom: 0; background: linear-gradient(to right, #8BC34A 50%, #2196F3 50%);"></div>
+                  </div> -->
+            <!-- <div class="card-body py-2 px-3">
+                    <h6 class="card-title mb-1">{{ blog.title }}</h6>
+                    <small class="text-muted d-block">{{ blog.date }}</small>
+                    <a href="#" class="small fw-bold text-dark text-decoration-none">Read More</a>
+                  </div> -->
+            <!-- <div *ngIf="i < recentPosts.length - 1" class="br_light_blue my-3"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <app-footer></app-footer>

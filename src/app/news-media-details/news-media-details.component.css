@@ -1,0 +1,30 @@
+.bg_light_blue{
+    background-color: #008FD50D;
+  }
+  .bg_blue{
+    background-color: #008FD5;
+  }
+  .br_gray{
+    border:1px solid #008FD5
+  }
+  .bg_white{
+    border-color: #FFFFFF;
+  }
+  .border_remove{
+    border:none !important;
+  }
+  .meadia_title{
+    font-size: 25px;
+  }
+  @media (max-width: 768px) {
+    .meadia_title{
+        font-size: 20px !important;
+        margin: 0px !important;
+      }
+      .mobile_view{
+        padding:0px !important;
+      }
+      .mobile_view_text{
+        font-size: 13px !important;
+      }
+  }

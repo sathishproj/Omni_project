@@ -29,6 +29,7 @@ import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
+import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -54,7 +55,8 @@ import { NewsMediaDetailsComponent } from './news-media-details/news-media-detai
     CareersComponent,
     FeedbackComponent,
     BlogDetailsComponent,
-    NewsMediaDetailsComponent
+    NewsMediaDetailsComponent,
+    BookAnAppointmentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="container-fluid bg-dark text-white py-5">
+    <div class="row g-0 align-items-center">
+<div class="col-lg-6 d-flex align-items-center justify-content-center bg-dark text-white p-5">
+    <div class="text-center">
+      <h2 class="fw-bold text_col mb-3">Experience Healthcare With Comfort & Care</h2>
+      <p class="lead mb-4">
+        Step into a world of personalized, luxurious medical care. Our expert team is ready to help you feel better, faster.
+      </p>
+      <ul class="list-unstyled text-start mx-auto" style="max-width: 400px;">
+        <li class="mb-2">✔️ Trusted & Qualified Doctors</li>
+        <li class="mb-2">✔️ Convenient Booking & Flexible Timings</li>
+        <li class="mb-2">✔️ Premium Patient Experience</li>
+      </ul>
+      <p class="mt-4 text-muted fst-italic">Your health, our highest priority.</p>
+    </div>
+  </div>
+      <!-- Right form section -->
+      <div class="col-lg-6 bg-dark px-3 py-4 d-flex align-items-center justify-content-center">
+        <div class="w-100" style="max-width: 500px;">
+          <h6 class="text-uppercase text-white-50">Health Care</h6>
+          <h2 class="text_col fw-bold mb-4">Book An Appointment</h2>
+      
+          <form>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Mobile Number" required>
+            </div>
+    
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <select class="form-select" [(ngModel)]="selectedLocation" name="location" (change)="onLocationChange()">
+                  <option selected disabled>Select Location</option>
+                  <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+                </select>
+              </div>
+    
+              <div class="col-md-6">
+                <select class="form-select" name="department">
+                  <option selected disabled>Select Department</option>
+                  <option *ngFor="let dept of filteredDepartments">{{ dept }}</option>
+                </select>
+              </div>
+            </div>
+    
+            <div class="mb-4">
+              <textarea class="form-control" rows="3" placeholder="Any Special Request"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-warning w-100 fw-bold py-2">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

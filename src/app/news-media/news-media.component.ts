@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -81,10 +82,50 @@ export class NewsMediaComponent {
     }
 
   ]
+  
+  testimonials = [
+    {
+      name: "Mr. S. A. Jeelan",
+      profession: "Healthcare Provider",
+      text: "Omni Hospitals proudly inaugurated station naming rights...",
+      date: "January 20, 2025",
+      videoPlayed: false,
+      thumbnailUrl: 'F6PTu29AhUE',
+      videoUrl: "https://www.youtube.com/embed/F6PTu29AhUE"
+    },
+    {
+      name: "Anand Doe",
+      profession: "Software Engineer",
+      text: "This platform helped me a lot in my career growth...",
+      date: "March 10, 2025",
+      videoPlayed: false,
+      thumbnailUrl: '5mGb2WtElQc',
+      videoUrl: "https://www.youtube.com/embed/5mGb2WtElQc"
+    },
+    {
+      name: "Murali Doe",
+      profession: "Software Engineer",
+      text: "Very helpful for career development and opportunities...",
+      date: "March 10, 2025",
+      videoPlayed: false,
+      thumbnailUrl: 'UjQpbG_qnnw',
+      videoUrl: "https://www.youtube.com/embed/UjQpbG_qnnw"
+    },
+    {
+      name: "Anil Doe",
+      profession: "Software Engineer",
+      text: "Top-notch services and great experience overall...",
+      date: "March 10, 2025",
+      videoPlayed: false,
+      thumbnailUrl: 'w6uX9jamcwQ',
+      videoUrl: "https://www.youtube.com/embed/w6uX9jamcwQ"
+    }
+  ];
+
   playerWidth = window.innerWidth < 768 ? 320 : 640;
   playerHeight = window.innerWidth < 768 ? 180 : 360;
 
-    constructor(private router:Router) {
+    constructor(private router:Router, public sanitizer: DomSanitizer) {
     }
   
   ngOnInit(){
@@ -100,5 +141,16 @@ export class NewsMediaComponent {
         selected_obj: JSON.stringify(obj)
       }
     });
+  }
+
+
+  playVideo(index: number): void {
+    this.testimonials.forEach((item, idx) => {
+      item.videoPlayed = idx === index;
+    });
+  }
+
+  getUnmutedVideoUrl(url: string): string {
+    return `${url}?autoplay=1&mute=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1`;
   }
 }

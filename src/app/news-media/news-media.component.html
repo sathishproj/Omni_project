@@ -72,7 +72,7 @@
           <div class="col-md-4 col-sm-6 mb-4" *ngFor="let ne of news">
             <div class="card h-100 shadow-sm rounded-4">
               <img [src]="ne.image" class="card-img-top" alt="{{ ne.title }}">
-              <div class="card-body">
+              <div class="card-body" (click)="goToMediaDetails(ne)">
                 <h5 class="card-title">{{ ne.title }}</h5>
                 <p class="card-text text-muted">{{ ne.description }}</p>
                 <p class="p-0 m-0">{{ ne.date }}</p>

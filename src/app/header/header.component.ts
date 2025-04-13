@@ -37,7 +37,7 @@ export class HeaderComponent {
 
   }
 
-  routeToLocation(location:string){
+  routeToLocation(location:string, selected_image:string){
     const modalElement = document.getElementById('branchesModal');
   const modalInstance = bootstrap.Modal.getInstance(modalElement);
   if (modalInstance) {
@@ -48,6 +48,7 @@ export class HeaderComponent {
     this.router.navigate(['/our-branches'], {
       queryParams: {
         selected_location: location,
+        selected_image:selected_image
       }
     });
   }, 300); // optional delay for smoother transition

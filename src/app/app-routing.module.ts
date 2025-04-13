@@ -16,6 +16,7 @@ import { OurBranchesComponent } from './our-branches/our-branches.component';
 import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'carres', component: CareersComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'blogs-details', component: BlogDetailsComponent },
+  { path: 'news-media-details', component: NewsMediaDetailsComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

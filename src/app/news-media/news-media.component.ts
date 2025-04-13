@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-media',
@@ -82,11 +83,22 @@ export class NewsMediaComponent {
   ]
   playerWidth = window.innerWidth < 768 ? 320 : 640;
   playerHeight = window.innerWidth < 768 ? 180 : 360;
+
+    constructor(private router:Router) {
+    }
   
   ngOnInit(){
     window.scrollTo(0, 0)
   }
   showMedia(index: number) {
     this.media_type = index;
+  }
+
+  goToMediaDetails(obj:any){
+    this.router.navigate(['/news-media-details'], {
+      queryParams: {
+        selected_obj: JSON.stringify(obj)
+      }
+    });
   }
 }

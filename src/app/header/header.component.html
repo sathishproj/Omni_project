@@ -4,7 +4,7 @@
 <div class="container-fluid bg-light py-1 d-none d-lg-block">
   <div class="container d-flex justify-content-center justify-content-lg-end small text-muted flex-wrap">
     <a href="#" class="text-decoration-none me-2" style="color: black;" routerLink="/blogs">Blogs</a> |&nbsp;
-    <span class="me-2">Media</span> |&nbsp;
+    <span class="me-2" routerLink="/news-media">Media</span> |&nbsp;
     <span>24/7 APPOINTMENT HELPLINE : <span class="fw-bold text-primary"><a href="tel:8880101000">888 0101 000</a></span></span>
   </div>
 </div>
@@ -80,7 +80,7 @@
           <div class="container">
             <div class="row g-3">
               <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
-                <div class="text-center" (click)="routeToLocation(details['location_name'])">
+                <div class="text-center" (click)="routeToLocation(details['location_name'], details['img'])">
                   <img src="assets/locations/{{details['img']}}" alt="Kothapet">
                   <p class="border_prop py-2">{{details['location_name']}}</p>
                 </div>

@@ -1,16 +1,17 @@
-
+<app-header></app-header>
 <section class="bg_color">
-    <div class="container-fluid my-4">
+    <div class="container-fluid mt-4">
         <!-- Hospital Info -->
         <div class="row g-4">
           <div class="col-lg-12">
             <div class="card p-3 shadow-sm">
               <div class="row">
                 <div class="col-md-4">
-                  <img src="https://i.ibb.co/BZVsb8M/omni.png" alt="Omni Kukatpally" class="img-fluid rounded">
+                  <!-- <img src="assets/locations/omni_hospital_image.svg" alt="Omni Kukatpally" class="img-fluid rounded"> -->
+                  <img src="assets/locations/{{getting_location=='Kukatpally'?'omni_hospital_image.svg':getting_location=='Kothapet'?'kothapet_hospital.svg':'omni_hospital_image.svg'}}" alt="Omni Kukatpally" class="img-fluid rounded">
                 </div>
                 <div class="col-md-8">
-                  <h5 class="text-primary fw-bold">{{getting_location}}</h5>
+                  <h5 class="text-primary fw-bold mt-lg-4">{{getting_location}}</h5>
                   <p class="small text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales purus et sapien facilisis, sed pharetra risus faucibus.
                   </p>
@@ -86,7 +87,7 @@
                           <span class="txt">{{ doc.location }}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-start mb-3">
-                            <button class="btn rounded-pill px-3 py-2 btn-sm" style="font-size:13px; color: rgba(255, 255, 255, 1); font-weight: 700; font-family: 'Roboto'; background-color: rgba(140, 198, 63, 1);">
+                            <button class="btn rounded-pill px-3 py-2 btn-sm book_btn">
                               Book an Appointment
                             </button>
                         </div>
@@ -104,5 +105,4 @@
         </div>
       </div>
 </section>
-
-  
+<app-footer></app-footer>

@@ -28,6 +28,7 @@ import { OurBranchesComponent } from './our-branches/our-branches.component';
 import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -52,7 +53,8 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
     OurBranchesComponent,
     CareersComponent,
     FeedbackComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    NewsMediaDetailsComponent
   ],
   imports: [
     BrowserModule,

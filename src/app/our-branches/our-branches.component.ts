@@ -70,6 +70,7 @@ export class OurBranchesComponent {
       department: 'Dermatology'
     },
   ];
+  getting_image:string='';
   getting_location:string='';
   constructor(private activated_routes: ActivatedRoute){
     this.activatedRoutesData();
@@ -79,6 +80,7 @@ export class OurBranchesComponent {
     this.activated_routes.queryParams.subscribe(params => {
       console.log(params,'params..');
       this.getting_location = params['selected_location'] || '';
+      // this.getting_image = params['selected_image'] || '';
     });
   }
 

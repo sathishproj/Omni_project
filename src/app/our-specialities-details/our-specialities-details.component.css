@@ -189,13 +189,13 @@ button {
 }
 
   .custom_select_btn {
-    appearance: none;           /* Hide default arrow */
+    appearance: none;           
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid #828282;  /* Bootstrap primary border */
+    border: 1px solid #828282;  
     background-color: #fff;
     padding: 10px 16px;
-    border-radius: 1.3rem;    /* Bootstrap button radius */
+    border-radius: 1.3rem;    
     color: #828282;
     font-weight: 500;
     cursor: pointer;

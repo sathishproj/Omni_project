@@ -115,3 +115,15 @@
     }
   }
 
+  .custom_select_btn {
+    appearance: none;           
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #828282;  
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 1.3rem;    
+    color: #828282;
+    font-weight: 500;
+    cursor: pointer;
+  }

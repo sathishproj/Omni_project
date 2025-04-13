@@ -638,9 +638,9 @@ h6 {
         height: auto;
     }
 
-    .mrgin_bottm {
+    /* .mrgin_bottm {
         margin-bottom: 0px !important;
-    }
+    } */
 
     .key_title {
         font-size: 20px !important;
@@ -673,9 +673,9 @@ h6 {
     border-top: none;
 }
 
-.mrgin_bottm {
+/* .mrgin_bottm {
     padding-bottom: 138px !important;
-}
+} */
 
 .accordion_head {
     color: #666666;
@@ -1287,4 +1287,25 @@ swiper-container {
     color: #828282;
     font-weight: 500;
     cursor: pointer;
+
+  }
+  .footer-top input::placeholder {
+    color: white;
+  }
+
+  .footer-top{
+    background-color:rgba(140, 198, 63, 1);
+  }
+
+  .footer-top input.form-control {
+    background-color: rgba(140, 198, 63, 1);
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid white;
+  }
+  .sub_btn{
+    background-color: rgba(140, 198, 63, 1);
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid white;
   }

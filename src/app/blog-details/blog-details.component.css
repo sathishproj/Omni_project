@@ -20,3 +20,10 @@
   .br_light_blue{
     border-bottom: 2px solid #008FD526;
   }
+  .bg_blue{
+    background-color: #008FD5;
+    border-color: #FFFFFF;
+  }
+  .bg_light_blue{
+    background-color: #008FD50D;
+  }

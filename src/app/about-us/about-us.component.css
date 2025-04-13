@@ -151,7 +151,7 @@ body {
   width: 100%;
   height: auto;
   max-height: 250px;
-  object-fit: cover;
+  /* object-fit: cover; */
   /* border-radius: 8px; */
 }
 

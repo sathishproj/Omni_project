@@ -642,7 +642,6 @@ h6 {
         margin-bottom: 0px !important;
     }
 
-    .title_text,
     .key_title {
         font-size: 20px !important;
     }
@@ -1228,6 +1227,16 @@ swiper-container {
     .key_surgeries{
         font-size: 13px; 
     }
+    .why_choose_img{
+      width:80px !important;
+      height:80px !important;
+    }
+    .why_choose_value{
+      font-size: 20px !important;
+    }
+    .why_choose_label{
+      font-size: 13px !important;
+    }
   }
   .choose_txt{
     color: rgba(0, 143, 213, 1);
@@ -1255,4 +1264,15 @@ swiper-container {
     .position-relative {
       min-height: 100%;
     }
+   
+  }
+  .why_choose_img{
+    width: 120px;
+    height: 120px;
+  }
+  .why_choose_value{
+    font-size: 50px;
+  }
+  .why_choose_label{
+    font-size: 20px;
   }

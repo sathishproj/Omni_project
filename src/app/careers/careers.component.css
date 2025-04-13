@@ -24,8 +24,13 @@
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1rem;
-    color: #000; /* You can change it */
-    border: 1px solid #ccc; /* Custom border */
-    border-radius: 0.25rem; /* Optional: customize or remove */
+    color: #000;
+    border: 1px solid #ccc; 
+    border-radius: 0.25rem;     
     box-sizing: border-box;
+}
+.choose_file_btn:hover {
+  background-color: #008FD5 !important;
+  color: white !important;
+  border-color: #008FD5 !important;
 }

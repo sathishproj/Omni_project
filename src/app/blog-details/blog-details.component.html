@@ -11,17 +11,20 @@
       </div>
   
       <div class="col-lg-4 col-md-12">
-        <div class="bg-primary text-white rounded-top px-3 py-2 text-center mb-2">
-          <h5 class="m-0">Recent Posts</h5>
-        </div>
-        <div *ngFor="let blog of recentPosts" class="card mb-3 recent-card cursor-pointer" (click)="swapBlog(blog)">
-          <img [src]="blog.image" class="card-img-top rounded-top" style="height: 130px; object-fit: cover;" />
-          <div class="border-top border-3 border-info border-start-0 border-end-0 border-bottom-0"></div>
-          <div class="card-body py-2 px-3">
-            <h6 class="card-title mb-1">{{ blog.title }}</h6>
-            <small class="text-muted d-block">{{ blog.date }}</small>
-            <a href="#" class="small fw-bold text-dark text-decoration-none">Read More</a>
-          </div>
+        <h5 class="bg-primary text-white rounded-top px-3 py-2 text-center m-0">Recent Posts</h5>
+          <div class="br_gray px-3">
+            <div *ngFor="let blog of recentPosts">
+              <div class="card recent-card cursor-pointer" (click)="swapBlog(blog)">
+                <img [src]="blog.image" class="card-img-top rounded-top" style="height: 130px; object-fit: cover;" />
+                <div class="border-top border-3 border-info border-start-0 border-end-0 border-bottom-0"></div>
+                <div class="card-body py-2 px-3">
+                  <h6 class="card-title mb-1">{{ blog.title }}</h6>
+                  <small class="text-muted d-block">{{ blog.date }}</small>
+                  <a href="#" class="small fw-bold text-dark text-decoration-none">Read More</a>
+                </div>
+              </div>
+              <div class="br_light_blue my-3"></div>
+            </div>
         </div>
       </div>
     </div>

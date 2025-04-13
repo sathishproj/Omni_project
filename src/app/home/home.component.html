@@ -56,7 +56,7 @@
     <div class="text-center specialities-container container-fluid">
       <div class="title-container mb-4 py-3">
         <div class="line line-left"></div>
-        <span class="title_text">OUR SPECIALITIES</span>
+        <span class="title_text section_title">OUR SPECIALITIES</span>
         <div class="line line-right"></div>
       </div>
 
@@ -189,7 +189,7 @@
         <p class="ps-2 tech-desc">
           Lorem ipsum is simply dummy text of the printing industry.
         </p>
-        <a href="#" class="text-black ps-2 pb-3 read_btn">Read More >></a>
+        <a class="text-black ps-2 pb-3 read_btn">Read More >></a>
       </swiper-slide>
     </swiper-container>
     
@@ -240,21 +240,18 @@
               style="min-height: 100px;"
             >
               <div class="icon-circle flex-shrink-0">
-                <img
+                <img class="why_choose_img"
                   src="assets/images/{{ counter.img }}"
-                  alt="{{ counter.label }}"
-                  width="80"
-                  height="80"
-                />
+                  alt="{{ counter.label }}"/>
               </div>
               <div
                 class="text-start ms-3 d-flex flex-column justify-content-center"
                 style="min-height: 80px;"
               >
-                <h5 class="counter mb-0" [attr.data-target]="counter.target" style="font-size: 20px;">
+                <h5 class="counter mb-0 why_choose_value" style="font-weight:900" [attr.data-target]="counter.target">
                   {{ counter.value }}+
                 </h5>
-                <span class="counter-label" style="font-size: 14px;">{{ counter.label }}</span>
+                <span class="counter-label why_choose_label" style="font-weight:400" >{{ counter.label }}</span>
               </div>
             </div>
           </div>
@@ -273,7 +270,7 @@
   <div class="py-3 wow fadeInUp mx-3" data-wow-delay="0.1s">
     <div class="title-container mb-3 mt-1">
       <div class="line line-left"></div>
-      <h1 class="news-title" style="font-size: 30px; font-family: 'roboto'; color: #000000; font-weight: 500;">
+      <h1 class="news-title section_title">
         News & Media
       </h1>
       <div class="line line-right"></div>

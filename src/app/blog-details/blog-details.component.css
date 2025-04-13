@@ -14,4 +14,9 @@
       height: 100px;
     }
   }
-  
+  .br_gray{
+    border:1px solid #008FD5
+  }
+  .br_light_blue{
+    border-bottom: 2px solid #008FD526;
+  }

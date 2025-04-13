@@ -11,7 +11,7 @@ export class CareersComponent {
   today = new Date();
   applyForm: FormGroup;
   selectedFile: File | null = null;
-
+emil:string= 'doctors@omnihospitals.in';
   careers = [
     { title: 'Compassionate Culture', image: 'careers_motivational.svg', description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },
     { title: 'Career Growth', image: 'careers_motivational.svg', description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },

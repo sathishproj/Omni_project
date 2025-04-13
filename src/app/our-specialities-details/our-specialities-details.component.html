@@ -50,7 +50,7 @@
 
             <!-- Centered Submit Button -->
           </form>
-          <div class="text-center w-100 mt-4">
+          <div class="text-center w-100 my-4">
             <button type="submit" class="btn btn-outline-dark px-5 py-1 submit-btn">Submit</button>
           </div>
         </div>
@@ -72,8 +72,8 @@
             <div *ngIf="!searchName && selectedLocation">
               <h5 class="mb-3">Showing Doctors in "{{ selectedLocation }}"</h5>
             </div> -->
-        <div class="row d-flex justify-content-center gap-3 padding_none">
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 board_container" style="border:none !important"
+        <div class="row d-flex align-items-center justify-content-center gap-3 padding_none">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 board_container mt-3 mt-lg-0 mt-md-0" style="border:none !important"
             *ngFor="let doctor of filteredDoctors">
             <div class="card card-animate text-center shadow">
               <img [src]="doctor.image" class="card-img-top" alt="{{ doctor.name }}" />

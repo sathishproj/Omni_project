@@ -86,19 +86,19 @@
             <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
                         style="color:#828282; ">+91 9876543210</a>, </strong> <strong>Email: <a
                         href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
-                        style="color:#828282">doctors@omnihospitals.in</a></strong></li>
+                        style="color:#828282">{{emil}}</a></strong></li>
             <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
                         style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
                         href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
-                        style="color:#828282">doctors@omnihospitals.in</a></strong></li>
+                        style="color:#828282">{{emil}}</a></strong></li>
             <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
                         style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
                         href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
-                        style="color:#828282">doctors@omnihospitals.in</a></strong></li>
+                        style="color:#828282">{{emil}}</a></strong></li>
             <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
                         style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
                         href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
-                        style="color:#828282">doctors@omnihospitals.in</a></strong></li>
+                        style="color:#828282">{{emil}}</a></strong></li>
 
         </ul>
     </div>
@@ -106,8 +106,8 @@
 
 <!-- Apply Form -->
 <div class="pb-4" *ngIf="currentTab === 'apply'">
-    <form [formGroup]="applyForm" (ngSubmit)="onSubmit()"
-        class="w-50 mx-auto p-3 border rounded-4 shadow-sm form_border">
+    <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" style="width:30%"
+        class="mx-auto p-3 border rounded-4 shadow-sm form_border">
         <div class="mb-3">
             <label style="color:#828282">First Name*</label>
             <input type="text" class="form-control"
@@ -141,13 +141,13 @@
         </div>
 
 
-        <div class="mb-3 d-flex gap-3 align-items-center w-100">
-            <label class="form-label" style="color:#828282">Attachment File*</label>
+        <div class="mb-3 d-flex gap-2 align-items-center w-100">
+            <label class="form-label mb-0" style="color:#828282">Attachment File*</label>
             <input type="file" class="form-control visually-hidden" id="customFile" (change)="onFileChange($event)">
-            <label for="customFile" class="btn btn-outline-secondary text-black" style="width:40%">Choose File</label>
+            <label for="customFile" class="btn btn-outline-secondary choose_file_btn text-black py-1" style="width:45%">Choose File</label>
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center">
-            <button type="submit" class="btn btn-outline-secondary w-25 text-black"
+            <button type="submit" class="btn btn-outline-secondary choose_file_btn text-black py-1" style="width:30%"
                 [disabled]="applyForm.invalid">Apply</button>
         </div>
     </form>

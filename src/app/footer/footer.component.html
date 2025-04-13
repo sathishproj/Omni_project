@@ -3,13 +3,55 @@
         <div class="row">
             <div class="col-md-3 text-start me-3">
                 <img src="assets/images/omni_footer_white_logo.svg" alt="Footer Logo" class="img-fluid mb-2 mt-4 ms-0 ps-0" style="">
-                <div class="d-flex justify-content-start gap-2">
-                    <img src="assets/images/facebook_icon.svg" alt="Facebook" class="img-fluid" style="width: 24px; height: 24px;">
+                <!-- <div class="d-flex justify-content-start gap-2">
+                    <img src="assets/images/facebook_icon.svg"  alt="Facebook" class="img-fluid" style="width: 24px; height: 24px;">
                     <img src="assets/images/twitter_icon.svg" alt="Twitter" class="img-fluid" style="width: 24px; height: 24px;">
                     <img src="assets/images/insta_icon.svg" alt="Instagram" class="img-fluid" style="width: 24px; height: 24px;">
                     <img src="assets/images/youtube_icon.svg" alt="YouTube" class="img-fluid" style="width: 24px; height: 24px;">
                     <img src="assets/images/linkedin_icon.svg" alt="LinkedIn" class="img-fluid" style="width: 24px; height: 24px;">
-                </div>
+                </div> -->
+                <div class="d-flex justify-content-start gap-2">
+                    <img ocial_media
+                      [src]="hoveredIcon === 'fb' ? 'assets/images/facebook_icon_white.svg' : 'assets/images/social_media/facebook.svg'" 
+                      alt="Facebook"
+                      (mouseenter)="hoveredIcon = 'fb'" 
+                      (mouseleave)="hoveredIcon = ''"
+                      class="img-fluid" style="width: 24px; height: 24px;"
+                    >
+                    
+                    <img 
+                      [src]="hoveredIcon === 'tw' ? 'assets/images/twitter_icon_white.svg' : 'assets/images/social_media/cross_icon.svg'" 
+                      alt="Twitter"
+                      (mouseenter)="hoveredIcon = 'tw'" 
+                      (mouseleave)="hoveredIcon = ''"
+                      class="img-fluid" style="width: 24px; height: 24px;"
+                    >
+                  
+                    <img 
+                      [src]="hoveredIcon === 'ig' ? 'assets/images/insta_icon_white.svg' : 'assets/images/social_media/instagram.svg'" 
+                      alt="Instagram"
+                      (mouseenter)="hoveredIcon = 'ig'" 
+                      (mouseleave)="hoveredIcon = ''"
+                      class="img-fluid" style="width: 24px; height: 24px;"
+                    >
+                  
+                    <img 
+                      [src]="hoveredIcon === 'yt' ? 'assets/images/youtube_icon_white.svg' : 'assets/images/social_media/youtube.svg'" 
+                      alt="YouTube"
+                      (mouseenter)="hoveredIcon = 'yt'" 
+                      (mouseleave)="hoveredIcon = ''"
+                      class="img-fluid" style="width: 24px; height: 24px;"
+                    >
+                  
+                    <img 
+                      [src]="hoveredIcon === 'ln' ? 'assets/images/linkedin_icon_white.svg' : 'assets/images/social_media/linkedin.svg'" 
+                      alt="LinkedIn"
+                      (mouseenter)="hoveredIcon = 'ln'" 
+                      (mouseleave)="hoveredIcon = ''"
+                      class="img-fluid" style="width: 24px; height: 24px;"
+                    >
+                  </div>
+                  
             </div>
             <div class="col-md-4 d-flex justify-content-start">
                 <ul class="list-unstyled mb-0 mt-3">

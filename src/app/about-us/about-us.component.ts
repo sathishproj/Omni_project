@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -31,8 +32,17 @@ export class AboutUsComponent {
     { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
     { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' }
   ];
+  constructor(private router:Router) {
 
+  }
   setActiveSection(sectionId: string) {
     this.activeSection = sectionId;
+  }
+
+  goToDetails(){
+    this.router.navigate(['/board-members'], {
+      queryParams: {
+      }
+    });
   }
 }

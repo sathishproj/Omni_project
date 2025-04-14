@@ -30,6 +30,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
 import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
+import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
+import { BoardMembersComponent } from './board-members/board-members.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -56,7 +58,9 @@ import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appoin
     FeedbackComponent,
     BlogDetailsComponent,
     NewsMediaDetailsComponent,
-    BookAnAppointmentComponent
+    BookAnAppointmentComponent,
+    // FixedSurgicalPackagesComponent,
+    BoardMembersComponent
   ],
   imports: [
     BrowserModule,

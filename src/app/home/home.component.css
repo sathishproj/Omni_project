@@ -1294,17 +1294,17 @@ swiper-container {
   }
 
   .footer-top{
-    background-color:rgba(140, 198, 63, 1);
+    background-color:rgba(0, 143, 213, 1);
   }
 
   .footer-top input.form-control {
-    background-color: rgba(140, 198, 63, 1);
+    background-color: rgba(0, 143, 213, 1);
     outline: none !important;
     box-shadow: none !important;
     border: 1px solid white;
   }
   .sub_btn{
-    background-color: rgba(140, 198, 63, 1);
+    background-color: rgba(0, 143, 213, 1);
     outline: none !important;
     box-shadow: none !important;
     border: 1px solid white;

@@ -170,7 +170,7 @@
             </div>
             <!-- <h2 class="section-title">BOARD MEMBERS</h2> -->
             <div class="row d-flex justify-content-center gap-5 padding_none ">
-              <div class="col-12 col-sm-6 col-md-4 mb-4 board_container" *ngFor="let member of boardMembers">
+              <div class="col-12 col-sm-6 col-md-4 mb-4 board_container" *ngFor="let member of boardMembers" (click)="goToDetails()">
                 <img [src]="member.image" class="card-img-top" alt="Board Member" />
                 <div class="card-body">
                   <h5 class="card-title">{{ member.name }}</h5>

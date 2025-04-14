@@ -15,24 +15,12 @@
   }
 
   .blog_hover:hover, .media:hover {
-    background-color:rgba(0, 143, 213, 1);
-    color: white !important;
-    white-space: nowrap !important;
-    font-weight: 500;
-    padding: 0rem 1rem;
-    transition: all 0.3s ease;
-    border-radius: 6px;
-    user-select: none;
+    color: rgba(0, 143, 213, 1) !important;
+    font-family: 'Roboto';
+    font-weight: 900;
   }
   
-  /* Active style only for desktop */
-  /* @media (min-width: 992px) {
-    .navbar-nav .nav-link.active {
-      background-color: #007bff;
-      color: #fff !important;
-    }
-  }
-   */
+
   /* Mobile styles */
   @media (max-width: 991.98px) {
     .navbar-collapse {

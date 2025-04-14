@@ -409,6 +409,12 @@ export class HomeComponent {
       }
     }
   }
+  ngAfterViewChecked() {
+    if (this.activeIndex === 2 && this.swiperContainer?.nativeElement?.swiper) {
+      const swiper = this.swiperContainer.nativeElement.swiper;
+      this.updateArrowStates(swiper);
+    }
+  }
   
   // ngAfterViewChecked() {
   //   if (this.activeIndex === 2) {

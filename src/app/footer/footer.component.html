@@ -1,18 +1,12 @@
 <footer class="footer_bg pt-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 text-start me-3">
-                <img src="assets/images/omni_footer_white_logo.svg" alt="Footer Logo" class="img-fluid mb-2 mt-4 ms-0 ps-0" style="">
-                <!-- <div class="d-flex justify-content-start gap-2">
-                    <img src="assets/images/facebook_icon.svg"  alt="Facebook" class="img-fluid" style="width: 24px; height: 24px;">
-                    <img src="assets/images/twitter_icon.svg" alt="Twitter" class="img-fluid" style="width: 24px; height: 24px;">
-                    <img src="assets/images/insta_icon.svg" alt="Instagram" class="img-fluid" style="width: 24px; height: 24px;">
-                    <img src="assets/images/youtube_icon.svg" alt="YouTube" class="img-fluid" style="width: 24px; height: 24px;">
-                    <img src="assets/images/linkedin_icon.svg" alt="LinkedIn" class="img-fluid" style="width: 24px; height: 24px;">
-                </div> -->
-                <div class="d-flex justify-content-start gap-2">
+    <section class="container">
+        <div class="row d-flex align-items-center text-center text-md-start">
+            <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start me-md-3 p-0 mb-4 mb-md-0">
+              <img src="assets/images/omni_footer_white_logo.svg" alt="Footer Logo" class="img-fluid mb-2">
+              <div class="d-flex gap-2 justify-content-center">
+                <div class="d-flex gap-2 text_center">
                     <img ocial_media
-                      [src]="hoveredIcon === 'fb' ? 'assets/images/facebook_icon_white.svg' : 'assets/images/social_media/facebook.svg'" 
+                      [src]="hoveredIcon === 'fb' ? 'assets/images/social_media/facebook.svg':'assets/images/facebook_icon.svg' " 
                       alt="Facebook"
                       (mouseenter)="hoveredIcon = 'fb'" 
                       (mouseleave)="hoveredIcon = ''"
@@ -20,7 +14,7 @@
                     >
                     
                     <img 
-                      [src]="hoveredIcon === 'tw' ? 'assets/images/twitter_icon_white.svg' : 'assets/images/social_media/cross_icon.svg'" 
+                      [src]="hoveredIcon === 'tw' ? 'assets/images/social_media/cross_icon.svg':'assets/images/twitter_icon.svg' " 
                       alt="Twitter"
                       (mouseenter)="hoveredIcon = 'tw'" 
                       (mouseleave)="hoveredIcon = ''"
@@ -28,7 +22,7 @@
                     >
                   
                     <img 
-                      [src]="hoveredIcon === 'ig' ? 'assets/images/insta_icon_white.svg' : 'assets/images/social_media/instagram.svg'" 
+                      [src]="hoveredIcon === 'ig' ? 'assets/images/social_media/instagram.svg':'assets/images/insta_icon.svg' " 
                       alt="Instagram"
                       (mouseenter)="hoveredIcon = 'ig'" 
                       (mouseleave)="hoveredIcon = ''"
@@ -36,7 +30,7 @@
                     >
                   
                     <img 
-                      [src]="hoveredIcon === 'yt' ? 'assets/images/youtube_icon_white.svg' : 'assets/images/social_media/youtube.svg'" 
+                      [src]="hoveredIcon === 'yt' ? 'assets/images/social_media/youtube.svg':'assets/images/youtube_gray.svg' " 
                       alt="YouTube"
                       (mouseenter)="hoveredIcon = 'yt'" 
                       (mouseleave)="hoveredIcon = ''"
@@ -44,35 +38,39 @@
                     >
                   
                     <img 
-                      [src]="hoveredIcon === 'ln' ? 'assets/images/linkedin_icon_white.svg' : 'assets/images/social_media/linkedin.svg'" 
+                      [src]="hoveredIcon === 'ln' ? 'assets/images/social_media/linkedin.svg':'assets/images/linkedin_icon.svg' " 
                       alt="LinkedIn"
                       (mouseenter)="hoveredIcon = 'ln'" 
                       (mouseleave)="hoveredIcon = ''"
                       class="img-fluid" style="width: 24px; height: 24px;"
                     >
                   </div>
-                  
+              </div>
             </div>
-            <div class="col-md-4 d-flex justify-content-start">
-                <ul class="list-unstyled mb-0 mt-3">
-                    <h6 class="text_prm fw-bold mb-2">OUR HOSPITALS</h6>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kukatpally</a></li>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">UDAI OMNI Hospitals, Chapel Road</a></li>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kothapet</a></li>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Vizag</a></li>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kurnool</a></li>
-                    <li class="mb-1 ms-3">• <a href="#" class="text-white">Giggles by OMNI, Vizag</a></li>
-                </ul>
+          
+            <div class="col-md-5 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
+              <ul class="list-unstyled mb-0 mt-3 text-start">
+                <h6 class="text_prm fw-bold mb-2">OUR HOSPITALS</h6>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kukatpally</a></li>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">UDAI OMNI Hospitals, Chapel Road</a></li>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kothapet</a></li>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Vizag</a></li>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">OMNI Hospitals, Kurnool</a></li>
+                <li class="mb-1 ms-3">• <a href="#" class="text-white">Giggles by OMNI, Vizag</a></li>
+              </ul>
             </div>
-            <div class="col-md-3 d-flex justify-content-start">
-                <ul class="list-unstyled mb-0 p-0 mt-3">
-                    <h6 class="text_prm fw-bold mb-2">PATIENT SERVICES</h6>
+          
+            <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start">
+              <ul class="list-unstyled mb-0 p-0 mt-3 text-start">
+                <h6 class="text_prm fw-bold mb-2">PATIENT SERVICES</h6>
                     <li class="mb-1 ms-2">• <a href="#" class="text-white ">Request an appointment</a></li>
                     <li class="mb-1 ms-2">• <a routerLink="/feedback" class="text-white ">Feedback</a></li>
-                </ul>
+              </ul>
             </div>
-        </div>
-    </div>
+          </div>
+
+    </section>
+      
     <div class="sec_footer_bg py-2 mt-3">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
             <span>2025 Incor Hospitals Pvt Ltd</span>

@@ -18,7 +18,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
 import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
-import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
+// import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
 import { BoardMembersComponent } from './board-members/board-members.component';
 
 const routes: Routes = [
@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'blogs-details', component: BlogDetailsComponent },
   { path: 'news-media-details', component: NewsMediaDetailsComponent },
   { path: 'book-an-appointment', component: BookAnAppointmentComponent },
-  { path: 'fixed-surgical-packages', component: FixedSurgicalPackagesComponent },
+  // { path: 'fixed-surgical-packages', component: FixedSurgicalPackagesComponent },
   { path: 'board-members', component: BoardMembersComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

@@ -279,9 +279,15 @@
       <div *ngFor="let news of newsMedia; let idx = index" class="news-item ">
         <div class="row g-0">
           <!-- Image Section (Full Width) -->
-          <div class="col-12 d-flex align-items-center justify-content-center" (click)="onNewsCLick()">
-            <img [src]="news.image" class="rounded news-image" width="250px" height="170px" alt="News Image"
+          <div class="col-12 d-flex flex-column justify-content-center" (click)="onNewsCLick()">
+            <img [src]="news.image" class="rounded news-image" width="150px" height="80px" alt="News Image"
               style="object-fit: cover;">
+              <div class="d-flex flex-column px-4 py-2 bg-white">
+                <p class="pt-2 border_top fw-medium m-0" style="font-size:15px">{{news.title}}</p>
+                <address class="fw-medium m-0 py-2" style="font-size:10px">{{news.location}}</address>
+                <label class="fw-medium" style="font-size:13px;text-decoration:underline">{{news.posted_date}}</label>
+                <label class="fw-medium" style="font-size:13px;text-decoration:underline">Read More</label>
+              </div>
           </div>
         </div>
       </div>
@@ -401,7 +407,7 @@
 
 <!-- FAQ Section -->
 <section class="mt-3 mrgin_bottm bg-white py-3">
-  <div class="title-container">
+  <div class="title-container pt-4">
     <div class="line line-left"></div>
     <span class="title_text">FREQUENTLY ASKED QUESTIONS</span>
     <div class="line line-right"></div>

@@ -1312,3 +1312,7 @@ swiper-container {
   .border_top{
     border-top: 1px solid lightgray;
   }
+
+.bg_blue_lgt{
+  background-color: #a1d6d8;
+}

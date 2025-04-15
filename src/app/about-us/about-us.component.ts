@@ -27,10 +27,10 @@ export class AboutUsComponent {
   ];
 
   leadershipTeam = [
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' },
-    { name: 'Dr M Goutham Reddy', title: 'Medical Director', image: 'assets/images/leadership.png' }
+    { name: 'DR DURGESH', title: 'CEO', image: 'assets/images/leadership.png' },
+    { name: 'MR ANKIT', title: 'CFO', image: 'assets/images/leadership.png' },
+    { name: 'DR DURGESH', title: 'CEO', image: 'assets/images/leadership.png' },
+    { name: 'MR ANKIT', title: 'CFO', image: 'assets/images/leadership.png' }
   ];
   constructor(private router:Router) {
 

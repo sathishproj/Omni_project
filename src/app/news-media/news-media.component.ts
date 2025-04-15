@@ -13,39 +13,39 @@ export class NewsMediaComponent {
     {
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
       description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
+      image: 'assets/images/news_images.png',
       date: 'January 20, 2025'
     },
     {
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
       description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
-      date: 'January 20, 2025'
-
-    },
-    {
-      title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
-      description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
+      image: 'assets/images/news_images.png',
       date: 'January 20, 2025'
 
     },
     {
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
       description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
+      image: 'assets/images/news_images.png',
+      date: 'January 20, 2025'
+
+    },
+    {
+      title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
+      description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
+      image: 'assets/images/news_images.png',
       date: 'January 20, 2025'
     },
     {
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
       description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
+      image: 'assets/images/news_images.png',
       date: 'January 20, 2025'
     },
     {
       title: 'Omni Hospitals Kukatpally Inaugurates Station Naming Rights with Grand Ceremony',
       description: 'Hyderabad, 7/01/2025– Omni Hospitals, a leading multi-specialty healthcare provider, proudly inaugurated the station naming rights...',
-      image: 'https://thumbs.dreamstime.com/b/old-newspaper-design-vector-template-vintage-retro-background-text-images-77345579.jpg',
+      image: 'assets/images/news_images.png',
       date: 'January 20, 2025'
     }
   ];

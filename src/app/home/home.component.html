@@ -329,10 +329,13 @@
               </div>
         
               <!-- Text on right -->
-              <div class="col-md-8  d-flex flex-column align-items-start justify-content-center ps-2 p-3">
-                <h5 class="p-0 m-0 ms-2" style="font-size: 15px;">{{ testimonial.name }}</h5>
-                <p class="m-0 py-2 ms-2" style="font-size: 10px; color: #828282;">{{ testimonial.text }}</p>
-                <p class="m-0 ms-2" style="font-size: 10px; color: #000;">{{ testimonial.date }}</p>
+              <div class="col-md-8  d-flex flex-column align-items-start ps-2 p-3 position-relative">
+                <img class="position-absolute" style="width:29px;height:26px;right:0px;top:2px" src="assets/images/quote.svg" alt="">
+                <div class="d-flex flex-column">
+                  <h5 class="p-0 m-0 ms-2" style="font-size: 15px;">{{ testimonial.name }}</h5>
+                  <p class="m-0 py-2 ms-2" style="font-size: 12px; color: #828282;">{{ testimonial.text }}</p>
+                  <p class="m-0 ms-2" style="font-size: 12px; color: #000;">{{ testimonial.date }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -344,11 +347,13 @@
           <div *ngFor="let testimonial of userTestimonials" class="testimonial_card card p-3 pb-0">
             <div class="d-flex align-items-center mb-2">
               <img [src]="testimonial.image" class="me-2 cicle_image" alt="User Image" style="object-fit: cover;">
-              <div>
-                <h6 class="mb-0" style="font-weight: 600;">{{ testimonial.name }}</h6>
-                <small class="text-muted">{{ testimonial.location }}</small>
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h6 class="mb-0" style="font-weight: 600;">{{ testimonial.name }}</h6>
+                  <small class="text-muted">{{ testimonial.location }}</small>
+                </div>
+                <img src="assets/images/quote.svg"  style="width:29px;height:26px">
               </div>
-              <span class="ms-auto fs-3 text-muted">“</span>
             </div>
             <p class="mb-0 pb-0" style="font-size: 13px; color: #333;">{{ testimonial.text }}</p>
           </div>
@@ -503,16 +508,17 @@
 </section>
 
 <!---------- Side Fixed Buttons ------------>
-<div class="fixed_buttons" *ngIf="false">
-  <div class="book_app_button bg_green d-flex align-items-center">
-    <img src="assets/images/book_an_appointment.png" style="rotate: 90deg;" width="24px" height="24px">
-    <button class="rotate btn-lg custom-btns bg_green"> BOOK <br> AN APPOINTMENT</button>
+<div class="fixed_buttons">
+  <div class="side_button bg_green">
+    <img src="assets/images/book_an_appointment.png" alt="appointment icon" />
+    <span class="fw-medium" style="font-size:10px">BOOK AN <br> APPOINTMENT</span>
   </div>
-  <div class="bg_blue d-flex align-items-center">
-    <img src="assets/images/call_icon.png" style="rotate: 90deg;" width="24px" height="24px">
-    <button for="" class="bg_blue">CALL FOR <br> ENQUARY</button>
+  <div class="side_button bg_blue">
+    <img src="assets/images/call_icon.png" alt="call icon" />
+    <span class="fw-medium" style="font-size:10px">CALL FOR <br> ENQUIRY</span>
   </div>
 </div>
+
 
 
 

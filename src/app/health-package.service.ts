@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class HealthPackageService {
 
-  private dataUrl = 'assets/data.json';
+  private dataUrl = 'assets/json_data_files/data.json';
 
   constructor(private http: HttpClient) {}
 

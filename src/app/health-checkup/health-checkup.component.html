@@ -1,7 +1,20 @@
 <app-header></app-header>
 <div class="container">
+  <div class="py-3">
+    <div class="d-flex flex-wrap gap-3 justify-content-start">
+      <button 
+      *ngFor="let location of locations"
+      class="btn rounded-pill px-4 py-1 fw-semibold border me-2 mb-2"
+      [ngClass]="selected === location ? 'selected_bg text-white' : 'bg-white text-black'"
+      (click)="selectLocation(location)">
+      {{ location }}
+    </button>
+    
+    </div>
+  </div>
+  
   <div class="row">
-    <div class="col-md-4 col-sm-6 col-12" *ngFor="let checkup of checkups; index as i">
+    <div class="col-md-4 col-sm-6 col-12" *ngFor="let checkup of displayedPackages; index as i">
       <div class="card">
         <div class="row card_bg">
           <div class="col-8">

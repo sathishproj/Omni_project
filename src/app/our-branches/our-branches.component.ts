@@ -14,6 +14,12 @@ export class OurBranchesComponent {
     'Nephrology', 'Urology', 'Dermatology'
   ];
 
+  locationImages = [
+    { name: 'Vishakapatnam', image: 'kothapet_hospital.svg' },
+    { name: "Womens & Children's Hospital", image: 'kothapet_hospital.svg' },
+    { name: 'Fertility Center', image: 'kothapet_hospital.svg' } // Example third location
+  ];
+
   doctors = [
     {
       name: 'Dr R Naga Sudha Ashok',

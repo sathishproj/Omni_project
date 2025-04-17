@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Renderer2 } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,95 +12,37 @@ export class HealthCheckupComponent {
   discount: string = '';
   appointmentForm!: FormGroup;
   modalInstance: any;
-  checkups = [
-    {
-      id: 1,
-      title: 'Whole Body Check-Up',
-      oldPrice: 20605,
-      newPrice: 6000,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 2,
-      title: 'EXECUTIVE HEALTH CHECK-UP ',
-      oldPrice: 14555,
-      newPrice: 3999,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 3,
-      title: 'GIGGLES WELL WOMEN CHECK-UP ',
-      oldPrice: 7755,
-      newPrice: 2999,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 4,
-      title: 'LUNG PULMONARY CHECK-UP ',
-      oldPrice: 4890,
-      newPrice: 1800,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 5,
-      title: 'KIDNEY CHECK-UP',
-      oldPrice: 6310,
-      newPrice: 2500,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 6,
-      title: 'DIABETIC HEALTH CHECK-UP ',
-      oldPrice: 2845,
-      newPrice: 999,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 7,
-      title: 'GASTRO CHECK UP',
-      oldPrice: 6315,
-      newPrice: 2500,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 8,
-      title: 'LIVER  CHECK UP',
-      oldPrice: 7660,
-      newPrice: 2500,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 9,
-      title: 'UROLOGY  CHECK UP',
-      oldPrice: 4095,
-      newPrice: 1800,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    },
-    {
-      id: 10,
-      title: 'GIGGLES PAEDIATRIC  HEALTH CHECK-UP ',
-      oldPrice: 3000,
-      newPrice: 1200,
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,....",
-      image: 'assets/health_checkup/whole_body_checkup.svg'
-    }
-  ];
-  constructor(private router: Router, private renderer: Renderer2, private fb: FormBuilder) {
+  locations: string[] = ['All Packages', 'Kothapet', 'Kukatpally', 'Nampally', 'Vizag', 'Kurnool'];
+  selected: string = 'All Packages';
+  allPackages: any = {};
+  displayedPackages: any[] = [];
+
+  constructor(private router: Router, private renderer: Renderer2, private fb: FormBuilder, private http: HttpClient) {
     this.valiDations()
   }
   ngOnInit() {
+    this.getHealthPackageDetails();
+    this.getDoctorsDetails();
     this.renderer.setStyle(document.body, 'background-color', 'white');
   }
 
+getHealthPackageDetails(){
+  this.http.get<any>('assets/json_data_files/health_checkup.json').subscribe(data => {
+    console.log(data,'data....');
+    
+    this.allPackages = data;
+    this.locations = ['All Packages', ...Object.keys(data).filter(loc => loc !== 'All Packages')];
+    this.displayAllPackages();
+  });
+}
+
+
+getDoctorsDetails(){
+  this.http.get<any>('assets/json_data_files/depertment_details.json').subscribe(res => {
+    console.log(res,'ressss...');
+    
+  })
+}
   ngOnDestroy() {
     this.renderer.setStyle(document.body, 'background-color', 'rgb(234, 232, 232)');
   }
@@ -149,5 +92,21 @@ export class HealthCheckupComponent {
     } else {
       alert('Please fill in all required fields correctly.');
     }
+  }
+
+  selectLocation(location: string) {
+    console.log(location,'location..');
+    
+    this.selected = location;
+    if (location === 'All Packages') {
+      this.displayAllPackages();
+    } else {
+      this.displayedPackages = this.allPackages[location] || [];
+    }
+  }
+  displayAllPackages() {
+    this.displayedPackages = Object.entries(this.allPackages)
+      .filter(([key]) => key !== 'All Packages')
+      .flatMap(([_, value]) => value);
   }
 }

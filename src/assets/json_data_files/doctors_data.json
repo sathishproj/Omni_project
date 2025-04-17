@@ -1,0 +1,869 @@
+[
+    {
+      "location": "kothapet",
+      "doctors": [
+        {
+          "name": "Dr B Jaipal Reddy",
+          "qualification": "MBBS, MD - General Medicine, Diploma in Diabetes",
+          "speciality": "Consultant Physician (Diabetology)",
+          "experience": "19 years",
+          "expertise": [
+            "Management Of Pre – Diabetic Cases",
+            "Diabetic Complications",
+            "Thyroid Disorders",
+            "Hypertension",
+            "Body Pains",
+            "Infectious Diseases, Mainly Dengue Fevers",
+            "Vertigo",
+            "Chronic Kidney Condition",
+            "Adolescent And Geriatric Care",
+            "Dyslipidemia",
+            "Joint Pains (Including RA)",
+            "Poisoning",
+            "Regional Pain Syndrome",
+            "Fibromyalgia"
+          ]
+        },
+        {
+          "name": "Dr Pavan Kumar Reddy",
+          "qualification": "MBBS, MD (Internal Medicine)",
+          "speciality": "General Physician",
+          "experience": "18 years",
+          "expertise": [
+            "Management Of Pre – Diabetic Cases",
+            "Diabetic Complications",
+            "Thyroid Disorders",
+            "Hypertension",
+            "High Cholesterol Diseases (Dyslipidemia)",
+            "Sepsis And Infectious Diseases",
+            "Vertigo"
+          ]
+        },
+        {
+          "name": "Dr U P Sharma",
+          "qualification": "MD (General Medicine), DM (Neurology)",
+          "speciality": "Neurologist",
+          "experience": "",
+          "expertise": []
+        },
+        {
+          "name": "Dr Mastan Reddy",
+          "qualification": "M.S, MCh Neuro Surgery",
+          "speciality": "Neuro & Spine Surgeon",
+          "experience": "25 years",
+          "expertise": [
+            "Brain Tumors",
+            "Vascular Surgeries",
+            "Spine Surgery"
+          ]
+        },
+        {
+          "name": "Dr Raghudeep Palla",
+          "qualification": "MBBS, MD (Pulmonology), IDCCM",
+          "speciality": "Pulmonologist",
+          "experience": "10 years",
+          "expertise": [
+            "Critical Care",
+            "Interventional Pulmonology",
+            "Allergy",
+            "Asthma",
+            "COPD & Chest Infections"
+          ]
+        },
+        {
+          "name": "Dr K.V. Venugopal Reddy",
+          "qualification": "MD, DM (Gastroenterology)",
+          "speciality": "Consultant Gastroenterologist",
+          "experience": "15 years",
+          "expertise": [
+            "Acid Peptic Disease",
+            "Jaundice",
+            "Liver, Pancreatic, Bile Duct Diseases",
+            "Ulcerative Colitis and Crohn’s Disease",
+            "Endoscopic & Colonoscopic Procedures",
+            "ERCP/Biliary Stenting",
+            "Peptic Ulcer Disease",
+            "Banding – EVL"
+          ]
+        },
+        {
+          "name": "Dr Jayasimha Nagella",
+          "qualification": "MBBS, DNB - General Surgery",
+          "speciality": "Laparoscopic, General Surgeon",
+          "experience": "13 years",
+          "expertise": []
+        },
+        {
+          "name": "Dr K. Srikanth",
+          "qualification": "MBBS, DNB (ENT), DLO MNAMS",
+          "speciality": "ENT Surgeon",
+          "experience": "18 years",
+          "expertise": [
+            "Tonsil and Adenoid Surgery",
+            "Microscopic Laryngeal Surgery",
+            "Grommet Insertion",
+            "Endoscopic DCR",
+            "Optic Nerve Decompression",
+            "Ear Problem Treatment",
+            "Allergy Treatment",
+            "FESS",
+            "Ear Surgery",
+            "Tinnitus Management",
+            "Vertigo",
+            "Thyroid Surgery",
+            "Septorhinoplasty",
+            "Hearing Loss and Aid"
+          ]
+        },
+        {
+          "name": "Dr Vijay Bhaskar Mallela",
+          "qualification": "MD, FAAD",
+          "speciality": "Dermatologist (Cosmetology)",
+          "experience": "8 years",
+          "expertise": [
+            "Dermatology",
+            "Trichology",
+            "Laser Surgeries"
+          ]
+        },
+        {
+          "name": "Dr R. Padma Kumari",
+          "qualification": "MBBS, MD - Obstetrics & Gynaecology",
+          "speciality": "Gynaecologist",
+          "experience": "26 years",
+          "expertise": [
+            "High Risk Pregnancy",
+            "Pregnancy Induced Hypertension",
+            "Eclampsia And Pre-Eclampsia",
+            "Elective And Emergency LSCS",
+            "IVF",
+            "Gynic Surgery"
+          ]
+        },
+        {
+          "name": "Dr K. Naveen",
+          "qualification": "BDS, MDS, FICUI",
+          "speciality": "Maxillofacial Surgeon",
+          "experience": "12 years",
+          "expertise": [
+            "Maxillofacial Trauma",
+            "Facial Cosmetic Surgery",
+            "Rhinoplasty",
+            "Cleft Lip and Palate",
+            "Oral Tumors",
+            "Reconstructive Surgery"
+          ]
+        },
+        {
+          "name": "Dr Santhosh Bukya",
+          "qualification": "MBBS, MS, MCh - Urology",
+          "speciality": "Urologist, Andrologist",
+          "experience": "13 years",
+          "expertise": [
+            "Endourology",
+            "Laparoscopy",
+            "Renal Transplantation",
+            "Uro-oncology",
+            "Andrology",
+            "Microsurgical Andrology"
+          ]
+        },
+        {
+          "name": "Dr Sameera K",
+          "qualification": "MBBS, MS (General Surgery), FMAS, FISCP",
+          "speciality": "Laparoscopic Surgeon",
+          "experience": "7 years",
+          "expertise": []
+        },
+        {
+          "name": "Dr M Saradhi Gooud",
+          "qualification": "MBBS, MD (Psychiatry)",
+          "speciality": "Psychiatrist",
+          "experience": "18 years",
+          "expertise": [
+            "Emergency Psychiatry",
+            "Psychopharmacotherapy",
+            "Electroconvulsive Therapy",
+            "CBT",
+            "Counseling",
+            "OCD",
+            "De-Addiction"
+          ]
+        },
+        {
+          "name": "Dr J Janardhan Reddy",
+          "qualification": "MBBS, FRCS",
+          "speciality": "Laparoscopy & Proctology Surgeon",
+          "experience": "55 years",
+          "expertise": [
+            "Anorectal Surgery",
+            "Hernia",
+            "Appendisectomy",
+            "Gall Bladder Surgery",
+            "Piles Surgery",
+            "Thyroidectomy"
+          ]
+        },
+        {
+          "name": "Dr Vamshi Krishna Reddy C",
+          "qualification": "MS (Ortho), DNB (Ortho), AOA Fellowship",
+          "speciality": "Joint Replacement Surgeon",
+          "experience": "14 years",
+          "expertise": [
+            "Primary and Revision Joint Replacement Surgeries"
+          ]
+        },
+        {
+          "name": "Dr M A Suboor Shaherose",
+          "qualification": "MBBS, MD, DrNB (Medical Oncology)",
+          "speciality": "Medical Oncologist",
+          "experience": "3 years",
+          "expertise": [
+            "Breast Cancer",
+            "GI Cancers",
+            "Gynecological Cancers",
+            "Lung Cancer",
+            "Leukemias",
+            "Lymphomas",
+            "Targeted Therapy",
+            "Immunotherapy",
+            "Stem Cell Transplantation"
+          ]
+        },
+        {
+          "name": "Dr CH. Nagaraj",
+          "qualification": "MD, PDCC",
+          "speciality": "Anaesthesiologist",
+          "experience": "26 years",
+          "expertise": [
+            "Cardiac Anaesthesia",
+            "Neuro Anaesthesia",
+            "Renal Anaesthesia",
+            "Intensive Care"
+          ]
+        },
+        {
+          "name": "Dr B. Sreenivas Rao",
+          "qualification": "MBBS, DNB (Med), DNB (Nephro)",
+          "speciality": "Nephrologist",
+          "experience": "14 years",
+          "expertise": [
+            "Kidney Injury",
+            "Hypertension",
+            "Chronic Kidney Disease",
+            "Kidney Stones",
+            "Transplantation"
+          ]
+        },
+        {
+          "name": "Dr Shyam Sunder Reddy",
+          "qualification": "MBBS, DNB",
+          "speciality": "Orthopaedic Surgeon",
+          "experience": "13 years",
+          "expertise": [
+            "Polytrauma",
+            "Joint Replacement"
+          ]
+        },
+        {
+          "name": "Dr S Sangeetha Santosh",
+          "qualification": "MBBS, MD, DM (Endocrinology)",
+          "speciality": "Endocrinologist",
+          "experience": "12 years",
+          "expertise": []
+        },
+        {
+          "name": "Dr Surya Reddy",
+          "qualification": "DNB (Anaesthesia)",
+          "speciality": "Consultant Intensivist",
+          "experience": "25 years",
+          "expertise": [
+            "Critical Care for Respiratory, Cardiac, Neuro and Renal",
+            "Trauma Cases",
+            "ECMO Management"
+          ]
+        },
+        {
+          "name": "Dr K Girish Kumar",
+          "qualification": "MBBS, MS, MRCS, MCh (Surgical Oncology)",
+          "speciality": "Surgical Oncologist",
+          "experience": "14 years",
+          "expertise": [
+            "Head & Neck Oncology",
+            "Breast Oncology",
+            "Colorectal Cancer",
+            "Hepatobiliary & Pancreatic Cancer"
+          ]
+        },
+        {
+          "name": "Dr Ch Ranjit Kumar",
+          "qualification": "MD (Anaesthesia), FCCCM",
+          "speciality": "Anaesthesiologist & Pain Management",
+          "experience": "3 years",
+          "expertise": []
+        },
+        {
+          "name": "Dr S Ravinder",
+          "qualification": "MBBS, FCCCM",
+          "speciality": "Intensivist",
+          "experience": "4 years",
+          "expertise": [
+            "Ventilatory Management",
+            "Critical Care",
+            "ECMO",
+            "Sepsis",
+            "Burns"
+          ]
+        },
+        {
+          "name": "Dr N Srinivas",
+          "qualification": "MBBS, PGDCC (Cardiology)",
+          "speciality": "Cardiologist",
+          "experience": "12 years",
+          "expertise": [
+            "Cardiac Interventions",
+            "Pacemaker Installation",
+            "Valvular Interventions"
+          ]
+        },
+        {
+          "name": "Dr V.A. Vani",
+          "qualification": "MBBS, DA, FCCCM",
+          "speciality": "Anaesthesiologist",
+          "experience": "12 years",
+          "expertise": [
+            "Anaesthesia"
+          ]
+        },
+        {
+          "name": "Dr G Sudarsana",
+          "qualification": "MD, DNB (Cardiology)",
+          "speciality": "Anaesthesiologist & Pain Management",
+          "experience": "43 years",
+          "expertise": [
+            "Cardiac Interventions",
+            "Pacemaker",
+            "Valvular Interventions"
+          ]
+        },
+        {
+          "name": "Dr M Khallel",
+          "qualification": "M Sc (Dietetics & Food Service Mgmt)",
+          "speciality": "Physiotherapist",
+          "experience": "8 years",
+          "expertise": []
+        },
+        {
+          "name": "Dr Saritha T",
+          "qualification": "MSc (Dietetics), BSc (Food Science)",
+          "speciality": "Dietitian",
+          "experience": "18 years",
+          "expertise": []
+        }
+      ]
+    },
+    {
+      "location": "kukkatpally",
+      "doctors": [
+        {
+          "name": "Dr. Ranjith Nellore Mahesh",
+          "specialization": "Orthopaedic Surgeon",
+          "qualification": "MBBS, MS (Ortho), FIPO (Peadiatric Orthopaedics-IGICH), FIJR (Joint Replacement Surgery), FIRKR (Robotic Knee Replacement Surgery)",
+          "experience": "8 years"
+        },
+        {
+          "name": "Dr. R. Naga Sudha Ashok",
+          "specialization": "Surgical Gastroenterologist",
+          "qualification": "MBBS, MS - General Surgery, DNB - Surgical Gastroenterology, Consultant - GI, GI Oncology, HPB, Bariatric & Minimal Access Surgery",
+          "experience": "10 Years"
+        },
+        {
+          "name": "Dr. Sandeep Pemira",
+          "specialization": "Nephrologist",
+          "qualification": "MBBS, MD (Internal Medicine), DNB (Nephrology)",
+          "experience": "7yrs"
+        },
+        {
+          "name": "Dr Neelima.M",
+          "specialization": "Plastic & Reconstructive Surgery",
+          "qualification": "MBBS, MS (General Surgery), MCh Plastic Surgery",
+          "experience": "15 Years"
+        },
+        {
+          "name": "Dr Chinthakunta Raghavendra Reddy",
+          "specialization": "Medical Oncology and Hematologist",
+          "qualification": "MBBS, DNB General Medicine, DM Medical Oncology",
+          "experience": "5 Years"
+        },
+        {
+          "name": "Dr. Rajendar Byshetty",
+          "specialization": "Surgical Oncologist",
+          "qualification": "MBBS, MS, DNB, MCh (AIIMS), FMAS (Fellowship in Minimal Access Surgery)",
+          "experience": "5 Years"
+        },
+        {
+          "name": "Dr. Praneeth Reddy",
+          "specialization": "Orthopedic Surgeon",
+          "qualification": "MBBS, MS (Ortho), Fellow in Joint Replacement, Fellow in Shoulder & Elbow Surgery (Italy)",
+          "experience": "14 Years"
+        },
+        {
+          "name": "Dr Anudeep Davuluri",
+          "specialization": "Neurophysician",
+          "qualification": "MBBS, MD (Internal Medicine - NIMS), DM (Neurology) NIMHANS",
+          "experience": "3 years"
+        },
+        {
+          "name": "Dr. Varaprasad",
+          "specialization": "Neurosurgeon",
+          "qualification": "MBBS, MD (Anesthesiology & Critical Care), DNB - Neurosurgery",
+          "experience": "14 Years"
+        },
+        {
+          "name": "Dr. Tagore Mohan Grandhi",
+          "specialization": "Gastrointestinal Surgeon General, Bariatric & Minimal Access Surgeon",
+          "qualification": "MBBS, MS, FRCS (UK), DLS (France), Fellowship in Bariatric & Adv. Laparoscopic Surgery (USA), Robotic & Laparoscopic Colorectal Surgery (Korea)",
+          "experience": "28 Years"
+        },
+        {
+          "name": "DR. VINAY KUMAR",
+          "specialization": "General Physician & Diabetologist",
+          "qualification": "MBBS, DNB (General Medicine)",
+          "experience": "15 years"
+        },
+        {
+          "name": "Dr. Padmaja S",
+          "specialization": "Gynaecologist and Obstetrician",
+          "qualification": "MBBS, DGO (MRCOG) Obstetrics & Gynaecology",
+          "experience": "15 Years"
+        },
+        {
+          "name": "Dr Pramod Kumar Rao",
+          "specialization": "Sr. Consultant - Dept. of Cardiology",
+          "qualification": "MD, DNB (Medicine), DM Cardiology",
+          "experience": "18 Years"
+        },
+        {
+          "name": "Dr G B Varaprasad",
+          "specialization": "Consultant Neuro Surgeon",
+          "qualification": "MBBS, MD, DNB (Neurosurgery)",
+          "experience": "8 Years"
+        },
+        {
+          "name": "Dr M. Chandra Shekar",
+          "specialization": "HOD - Dept. of Paediatrics",
+          "qualification": "MD (Paediatrics) AIIMS (New Delhi), Fellow in Neonatology, Fellow in Paediatric Cardiology (MOH, Kuwait)",
+          "experience": "24 years"
+        },
+        {
+          "name": "Dr Vishwanatham Vemula",
+          "specialization": "HOD - Dept. of Internal Medicine",
+          "qualification": "MBBS, MD, ECFMG, CCDM",
+          "experience": "36 Years"
+        },
+        {
+          "name": "Dr Lokesh Kumar",
+          "specialization": "Psychiatrist",
+          "qualification": "MBBS, MD (Psychiatry)",
+          "experience": "13 Years"
+        },
+        {
+          "name": "Dr Payal Chitransi",
+          "specialization": "Consultant - Dept. of ENT",
+          "qualification": "MBBS, MS - ENT",
+          "experience": "17 Years"
+        },
+        {
+          "name": "Dr A Vishnu Sri",
+          "specialization": "Consultant Dentist",
+          "qualification": "Not Mentioned",
+          "experience": "Not Mentioned"
+        },
+        {
+          "name": "Dr Neehar Potluri",
+          "specialization": "Sr. Consultant Neurologist",
+          "qualification": "MBBS, MD - General Medicine, DM - Neurology",
+          "experience": "23 Years"
+        },
+        {
+          "name": "Dr Abhilash Sandhyala",
+          "specialization": "Interventional Radiologist & Endo Vascular Specialist",
+          "qualification": "MD, MBBS, FIVR (KEM)",
+          "experience": "9 Years"
+        },
+        {
+          "name": "Dr S.Kiran",
+          "specialization": "Consultant - Dermatology & Cosmetology",
+          "qualification": "MBBS, DDVL (Osm), DNB (Dermatology), MCSEPI, MIAS",
+          "experience": "23 years"
+        },
+        {
+          "name": "Dr G.V. Chanukya",
+          "specialization": "Consultant Endocrinology",
+          "qualification": "MD, DM, PGIMER (Chandigarh)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "name": "Dr Ragi Prasad",
+          "specialization": "Sr. Consultant Orthopaedics",
+          "qualification": "MS (Ortho), FIHRS, FIJR (Germany)",
+          "experience": "21 Years"
+        },
+        {
+          "name": "Dr Ravinder Reddy",
+          "specialization": "Sr. Consultant - Dept. of Urology",
+          "qualification": "MBBS, MS, MCH",
+          "experience": "8 Years"
+        },
+        {
+          "name": "Dr Kiran Grandhi",
+          "specialization": "Consultant Pulmonology",
+          "qualification": "MBBS, MD - Pulmonary Medicine",
+          "experience": "16 Years"
+        },
+        {
+          "name": "Dr Potluri Neehar",
+          "specialization": "Consultant Neurology",
+          "qualification": "MD, DM",
+          "experience": "Not Mentioned"
+        },
+        {
+          "name": "Dr Potluri Neehar",
+          "specialization": "Consultant Neurology",
+          "qualification": "MD, DM",
+          "experience": "Not Mentioned"
+        },
+        {
+          "name": "Dr Sharan Basappa",
+          "specialization": "Sr. Consultant - Dept. of Neurosurgery",
+          "qualification": "MBBS, MS (Gen Surgery), DNB Neurosurgery",
+          "experience": "15 Years"
+        },
+        {
+          "name": "Dr Raju C H",
+          "specialization": "Pulmonologist",
+          "qualification": "MBBS, MD - Pulmonary Medicine",
+          "experience": "9 Years"
+        },
+        {
+          "name": "Dr S. Siva Kumar Reddy",
+          "specialization": "Consultant Cardiology",
+          "qualification": "MD, DM (NIMS)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "name": "Dr Nagavender Rao M",
+          "specialization": "Senior Consultant Physician",
+          "qualification": "Not Mentioned",
+          "experience": "22 Years"
+        },
+        {
+          "name": "Dr Praveen K",
+          "specialization": "Consultant Pulmonologist",
+          "qualification": "MBBS, DTRD, FCCP (USA), FERS",
+          "experience": "13 years"
+        },
+        {
+          "name": "Dr Srinivas Reddy V",
+          "specialization": "Senior Consultant Oral & Maxillofacial Surgeon",
+          "qualification": "MDS, MFDS RCS (UK), FDSRCS (UK)",
+          "experience": "21 years"
+        },
+        {
+          "name": "Dr Sanjeeva Rao K",
+          "specialization": "Sr. Consultant Vascular & Endo Vascular Surgeon",
+          "qualification": "MBBS, DNB (General Surgery), MNAMS, FVES (Austria), FIVS (Chandigarh), CCEBDM",
+          "experience": "9 Years"
+        },
+        {
+          "name": "Dr Yugaveer Goud K",
+          "specialization": "Consultant Interventional Pulmonologist",
+          "qualification": "MBBS, MD, FCCP",
+          "experience": "11 years"
+        },
+        {
+          "name": "Dr Dudipala Raghuveer Reddy",
+          "specialization": "Consultant Plastic, Reconstructive and Microsurgeon",
+          "qualification": "MBBS, MS (General Surgery), MCh (Plastic and Reconstructive Surgery), FMAS, DMAS, FIHPBA",
+          "experience": "11 Years"
+        },
+        {
+          "name": "Dr Shilpa Ponnada",
+          "specialization": "Consultant Dermatologist & Hair Transplant Surgeon",
+          "qualification": "MBBS, MD",
+          "experience": "4 Years"
+        },
+        {
+          "name": "Dr. M. Rama Krishna Reddy",
+          "specialization": "Sr. Clinical & Interventional Pulmonologist",
+          "qualification": "MBBS, DTCD, DNB, FCCP (USA)",
+          "experience": "20 Years"
+        },
+        {
+          "name": "Dr. G. UMA SRI",
+          "specialization": "Fellowship in Sleep Medicine",
+          "qualification": "MBBS, DNB Pulmonology",
+          "experience": "4 Years"
+        }
+      ]
+    },    
+    {
+      "location": "kurnool",
+      "doctors": [
+        {
+          "id": 1,
+          "name": "Dr Ved Prakash",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "FRCS (Eng.)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 2,
+          "name": "Dr M. Raghava Dutt",
+          "specialization": "Director and Chief of Spine Surgery",
+          "qualification": "MS (Ortho), FRCS (Edin), M.Ch.(Ortho) Liv. UK",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 3,
+          "name": "Dr Udai Prakash",
+          "specialization": "Director and Joint Replacement Surgeon",
+          "qualification": "FRCS(Eng.), FRCS(Edin.), FRCS (Tr & Ortho.)UK.",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 4,
+          "name": "Dr Vimal Rai",
+          "specialization": "Consultant General Physician",
+          "qualification": "M.D",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 5,
+          "name": "Dr STR Chari",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "MS",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 6,
+          "name": "Dr Pavan Kumar Goud",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "D.Ortho",
+          "experience": "Not Mentioned"
+        }
+      ]
+    },    
+    {
+      "location": "vizag",
+      "doctors": [
+        {
+          "id": 1,
+          "name": "Dr. Subramanyam S.S. Penneru",
+          "specialization": "Sr. Consultant Interventional Cardiologist & Endovascular Interventionist",
+          "qualification": "MBBS, MD, DM (NIMS) Gold Medalist (Nizams Institute of Medical Sciences)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 2,
+          "name": "Dr. Siripurapu Govinda",
+          "specialization": "Consultant Neurologist",
+          "qualification": "MBBS, DNB - General Medicine, DM - Neurology - AIIMS Delhi",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 3,
+          "name": "Dr. B.V.R.N. Varma",
+          "specialization": "Consultant Orthopaedic Surgeon and Joint Replacement Surgeon, Institute of Bone & Joint Care",
+          "qualification": "MBBS, D.Ortho, MCh Ortho",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 4,
+          "name": "Dr. Vulli Venkatesh",
+          "specialization": "Consultant Pulmonologist",
+          "qualification": "MBBS MD, EDARM",
+          "experience": "8 Years"
+        },
+        {
+          "id": 5,
+          "name": "Dr. B Mohan Kalyan Phaniteja",
+          "specialization": "Consultant Orthopedics and Joint Replacement Surgeon with Robotic Experience",
+          "qualification": "MBBS, DNB Ortho, FIJR",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 6,
+          "name": "Dr. J. Uma Kanth Reddy",
+          "specialization": "Physiotherapist",
+          "qualification": "B.P.T, M.P.T (Neuro), MIAP",
+          "experience": "3 Years"
+        },
+        {
+          "id": 7,
+          "name": "Dr. J.N. Srinivasulu",
+          "specialization": "Consultant - Nephrologist",
+          "qualification": "MD, DM Nephrology",
+          "experience": "10 Years"
+        },
+        {
+          "id": 8,
+          "name": "Dr. L. Venkatesh",
+          "specialization": "Consultant - General Medicine",
+          "qualification": "M.D Gen. Med.",
+          "experience": "20 Years"
+        },
+        {
+          "id": 9,
+          "name": "Dr. Vidya Sagar Sammana",
+          "specialization": "General and Laparoscopic Surgeon",
+          "qualification": "MBBS, MS",
+          "experience": "5 Years"
+        },
+        {
+          "id": 10,
+          "name": "Dr. Pradeep Kumar Bachu",
+          "specialization": "Consultant - ER Physician",
+          "qualification": "MBBS, DEM, FIM, FICC",
+          "experience": "10 Years"
+        },
+        {
+          "id": 11,
+          "name": "Dr. Thalluri Prashanth",
+          "specialization": "Consultant Neurosurgeon",
+          "qualification": "MBBS, MS, M.Ch",
+          "experience": "8 Years"
+        },
+        {
+          "id": 12,
+          "name": "Surg L.t. Cdr. Dr. N. Deepali Prakesh (Retd)",
+          "specialization": "Consultant Physician",
+          "qualification": "Ex. Indian Navy, MBBS, DNB – Internal Medicine",
+          "experience": "19 Years"
+        },
+        {
+          "id": 13,
+          "name": "Dr. Annapurna Rao B",
+          "specialization": "Consultant ENT Surgeon & Otorhinolaryngologist",
+          "qualification": "MBBS, MS",
+          "experience": "29 Years"
+        },
+        {
+          "id": 14,
+          "name": "Dr. Vijay Kanth M",
+          "specialization": "Chief Anaesthesiologist",
+          "qualification": "MD Anaesthesiology",
+          "experience": "21 Years"
+        },
+        {
+          "id": 15,
+          "name": "Dr. Siddhartha T",
+          "specialization": "Consultant Plastic & Reconstruction Surgeon",
+          "qualification": "MBBS, MS (General Surgery), M Ch (Plastic Surgery) NIMS, Fellow in Microvascular surgery & Onco-reconstruction TMH, Mumbai",
+          "experience": "7 Years"
+        },
+        {
+          "id": 16,
+          "name": "Dr. Ravikiran Muddada",
+          "specialization": "Consultant Interventional Cardiologist",
+          "qualification": "MD, DM Cardiology",
+          "experience": "6 Years"
+        }
+      ]
+    },    
+    {
+      "location": "giggles-vizag",
+      "doctors": [
+        {
+          "id": 1,
+          "name": "Dr Ved Prakash",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "FRCS (Eng.)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 2,
+          "name": "Dr M. Raghava Dutt",
+          "specialization": "Director and Chief of Spine Surgery",
+          "qualification": "MS (Ortho), FRCS (Edin), M.Ch.(Ortho) Liv. UK",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 3,
+          "name": "Dr Udai Prakash",
+          "specialization": "Director and Joint Replacement Surgeon",
+          "qualification": "FRCS(Eng.), FRCS(Edin.), FRCS (Tr & Ortho.)UK.",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 4,
+          "name": "Dr Vimal Rai",
+          "specialization": "Consultant General Physician",
+          "qualification": "M.D",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 5,
+          "name": "Dr STR Chari",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "MS",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 6,
+          "name": "Dr Pavan Kumar Goud",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "D.Ortho",
+          "experience": "Not Mentioned"
+        }
+      ]
+    },    
+    {
+      "location": "nampally",
+      "doctors": [
+        {
+          "id": 1,
+          "name": "Dr Ved Prakash",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "FRCS (Eng.)",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 2,
+          "name": "Dr M. Raghava Dutt",
+          "specialization": "Director and Chief of Spine Surgery",
+          "qualification": "MS (Ortho), FRCS (Edin), M.Ch.(Ortho) Liv. UK",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 3,
+          "name": "Dr Udai Prakash",
+          "specialization": "Director and Joint Replacement Surgeon",
+          "qualification": "FRCS(Eng.), FRCS(Edin.), FRCS (Tr & Ortho.)UK.",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 4,
+          "name": "Dr Vimal Rai",
+          "specialization": "Consultant General Physician",
+          "qualification": "M.D",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 5,
+          "name": "Dr STR Chari",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "MS",
+          "experience": "Not Mentioned"
+        },
+        {
+          "id": 6,
+          "name": "Dr Pavan Kumar Goud",
+          "specialization": "Consultant Orthopaedic Surgeon",
+          "qualification": "D.Ortho",
+          "experience": "Not Mentioned"
+        }
+      ]
+    }    
+  ]
+  

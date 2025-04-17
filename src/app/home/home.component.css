@@ -914,58 +914,56 @@ h6 {
     }
 }
 
+/************ Side Fixed buttons *****************/
 .fixed_buttons {
-    display: flex;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    right: -108px;
-    transform: rotate(-90deg);
-    gap: 5px;
-    align-items: flex-end;
-    transition: right 0.3s ease-in-out;
+  position: fixed;
+  top: 35%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
 }
 
-@media (max-width: 768px) {
-    .fixed_buttons {
-        right: -104px;
-    }
+.side_button {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+  gap: 10px;
 }
 
-.book_app_button {
-    order: 1;
+.side_button img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-180deg);
 }
 
-.bg_green {
-    background: rgba(140, 198, 63, 1);
-    background-color: rgba(140, 198, 63, 1);
-    color: #f1f1f1 !important;
-    letter-spacing: 1px;
-    padding: 5px;
+.bg_green{
+  background-color: #70bf45; 
+  color: #f1f1f1 !important;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .bg_blue {
-    background-color: rgba(15, 157, 204, 1);
-    color: #f1f1f1 !important;
-    letter-spacing: 1px;
-    padding: 5px;
-
+  background-color: rgba(15, 157, 204, 1);
+  border-top-right-radius: 5px;
+  color: #f1f1f1 !important;
+  letter-spacing: 1px;
+  padding: 15px 5px;
 }
 
-.fixed_buttons div button {
-    border: none;
-}
-
-.fixed_buttons::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+/******** Side fixed buttons css end *********************/
 
 .carousel-item .d-flex {
     justify-content: space-between;
-    /* Adds space between cards */
 }
 
 .card-img-top {
@@ -1316,3 +1314,4 @@ swiper-container {
 .bg_blue_lgt{
   background-color: #a1d6d8;
 }
+  

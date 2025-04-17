@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AboutUsComponent {
   activeSection = 'aboutOmni'; // Default
-
+  showModal = false;
+  selectedLeader: any = null;
   sections = [
     // { id: 'visionMission', name: 'Vision & Mission' },
     { id: 'aboutOmni', name: 'About OMNI Hospitals' },
@@ -18,12 +19,12 @@ export class AboutUsComponent {
   ];
 
   boardMembers = [
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' },
-    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png' }
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' },
+    { name: 'Dr M Goutham Reddy', image: 'assets/images/passport-size-photo-sample.png', label:'Medical Director' }
   ];
 
   leadershipTeam = [
@@ -45,4 +46,21 @@ export class AboutUsComponent {
       }
     });
   }
+
+  openProfileModal(leader: any) {
+    this.selectedLeader = leader;
+    console.log(this.selectedLeader,'selectedLeader...');
+    
+    this.showModal = true;
+    document.body.classList.add('modal-open');
+  }
+  
+  closeModal() {
+    this.showModal = false;
+    this.selectedLeader = null;
+    document.body.classList.remove('modal-open');
+  }
+
 }
+
+

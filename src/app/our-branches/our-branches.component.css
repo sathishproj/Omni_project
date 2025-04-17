@@ -52,3 +52,6 @@ background-color: rgba(0, 143, 213, 0.05);
     background-color: rgba(140, 198, 63, 1);
     border: 1px solid rgba(140, 198, 63, 1); 
   }
+  .border_end{
+    border-right: 1px solid gray;
+  }

@@ -20,6 +20,7 @@ import { NewsMediaDetailsComponent } from './news-media-details/news-media-detai
 import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
 // import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
 import { BoardMembersComponent } from './board-members/board-members.component';
+import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -41,8 +42,8 @@ const routes: Routes = [
   { path: 'blogs-details', component: BlogDetailsComponent },
   { path: 'news-media-details', component: NewsMediaDetailsComponent },
   { path: 'book-an-appointment', component: BookAnAppointmentComponent },
-  // { path: 'fixed-surgical-packages', component: FixedSurgicalPackagesComponent },
   { path: 'board-members', component: BoardMembersComponent },
+  { path: 'fixed-surgical-packages', component: FixedSurgicalPackagesComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

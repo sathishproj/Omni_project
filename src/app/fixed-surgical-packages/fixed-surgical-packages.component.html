@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="container-fluid p-0">
+    <div class="banner">
+      <img src="assets/images/fixed_package_banner_image.svg" class="img-fluid w-100" alt="Fixed Surgery Banner" />
+    </div>
+    <div class="text-center text-black mt-2">
+        <h2><strong>Fixed Surgery Package</strong></h2>
+        <p class="mt-2 text-center mx-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    <div class="py-3">
+        <div class="d-flex flex-wrap gap-3 justify-content-start">
+          <button 
+          *ngFor="let location of locations"
+          class="btn rounded-pill px-4 py-1 fw-semibold border me-2 mb-2"
+          [ngClass]="selected === location ? 'selected_bg text-white' : 'bg-white text-black'"
+          (click)="selectLocation(location)">
+          {{ location }}
+        </button>
+        
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let pkg of surgeryPackages">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+              <div class="row g-0 align-items-center">
+                <!-- Left Image -->
+                <div class="col-12 col-md-5">
+                  <img src="assets/images/fixed_surgery_dummy_image.svg" class="img-fluid ms-3 h-100 object-fit-cover" alt="Knee Surgery" style="border-radius: 0.5rem 0 0 0.5rem;" />
+                </div>
+      
+                <!-- Right Text -->
+                <div class="col-12 col-md-7 p-4">
+                  <h5 class="text_primary fw-bold">Knee Replacement Surgery</h5>
+                  <p class="text-muted small mb-3" style="font-family: 'PT Sans', sans-serif;">
+                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-2 mb-md-0 fw-bold text-dark">1,49,000/-</h5>
+                    <button class="btn btn-primary btn-sm px-4">View Package</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  <app-footer></app-footer>

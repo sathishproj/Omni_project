@@ -164,3 +164,8 @@
 .custom-backdrop .modal-backdrop {
     background-color: rgba(0, 0, 0, 0.166) !important;
 }
+
+.selected_bg{
+    background-color: #008FD5;
+    color: white !important;
+}

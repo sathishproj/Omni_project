@@ -295,103 +295,6 @@ export class HomeComponent {
     window.addEventListener('resize', this.updateSlidesPerView.bind(this));
     register(); // Important for touch support in Web Components
   }
- 
- 
-  // ngAfterViewInit(): void {
-  //   this.observeCounters();
-  //   const blogs = $(this.blogCarousel.nativeElement);
-  //   const newsowl = $(this.newsMediaCarousel.nativeElement);
-  //   const owl = $(this.owlCarousel.nativeElement); // ✅ Fix: Use `const`
-  //   $(this.owlCarousel.nativeElement).owlCarousel({
-  //     loop: true,
-  //     margin: 20,
-  //     nav: false,
-  //     dots: false, // Disable Owl default dots
-  //     autoplay: true,
-  //     autoplayTimeout: 3000,
-  //     autoplayHoverPause: true,
-  //     responsive: {
-  //       0: { items: 1 },
-  //       768: { items: 2 },
-  //       992: { items: 3 }
-  //     }
-  //   });
-
-  //   // ✅ Update dot when auto-slide changes
-  //   owl.on('changed.owl.carousel', (event: any) => {
-  //     let realIndex = event.item.index - event.relatedTarget._clones.length / 2;
-  //     this.currentIndex = (realIndex + this.totalSlides) % this.totalSlides; // Fix incorrect index
-  //   });
-
-
-  //   newsowl.owlCarousel({
-  //     loop: true,
-  //     margin: 15,
-  //     nav: false,
-  //     dots: false, // Custom dots
-  //     autoplay: true,
-  //     autoplayTimeout: 3000,
-  //     autoplayHoverPause: true,
-  //     responsive: {
-  //       0: { items: 1 },
-  //       768: { items: 2 },
-  //       992: { items: 3 }
-  //     }
-  //   });
-
-  //   // ✅ Update dot when auto-slide changes
-  //   newsowl.on('changed.owl.carousel', (event: any) => {
-  //     let realIndex = event.item.index - event.relatedTarget._clones.length / 2;
-  //     this.currentNewsIndex = (realIndex + this.totalNewsSlides) % this.totalNewsSlides;
-  //   });
-
-  //   blogs.owlCarousel({
-  //     loop: true,
-  //     margin: 15,
-  //     nav: false,
-  //     dots: false, // Custom dots
-  //     autoplay: true,
-  //     autoplayTimeout: 3000,
-  //     autoplayHoverPause: true,
-  //     responsive: {
-  //       0: { items: 1 },
-  //       768: { items: 2 },
-  //       992: { items: 3 }
-  //     }
-  //   });
-
-  //   blogs.on('changed.owl.carousel', (event: any) => {
-  //     let realIndex = event.item.index - event.relatedTarget._clones.length / 2;
-  //     this.currentBlogIndex = (realIndex + this.totalBlogSlides) % this.totalBlogSlides;
-  //   });
-
-  //   $('#owl-demo').owlCarousel({
-  //     loop: false,
-  //     margin: 10,
-  //     nav: false,
-  //     responsive: {
-  //       0: { items: 1 },
-  //       600: { items: 2 },
-  //       1000: { items: 3 }
-  //     },
-  //     onInitialized: this.updateNavButtons,
-  //     onTranslated: this.updateNavButtons
-  //   });
-
-  //   // this.totalItems = document.querySelectorAll(".carousel-item").length;
-  //   // this.prevBtn = document.getElementById("prevBtn");
-  //   // this.nextBtn = document.getElementById("nextBtn");
-  //   // this.carousel = document.querySelector("#carouselExample");
-
-  //   // if (this.carousel) {
-  //   //   this.carousel.addEventListener("slid.bs.carousel", (e: any) => {
-  //   //     this.currentTechnologyIndex = [...e.target.querySelectorAll(".carousel-item")].indexOf(e.relatedTarget);
-  //   //     // this.updateButtons();
-  //   //   });
-  //   // }
-  //   // this.updateButtons();
-
-  // }
 
   ngAfterViewInit() {
     this.observeCounters();
@@ -422,16 +325,6 @@ export class HomeComponent {
       this.updateArrowStates(swiper);
     }
   }
-  
-  // ngAfterViewChecked() {
-  //   if (this.activeIndex === 2) {
-  //     setTimeout(() => {
-  //       this.initSwiper();
-  //     }, 200);
-  //   } else {
-  //     this.swiperInitialized = false; // reset flag
-  //   }
-  // }
 
   toggleReadMore(): void {
     this.showMore = !this.showMore;
@@ -735,7 +628,7 @@ testowl(){
   
 
   routeToLocation(location:string, selected_image:string){
-    const modalElement = document.getElementById('branchesModal');
+    const modalElement = document.getElementById('locationModal');
   const modalInstance = bootstrap.Modal.getInstance(modalElement);
   if (modalInstance) {
     modalInstance.hide();
@@ -748,7 +641,7 @@ testowl(){
         selected_image:selected_image
       }
     });
-  }, 300); // optional delay for smoother transition
+  }, 300);
   }
   
 }

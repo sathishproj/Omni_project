@@ -32,6 +32,7 @@ import { NewsMediaDetailsComponent } from './news-media-details/news-media-detai
 import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
 // import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
 import { BoardMembersComponent } from './board-members/board-members.component';
+import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -60,7 +61,8 @@ import { BoardMembersComponent } from './board-members/board-members.component';
     NewsMediaDetailsComponent,
     BookAnAppointmentComponent,
     // FixedSurgicalPackagesComponent,
-    BoardMembersComponent
+    BoardMembersComponent,
+    FixedSurgicalPackagesComponent
   ],
   imports: [
     BrowserModule,

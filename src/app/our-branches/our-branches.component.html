@@ -1,108 +1,120 @@
 <app-header></app-header>
 <section class="bg_color">
-    <div class="container-fluid mt-4">
-        <!-- Hospital Info -->
-        <div class="row g-4">
-          <div class="col-lg-12">
-            <div class="card p-3 shadow-sm">
-              <div class="row">
-                <div class="col-md-4">
-                  <!-- <img src="assets/locations/omni_hospital_image.svg" alt="Omni Kukatpally" class="img-fluid rounded"> -->
-                  <img src="assets/locations/{{getting_location=='Kukatpally'?'omni_hospital_image.svg':getting_location=='Kothapet'?'kothapet_hospital.svg':'omni_hospital_image.svg'}}" alt="Omni Kukatpally" class="img-fluid rounded">
-                </div>
-                <div class="col-md-8">
-                  <h5 class="text-primary fw-bold mt-lg-4">{{getting_location}}</h5>
-                  <p class="small text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales purus et sapien facilisis, sed pharetra risus faucibus.
-                  </p>
-                  <p class="small text-muted">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestias deleniti!
-                  </p>
-                </div>
-              </div>
+  <div class="container-fluid mt-4">
+    <!-- Hospital Info -->
+    <div class="row g-4">
+      <div class="col-lg-12">
+        <div class="card p-3 shadow-sm">
+          <div class="row">
+            <div class="col-md-4">
+              <!-- <img src="assets/locations/omni_hospital_image.svg" alt="Omni Kukatpally" class="img-fluid rounded"> -->
+              <img
+                src="assets/locations/{{getting_location=='Kukatpally'?'omni_hospital_image.svg':getting_location=='Kothapet'?'kothapet_hospital.svg':'omni_hospital_image.svg'}}"
+                alt="Omni Kukatpally" class="img-fluid rounded">
             </div>
-          </div>
-        </div>
-      
-        <!-- Specialties -->
-        <div class="row mt-4">
-          <div class="col-md-3 mb-4">
-            <div class="card p-3 shadow-sm">
-              <h6 class="fw-bold text-center">SPECIALTIES</h6>
-              <hr />
-              <form>
-                <div *ngFor="let dept of departments">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="specialty"
-                      [value]="dept"
-                      (change)="setSelected(dept)"
-                      [checked]="selectedDepartment === dept"
-                    />
-                    <label class="form-check-label">{{ dept }}</label>
+            <div class="col-md-8">
+              <h5 class="text-primary fw-bold mt-lg-4">{{getting_location}}</h5>
+              <p class="small text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales purus et sapien facilisis, sed
+                pharetra risus faucibus.
+              </p>
+              <p class="small text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestias deleniti!
+              </p>
+
+              <div class="row text-center mt-3  mx-5" *ngIf="(getting_location == 'Vizag' || '')">
+                <div class="col-4 col-md-4 mb-3 mb-md-0  py-2 " *ngFor="let loc of locationImages; let i = index"
+                  [ngClass]="{'border_end': i < 2}" 
+                  >
+                  <img [src]="'assets/locations/' + loc.image" [alt]="loc.name" class="border" width="150px"
+                    style="cursor: pointer; border-radius: 80%; height: 150px !important; object-fit: cover;">
+                  <div class="small mt-1" style="color: black; font-weight: bold; font-size: 17px;">
+                    {{ loc.name }}
                   </div>
                 </div>
-                <button class="btn btn-secondary btn-sm mt-3 w-100" type="button" (click)="selectedDepartment = null">Reset</button>
-              </form>
-            </div>
-          </div>
-      
-          <!-- Doctors -->
-          <div class="col-md-9">
-            <div class="doctor-list-container">
-                <div *ngFor="let doc of filteredDoctors()" class="card mb-3 shadow-sm p-3">
-                <div class="doctor-card mb-3 p-3 shadow-sm">
-                    <div class="row g-0 align-items-center">
-                      <!-- Doctor Image -->
-                      <div class="col-md-2 text-center">
-                        <img [src]="doc.image" class="doctor-img" alt="Doctor Image" />
-                      </div>
-                  
-                      <!-- Doctor Info -->
-                      <div class="col-md-7">
-                        <div class="ms-3">
-                            <h5 class="fw-bold">{{ doc.name }}</h5>
-                            <p class="mb-1 small text-muted">
-                              M.S. (Gen. Surgery), DNB (Surgical Gastro), FMAS, <br />
-                              Advanced Laparoscopic & Bariatric Surgeon, GI Oncology & Liver Transplant Surgeon
-                            </p>
-                            <p class="fw-semibold mb-0">Surgical Gastroenterologist</p>
-                        </div>
-                      </div>
-                  
-                      <!-- Right Side Icons and Button -->
-                      <div class="col-md-3 text-md-end mt-3 mt-md-0">
-                        <div class="d-flex align-items-center mb-2">
-                          <img class="ms-2 me-3" src="assets/our_doctors/experience.svg" alt="">
-                          <span class="txt">{{ doc.experience }}</span>
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                          <img class="ms-2 me-3" src="assets/our_doctors/clock.svg" alt="">
-                          <span class="txt">{{ doc.timings }}</span>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                          <img class="ms-2 me-3" src="assets/our_doctors/location.svg" alt="">
-                          <span class="txt">{{ doc.location }}</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-start mb-3">
-                            <button class="btn rounded-pill px-3 py-2 btn-sm book_btn">
-                              Book an Appointment
-                            </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
               </div>
+
             </div>
-      
-            <ng-template #noDoctors>
-              <div class="alert alert-warning">No doctors available for selected department.</div>
-            </ng-template>
+
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Specialties -->
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <h6 class="fw-bold text-center">SPECIALTIES</h6>
+          <hr />
+          <form>
+            <div *ngFor="let dept of departments">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="specialty" [value]="dept"
+                  (change)="setSelected(dept)" [checked]="selectedDepartment === dept" />
+                <label class="form-check-label">{{ dept }}</label>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm mt-3 w-100" type="button"
+              (click)="selectedDepartment = null">Reset</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Doctors -->
+      <div class="col-md-9">
+        <div class="doctor-list-container">
+          <div *ngFor="let doc of filteredDoctors()" class="card mb-3 shadow-sm p-3">
+            <div class="doctor-card mb-3 p-3 shadow-sm">
+              <div class="row g-0 align-items-center">
+                <!-- Doctor Image -->
+                <div class="col-md-2 text-center">
+                  <img [src]="doc.image" class="doctor-img" alt="Doctor Image" />
+                </div>
+
+                <!-- Doctor Info -->
+                <div class="col-md-7">
+                  <div class="ms-3">
+                    <h5 class="fw-bold">{{ doc.name }}</h5>
+                    <p class="mb-1 small text-muted">
+                      M.S. (Gen. Surgery), DNB (Surgical Gastro), FMAS, <br />
+                      Advanced Laparoscopic & Bariatric Surgeon, GI Oncology & Liver Transplant Surgeon
+                    </p>
+                    <p class="fw-semibold mb-0">Surgical Gastroenterologist</p>
+                  </div>
+                </div>
+
+                <!-- Right Side Icons and Button -->
+                <div class="col-md-3 text-md-end mt-3 mt-md-0">
+                  <div class="d-flex align-items-center mb-2">
+                    <img class="ms-2 me-3" src="assets/our_doctors/experience.svg" alt="">
+                    <span class="txt">{{ doc.experience }}</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <img class="ms-2 me-3" src="assets/our_doctors/clock.svg" alt="">
+                    <span class="txt">{{ doc.timings }}</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <img class="ms-2 me-3" src="assets/our_doctors/location.svg" alt="">
+                    <span class="txt">{{ doc.location }}</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-start mb-3">
+                    <button class="btn rounded-pill px-3 py-2 btn-sm book_btn">
+                      Book an Appointment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <ng-template #noDoctors>
+          <div class="alert alert-warning">No doctors available for selected department.</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
 </section>
 <app-footer></app-footer>

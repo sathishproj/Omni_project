@@ -22,5 +22,13 @@
     color: white !important;
 }
 .text_primary{
-    color:rgba(0, 143, 213, 1)
+    color:rgba(0, 143, 213, 1);
+}
+.btn_primary{
+  background-color: rgba(0, 143, 213, 1);
+  color: #fff;
+}
+.bg_card{
+  background-color:rgba(0, 143, 213, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
